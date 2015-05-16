@@ -9,10 +9,10 @@
 #ifndef AVOSCloudSNS_AVOSCloudSNS__h
 #define AVOSCloudSNS_AVOSCloudSNS__h
 
-#import "AVOSCloudSNS.h"
+#import "LeanCloudSNS.h"
 #import "AVHTTPClient.h"
 
-@interface AVOSCloudSNS ()
+@interface LeanCloudSNS ()
 +(NSMutableDictionary*)ssoConfigs;
 +(AVHTTPClient*)client;
 

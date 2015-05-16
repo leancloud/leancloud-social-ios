@@ -6,23 +6,23 @@
 //  Copyright (c) 2013年 AVOS. All rights reserved.
 //
 
-#import "AVOSCloudSNS.h"
-#import "AVSNSLoginViewController.h"
-#import "AVOSCloudSNSUtils.h"
-#import "AVOSCloudSNS_.h"
+#import "LeanCloudSNS.h"
+#import "LCSNSLoginViewController.h"
+#import "LeanCloudSNSUtils.h"
+#import "LeanCloudSNS_.h"
 
 static NSString * const AVOS_SNS_BASE_URL=@"cn.avoscloud.com";
 static NSString * const AVOS_SNS_BASE_URL2=@"leancloud.cn";
 static NSString * const AVOS_SNS_API_VERSION=@"1";
 
-@interface AVSNSLoginViewController()
+@interface LCSNSLoginViewController()
 @property(nonatomic,copy) NSString *redirect_uri;
 @property(nonatomic,copy) NSString *appkey;
 @property(nonatomic,copy) NSString *appsec;
 
 @property(nonatomic) BOOL hasCode;
 @end
-@implementation AVSNSLoginViewController
+@implementation LCSNSLoginViewController
 
 - (void)dealloc
 {
@@ -31,7 +31,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
 
 -(void)close:(UIBarButtonItem*)item{
     [self close];
-    [AVOSCloudSNS onCancel:self.type];
+    [LeanCloudSNS onCancel:self.type];
 }
 
 -(void)setType:(AVOSCloudSNSType)type{
@@ -39,7 +39,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
     if (type==0) {
         return;
     }
-    NSDictionary *config=[[AVOSCloudSNS ssoConfigs] objectForKey:@(self.type)];
+    NSDictionary *config=[[LeanCloudSNS ssoConfigs] objectForKey:@(self.type)];
     NSString *appkey=config[@"appkey"];
     
     if (appkey) {
@@ -101,7 +101,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
                                   @"display":@"mobile",
                                   };
             
-            NSURLRequest *req=[[AVOSCloudSNS client] requestWithMethod:@"GET" path:@"https://open.weibo.cn/oauth2/authorize" parameters:param];
+            NSURLRequest *req=[[LeanCloudSNS client] requestWithMethod:@"GET" path:@"https://open.weibo.cn/oauth2/authorize" parameters:param];
             
             [self.webView loadRequest:req];
         }
@@ -121,7 +121,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
                                   @"fall_to_wv":@1
                                   };
             
-            NSURLRequest *req=[[AVOSCloudSNS client] requestWithMethod:@"GET" path:@"https://openmobile.qq.com/oauth2.0/m_show" parameters:param];
+            NSURLRequest *req=[[LeanCloudSNS client] requestWithMethod:@"GET" path:@"https://openmobile.qq.com/oauth2.0/m_show" parameters:param];
             
             [self.webView loadRequest:req];
         }
@@ -169,7 +169,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
             return;
     }
     
-    [[AVOSCloudSNS client] postPath:url parameters:param success:^(AVHTTPRequestOperation *operation, id responseObject) {
+    [[LeanCloudSNS client] postPath:url parameters:param success:^(AVHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *info=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         
         NSString *token=info[@"access_token"];
@@ -180,14 +180,14 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
                 uid=info[@"openid"];
             }
             //FIXME: check other uid param if need
-            [AVOSCloudSNS onSuccess:self.type withToken:token andExpires:info[@"expires_in"] andUid:uid];
+            [LeanCloudSNS onSuccess:self.type withToken:token andExpires:info[@"expires_in"] andUid:uid];
         }else{
             NSError *error=nil;
             //TODO: return unknow error
-            [AVOSCloudSNS onFail:self.type withError:error];
+            [LeanCloudSNS onFail:self.type withError:error];
         }
     } failure:^(AVHTTPRequestOperation *operation, NSError *error) {
-        [AVOSCloudSNS onFail:self.type withError:error];
+        [LeanCloudSNS onFail:self.type withError:error];
     }];
     
 }
@@ -207,25 +207,25 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
         
         if(hasCode){
             //avos返回用户信息
-            [[AVOSCloudSNS client] getPath:url parameters:nil success:^(AVHTTPRequestOperation *operation, id responseObject) {
+            [[LeanCloudSNS client] getPath:url parameters:nil success:^(AVHTTPRequestOperation *operation, id responseObject) {
                 NSDictionary *info=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
                 info=info[@"user"];
                 if (info) {
-                    [AVOSCloudSNS onSuccess:self.type withParams:info];
+                    [LeanCloudSNS onSuccess:self.type withParams:info];
                 }else{
                     NSLog(@"avos server format error");
                     NSError *err=[NSError errorWithDomain:AVOSCloudSNSErrorDomain code:9999 userInfo:info];
-                    [AVOSCloudSNS onFail:self.type withError:err];
+                    [LeanCloudSNS onFail:self.type withError:err];
                 }
             } failure:^(AVHTTPRequestOperation *operation, NSError *error) {
-                [AVOSCloudSNS onFail:self.type withError:error];
+                [LeanCloudSNS onFail:self.type withError:error];
             }];
             
             
             return NO;
         }else if ([url rangeOfString:@"access_denied"].length>0) {
             //用户取消
-            [AVOSCloudSNS onFail:self.type withError:[NSError errorWithDomain:AVOSCloudSNSErrorDomain code:AVOSCloudSNSErrorUserCancel userInfo:nil]];
+            [LeanCloudSNS onFail:self.type withError:[NSError errorWithDomain:AVOSCloudSNSErrorDomain code:AVOSCloudSNSErrorUserCancel userInfo:nil]];
             return NO;
         }else if(self.type==0){
             //获取用户选择的登录平台
@@ -239,7 +239,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
             
             if (self.appkey) {
                 //检查是否SSO登录
-                if ([AVOSCloudSNS SSO:self.type])
+                if ([LeanCloudSNS SSO:self.type])
                     return NO;
                 
                 //web认证
@@ -250,20 +250,20 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
         }
         
     }else if(self.redirect_uri && [url hasPrefix:self.redirect_uri]){
-        NSDictionary *param= [AVOSCloudSNSUtils unserializeURL:url];
+        NSDictionary *param= [LeanCloudSNSUtils unserializeURL:url];
         NSString *code=param[@"code"];
         NSString *token=param[@"access_token"];
         if (code) {
             [self getAccessToken:code];
             return NO;
         }else if (token && self.type==AVOSCloudSNSQQ){
-            [[AVOSCloudSNS client] getPath:[NSString stringWithFormat:@"https://graph.qq.com/oauth2.0/me?access_token=%@",token] parameters:nil success:^(AVHTTPRequestOperation *operation, id responseObject) {
+            [[LeanCloudSNS client] getPath:[NSString stringWithFormat:@"https://graph.qq.com/oauth2.0/me?access_token=%@",token] parameters:nil success:^(AVHTTPRequestOperation *operation, id responseObject) {
                 NSString *string=[[NSString alloc] initWithBytes:[responseObject bytes] length:[responseObject length] encoding:NSUTF8StringEncoding];
-                NSDictionary *ret= [AVOSCloudSNSUtils unserializeJSONP:string];
+                NSDictionary *ret= [LeanCloudSNSUtils unserializeJSONP:string];
                 NSString *openid=ret[@"openid"];
-                [AVOSCloudSNS onSuccess:self.type withToken:token andExpires:param[@"expires_in"] andUid:openid];
+                [LeanCloudSNS onSuccess:self.type withToken:token andExpires:param[@"expires_in"] andUid:openid];
             } failure:^(AVHTTPRequestOperation *operation, NSError *error) {
-                [AVOSCloudSNS onFail:AVOSCloudSNSQQ withError:error];
+                [LeanCloudSNS onFail:AVOSCloudSNSQQ withError:error];
             }];
             
         }
@@ -298,7 +298,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
         //ignore
     }else{
         [self hideWait];
-        [AVOSCloudSNS onFail:self.type withError:error];
+        [LeanCloudSNS onFail:self.type withError:error];
     }
     
 }

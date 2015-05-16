@@ -6,23 +6,23 @@
 //  Copyright (c) 2013年 AVOS. All rights reserved.
 //
 
-#import "AVOSCloudSNS.h"
-#import "AVOSCloudSNSUtils.h"
-#import "AVSNSLoginViewController.h"
+#import "LeanCloudSNS.h"
+#import "LeanCloudSNSUtils.h"
+#import "LCSNSLoginViewController.h"
 
 #import "AVJSONRequestOperation.h"
 #import "AVHTTPRequestOperation.h"
 
 #import "AVNetworking.h"
-#import "AVSNSWebViewController.h"
+#import "LCSNSWebViewController.h"
 
 NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
 
-@interface AVOSCloudSNS()
+@interface LeanCloudSNS()
 
 @end
 
-@implementation AVOSCloudSNS
+@implementation LeanCloudSNS
 
 +(AVHTTPClient*)client{
     static AVHTTPClient *sharedClient=nil;
@@ -137,7 +137,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
         red_uri=@"http://";
     }
     
-    NSString *appAuthURL = [AVOSCloudSNSUtils serializeURL:appAuthBaseURL
+    NSString *appAuthURL = [LeanCloudSNSUtils serializeURL:appAuthBaseURL
                                                params:@{
                                                         @"client_id":config[@"appkey"],
                                                         @"redirect_uri":red_uri,
@@ -206,11 +206,11 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
 +(BOOL)SSO:(AVOSCloudSNSType)type{
     switch (type) {
         case AVOSCloudSNSSinaWeibo:
-            return [AVOSCloudSNS sinaWeiboSSO];
+            return [LeanCloudSNS sinaWeiboSSO];
             break;
             
         case AVOSCloudSNSQQ:
-            return [AVOSCloudSNS qqSSO];
+            return [LeanCloudSNS qqSSO];
             break;
             
     }
@@ -268,7 +268,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     
     NSInteger offset=[[tuser valueForKeyPath:@"access-token.expires-in"] integerValue];
     
-    NSDate *expireDate=[AVOSCloudSNSUtils expireDateWithOffset:offset];
+    NSDate *expireDate=[LeanCloudSNSUtils expireDateWithOffset:offset];
     [tuser setObject:expireDate forKey:@"expires_at"];
     
     [tuser removeObjectForKey:@"access-token"];
@@ -359,7 +359,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
             NSMutableDictionary *dict=[NSMutableDictionary dictionaryWithDictionary:params];
             [dict setObject:error forKey:NSLocalizedFailureReasonErrorKey];
             NSError *err=[NSError errorWithDomain:AVOSCloudSNSErrorDomain code:AVOSCloudSNSErrorLoginFail userInfo:dict];
-            [AVOSCloudSNS onFail:type withError:err];
+            [LeanCloudSNS onFail:type withError:err];
         }else{
             NSMutableDictionary *dict=[NSMutableDictionary dictionary];
             [dict setObject:@{@"access-token":token,@"expires-in":@([expires integerValue])} forKey:@"access-token"];
@@ -380,11 +380,11 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
             
             [dict setObject:params forKey:@"raw-user"];
             
-            [AVOSCloudSNS onSuccess:type withParams:dict];
+            [LeanCloudSNS onSuccess:type withParams:dict];
             
         }
     } failure:^(AVHTTPRequestOperation *operation, NSError *error) {
-        [AVOSCloudSNS onFail:type withError:error];
+        [LeanCloudSNS onFail:type withError:error];
     }];
     
     
@@ -395,7 +395,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     //保存用户信息
     info= [self saveUserInfo:info ofPlatform:type];
     
-    __block AVSNSLoginViewController *vc= [[self ssoConfigs] objectForKey:@"tmpvc"];
+    __block LCSNSLoginViewController *vc= [[self ssoConfigs] objectForKey:@"tmpvc"];
     [[self ssoConfigs] removeObjectForKey:@"tmpvc"];
     dispatch_async(dispatch_get_main_queue(), ^{
         [vc close];
@@ -412,7 +412,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
 
 +(void)onFail:(AVOSCloudSNSType)type withError:(NSError*)error{
     dispatch_async(dispatch_get_main_queue(), ^{
-        AVSNSLoginViewController *vc= [[self ssoConfigs] objectForKey:@"tmpvc"];
+        LCSNSLoginViewController *vc= [[self ssoConfigs] objectForKey:@"tmpvc"];
         [vc close];
         [[self ssoConfigs] removeObjectForKey:@"tmpvc"];
         
@@ -438,11 +438,11 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     switch (type) {
         case AVOSCloudSNSSinaWeibo:
         {
-            NSDictionary *dict= [AVOSCloudSNS userInfo:AVOSCloudSNSSinaWeibo];
+            NSDictionary *dict= [LeanCloudSNS userInfo:AVOSCloudSNSSinaWeibo];
             if (dict) {
                 NSString *token=[dict objectForKey:@"access_token"];
 
-                [[AVOSCloudSNS client] getPath:@"https://api.weibo.com/oauth2/revokeoauth2" parameters:@{@"access_token":token} success:^(AVHTTPRequestOperation *operation, id responseObject) {
+                [[LeanCloudSNS client] getPath:@"https://api.weibo.com/oauth2/revokeoauth2" parameters:@{@"access_token":token} success:^(AVHTTPRequestOperation *operation, id responseObject) {
                 } failure:^(AVHTTPRequestOperation *operation, NSError *error) {
                 }];
             }
@@ -466,7 +466,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
 +(BOOL)handleOpenURL:(NSURL *)url{
     NSString *scheme=url.scheme;
     
-    NSDictionary *params=[AVOSCloudSNSUtils unserializeURL:[url absoluteString]];
+    NSDictionary *params=[LeanCloudSNSUtils unserializeURL:[url absoluteString]];
     //NSLog(@"Params: %@",[params description]);
     if ([scheme hasPrefix:@"sinaweibosso"]) {
         
@@ -549,7 +549,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
 
 +(UIViewController*)loginManualyWithCallback:(AVSNSResultBlock)callback{
     if(callback)[[self ssoConfigs] setObject:[callback copy] forKey:@"callback"];
-    AVSNSLoginViewController *vc=[[AVSNSLoginViewController alloc] init];
+    LCSNSLoginViewController *vc=[[LCSNSLoginViewController alloc] init];
     [vc loginToPlatform:0];
     return vc;
 }
@@ -568,14 +568,14 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     if ([self SSO:type]) return nil;
     
     //网页登录
-    AVSNSLoginViewController *vc=[[AVSNSLoginViewController alloc] init];
+    LCSNSLoginViewController *vc=[[LCSNSLoginViewController alloc] init];
     vc.type=type;
     [vc loginToPlatform:type];
     return vc;
 }
 
 +(UIViewController *)loginManualyWithURL:(NSURL *)url callback:(AVSNSResultBlock)callback {
-    AVSNSWebViewController *controller = [[AVSNSWebViewController alloc] init];
+    LCSNSWebViewController *controller = [[LCSNSWebViewController alloc] init];
     controller.callback = callback;
     [controller.webView loadRequest:[NSURLRequest requestWithURL:url]];
     return controller;

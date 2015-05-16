@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AVWebViewController : UIViewController<UIWebViewDelegate>
+@interface LCWebViewController : UIViewController<UIWebViewDelegate>
 @property(nonatomic,retain) UIWebView *webView;
 -(void)close;
 @end

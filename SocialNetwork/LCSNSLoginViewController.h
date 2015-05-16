@@ -6,9 +6,9 @@
 //  Copyright (c) 2013年 AVOS. All rights reserved.
 //
 
-#import "AVWebViewController.h"
+#import "LCWebViewController.h"
 
-@interface AVSNSLoginViewController :AVWebViewController
+@interface LCSNSLoginViewController :LCWebViewController
 @property(nonatomic) AVOSCloudSNSType type;
 
 -(void)loginToPlatform:(AVOSCloudSNSType)type;

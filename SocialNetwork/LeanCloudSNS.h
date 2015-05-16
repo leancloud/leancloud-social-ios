@@ -68,7 +68,7 @@ typedef void (^AVSNSProgressBlock)(float percent);
  *  AVOSCloudSNS 是一个轻量级的社交平台助手
  *  几行代码就可以实现登录和发布内容
  */
-@interface AVOSCloudSNS : NSObject
+@interface LeanCloudSNS : NSObject
 
 /**
  *  设置平台所需要的参数

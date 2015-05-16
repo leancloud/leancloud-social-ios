@@ -9,20 +9,19 @@
 /* Begin PBXBuildFile section */
 		5C17559F1B047DE100B56585 /* SocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1755931B047DE100B56585 /* SocialNetwork.framework */; };
 		5C1755A61B047DE100B56585 /* SocialNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1755A51B047DE100B56585 /* SocialNetworkTests.m */; };
-		5C1755BE1B047F5400B56585 /* AVOSCloudSNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1755AF1B047F5400B56585 /* AVOSCloudSNS.m */; };
+		5C1755BE1B047F5400B56585 /* LeanCloudSNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1755AF1B047F5400B56585 /* LeanCloudSNS.m */; };
 		5C1755BF1B047F5400B56585 /* AVUser+SNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1755B01B047F5400B56585 /* AVUser+SNS.h */; };
-		5C1755C01B047F5400B56585 /* AVSNSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1755B11B047F5400B56585 /* AVSNSLoginViewController.m */; };
-		5C1755C11B047F5400B56585 /* AVOSCloudSNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1755B21B047F5400B56585 /* AVOSCloudSNS.h */; };
-		5C1755C21B047F5400B56585 /* AVSNSLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1755B31B047F5400B56585 /* AVSNSLoginViewController.h */; };
-		5C1755C31B047F5400B56585 /* AVSNSWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1755B41B047F5400B56585 /* AVSNSWebViewController.h */; };
-		5C1755C41B047F5400B56585 /* AVSNSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1755B51B047F5400B56585 /* AVSNSWebViewController.m */; };
-		5C1755C51B047F5400B56585 /* AVWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1755B61B047F5400B56585 /* AVWebViewController.h */; };
-		5C1755C61B047F5400B56585 /* AVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1755B71B047F5400B56585 /* AVWebViewController.m */; };
+		5C1755C01B047F5400B56585 /* LCSNSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1755B11B047F5400B56585 /* LCSNSLoginViewController.m */; };
+		5C1755C11B047F5400B56585 /* LeanCloudSNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1755B21B047F5400B56585 /* LeanCloudSNS.h */; };
+		5C1755C21B047F5400B56585 /* LCSNSLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1755B31B047F5400B56585 /* LCSNSLoginViewController.h */; };
+		5C1755C31B047F5400B56585 /* LCSNSWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1755B41B047F5400B56585 /* LCSNSWebViewController.h */; };
+		5C1755C41B047F5400B56585 /* LCSNSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1755B51B047F5400B56585 /* LCSNSWebViewController.m */; };
+		5C1755C51B047F5400B56585 /* LCWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1755B61B047F5400B56585 /* LCWebViewController.h */; };
+		5C1755C61B047F5400B56585 /* LCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1755B71B047F5400B56585 /* LCWebViewController.m */; };
 		5C1755C71B047F5400B56585 /* NSURL+AVAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1755B81B047F5400B56585 /* NSURL+AVAdditions.h */; };
 		5C1755C81B047F5400B56585 /* NSURL+AVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1755B91B047F5400B56585 /* NSURL+AVAdditions.m */; };
-		5C1755C91B047F5400B56585 /* AVOSCloudSNS_.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1755BA1B047F5400B56585 /* AVOSCloudSNS_.h */; };
-		5C1755CA1B047F5400B56585 /* AVOSCloudSNSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1755BB1B047F5400B56585 /* AVOSCloudSNSUtils.h */; };
-		5C1755CB1B047F5400B56585 /* AVOSCloudSNSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1755BC1B047F5400B56585 /* AVOSCloudSNSUtils.m */; };
+		5C1755CA1B047F5400B56585 /* LeanCloudSNSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1755BB1B047F5400B56585 /* LeanCloudSNSUtils.h */; };
+		5C1755CB1B047F5400B56585 /* LeanCloudSNSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1755BC1B047F5400B56585 /* LeanCloudSNSUtils.m */; };
 		5C1755CC1B047F5400B56585 /* AVUser+SNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1755BD1B047F5400B56585 /* AVUser+SNS.m */; };
 		5C1755CE1B047FA700B56585 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1755CD1B047FA700B56585 /* MobileCoreServices.framework */; };
 		5C1755D01B047FB200B56585 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1755CF1B047FB200B56585 /* CFNetwork.framework */; };
@@ -34,6 +33,7 @@
 		5C5CD7771B063A4000E736B8 /* LCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CD7751B063A4000E736B8 /* LCUtils.m */; };
 		5C5CD77A1B063E1A00E736B8 /* LCHttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C5CD7781B063E1A00E736B8 /* LCHttpClient.h */; };
 		5C5CD77B1B063E1A00E736B8 /* LCHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CD7791B063E1A00E736B8 /* LCHttpClient.m */; };
+		5C5CD77D1B074DCC00E736B8 /* LeanCloudSNS_.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C5CD77C1B074DCC00E736B8 /* LeanCloudSNS_.h */; };
 		73C6EAD5E6FCE96C122A8A0C /* libPods-SocialNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A2B0C343CF22CFF1CD53C32 /* libPods-SocialNetwork.a */; };
 /* End PBXBuildFile section */
 
@@ -54,20 +54,19 @@
 		5C17559E1B047DE100B56585 /* SocialNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1755A41B047DE100B56585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C1755A51B047DE100B56585 /* SocialNetworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialNetworkTests.m; sourceTree = "<group>"; };
-		5C1755AF1B047F5400B56585 /* AVOSCloudSNS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVOSCloudSNS.m; sourceTree = "<group>"; };
+		5C1755AF1B047F5400B56585 /* LeanCloudSNS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanCloudSNS.m; sourceTree = "<group>"; };
 		5C1755B01B047F5400B56585 /* AVUser+SNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVUser+SNS.h"; sourceTree = "<group>"; };
-		5C1755B11B047F5400B56585 /* AVSNSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSNSLoginViewController.m; sourceTree = "<group>"; };
-		5C1755B21B047F5400B56585 /* AVOSCloudSNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVOSCloudSNS.h; sourceTree = "<group>"; };
-		5C1755B31B047F5400B56585 /* AVSNSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSNSLoginViewController.h; sourceTree = "<group>"; };
-		5C1755B41B047F5400B56585 /* AVSNSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSNSWebViewController.h; sourceTree = "<group>"; };
-		5C1755B51B047F5400B56585 /* AVSNSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSNSWebViewController.m; sourceTree = "<group>"; };
-		5C1755B61B047F5400B56585 /* AVWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVWebViewController.h; sourceTree = "<group>"; };
-		5C1755B71B047F5400B56585 /* AVWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVWebViewController.m; sourceTree = "<group>"; };
+		5C1755B11B047F5400B56585 /* LCSNSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSNSLoginViewController.m; sourceTree = "<group>"; };
+		5C1755B21B047F5400B56585 /* LeanCloudSNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanCloudSNS.h; sourceTree = "<group>"; };
+		5C1755B31B047F5400B56585 /* LCSNSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSNSLoginViewController.h; sourceTree = "<group>"; };
+		5C1755B41B047F5400B56585 /* LCSNSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSNSWebViewController.h; sourceTree = "<group>"; };
+		5C1755B51B047F5400B56585 /* LCSNSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSNSWebViewController.m; sourceTree = "<group>"; };
+		5C1755B61B047F5400B56585 /* LCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCWebViewController.h; sourceTree = "<group>"; };
+		5C1755B71B047F5400B56585 /* LCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCWebViewController.m; sourceTree = "<group>"; };
 		5C1755B81B047F5400B56585 /* NSURL+AVAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+AVAdditions.h"; sourceTree = "<group>"; };
 		5C1755B91B047F5400B56585 /* NSURL+AVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+AVAdditions.m"; sourceTree = "<group>"; };
-		5C1755BA1B047F5400B56585 /* AVOSCloudSNS_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVOSCloudSNS_.h; sourceTree = "<group>"; };
-		5C1755BB1B047F5400B56585 /* AVOSCloudSNSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVOSCloudSNSUtils.h; sourceTree = "<group>"; };
-		5C1755BC1B047F5400B56585 /* AVOSCloudSNSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVOSCloudSNSUtils.m; sourceTree = "<group>"; };
+		5C1755BB1B047F5400B56585 /* LeanCloudSNSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanCloudSNSUtils.h; sourceTree = "<group>"; };
+		5C1755BC1B047F5400B56585 /* LeanCloudSNSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanCloudSNSUtils.m; sourceTree = "<group>"; };
 		5C1755BD1B047F5400B56585 /* AVUser+SNS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVUser+SNS.m"; sourceTree = "<group>"; };
 		5C1755CD1B047FA700B56585 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		5C1755CF1B047FB200B56585 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -79,6 +78,7 @@
 		5C5CD7751B063A4000E736B8 /* LCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCUtils.m; sourceTree = "<group>"; };
 		5C5CD7781B063E1A00E736B8 /* LCHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCHttpClient.h; sourceTree = "<group>"; };
 		5C5CD7791B063E1A00E736B8 /* LCHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCHttpClient.m; sourceTree = "<group>"; };
+		5C5CD77C1B074DCC00E736B8 /* LeanCloudSNS_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanCloudSNS_.h; sourceTree = "<group>"; };
 		6A2B0C343CF22CFF1CD53C32 /* libPods-SocialNetwork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SocialNetwork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		909E23BE03517F6D8E4E995A /* Pods-SocialNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,26 +132,26 @@
 		5C1755951B047DE100B56585 /* SocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				5C1755AF1B047F5400B56585 /* AVOSCloudSNS.m */,
+				5C1755AF1B047F5400B56585 /* LeanCloudSNS.m */,
 				5C1755B01B047F5400B56585 /* AVUser+SNS.h */,
-				5C1755B11B047F5400B56585 /* AVSNSLoginViewController.m */,
-				5C1755B21B047F5400B56585 /* AVOSCloudSNS.h */,
-				5C1755B31B047F5400B56585 /* AVSNSLoginViewController.h */,
-				5C1755B41B047F5400B56585 /* AVSNSWebViewController.h */,
-				5C1755B51B047F5400B56585 /* AVSNSWebViewController.m */,
-				5C1755B61B047F5400B56585 /* AVWebViewController.h */,
-				5C1755B71B047F5400B56585 /* AVWebViewController.m */,
+				5C1755B11B047F5400B56585 /* LCSNSLoginViewController.m */,
+				5C1755B21B047F5400B56585 /* LeanCloudSNS.h */,
+				5C5CD77C1B074DCC00E736B8 /* LeanCloudSNS_.h */,
+				5C1755B31B047F5400B56585 /* LCSNSLoginViewController.h */,
+				5C1755B41B047F5400B56585 /* LCSNSWebViewController.h */,
+				5C1755B51B047F5400B56585 /* LCSNSWebViewController.m */,
+				5C1755B61B047F5400B56585 /* LCWebViewController.h */,
+				5C1755B71B047F5400B56585 /* LCWebViewController.m */,
 				5C1755B81B047F5400B56585 /* NSURL+AVAdditions.h */,
 				5C1755B91B047F5400B56585 /* NSURL+AVAdditions.m */,
-				5C1755BA1B047F5400B56585 /* AVOSCloudSNS_.h */,
-				5C1755BB1B047F5400B56585 /* AVOSCloudSNSUtils.h */,
-				5C1755BC1B047F5400B56585 /* AVOSCloudSNSUtils.m */,
+				5C1755BB1B047F5400B56585 /* LeanCloudSNSUtils.h */,
+				5C1755BC1B047F5400B56585 /* LeanCloudSNSUtils.m */,
 				5C1755BD1B047F5400B56585 /* AVUser+SNS.m */,
-				5C1755961B047DE100B56585 /* Supporting Files */,
 				5C5CD7741B063A4000E736B8 /* LCUtils.h */,
 				5C5CD7751B063A4000E736B8 /* LCUtils.m */,
 				5C5CD7781B063E1A00E736B8 /* LCHttpClient.h */,
 				5C5CD7791B063E1A00E736B8 /* LCHttpClient.m */,
+				5C1755961B047DE100B56585 /* Supporting Files */,
 			);
 			path = SocialNetwork;
 			sourceTree = "<group>";
@@ -211,16 +211,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C1755C91B047F5400B56585 /* AVOSCloudSNS_.h in Headers */,
-				5C1755C31B047F5400B56585 /* AVSNSWebViewController.h in Headers */,
-				5C1755C51B047F5400B56585 /* AVWebViewController.h in Headers */,
-				5C1755CA1B047F5400B56585 /* AVOSCloudSNSUtils.h in Headers */,
+				5C1755C31B047F5400B56585 /* LCSNSWebViewController.h in Headers */,
+				5C1755C51B047F5400B56585 /* LCWebViewController.h in Headers */,
+				5C1755CA1B047F5400B56585 /* LeanCloudSNSUtils.h in Headers */,
 				5C1755C71B047F5400B56585 /* NSURL+AVAdditions.h in Headers */,
-				5C1755C11B047F5400B56585 /* AVOSCloudSNS.h in Headers */,
+				5C5CD77D1B074DCC00E736B8 /* LeanCloudSNS_.h in Headers */,
+				5C1755C11B047F5400B56585 /* LeanCloudSNS.h in Headers */,
 				5C5CD7761B063A4000E736B8 /* LCUtils.h in Headers */,
 				5C1755BF1B047F5400B56585 /* AVUser+SNS.h in Headers */,
 				5C5CD77A1B063E1A00E736B8 /* LCHttpClient.h in Headers */,
-				5C1755C21B047F5400B56585 /* AVSNSLoginViewController.h in Headers */,
+				5C1755C21B047F5400B56585 /* LCSNSLoginViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,14 +356,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C5CD77B1B063E1A00E736B8 /* LCHttpClient.m in Sources */,
-				5C1755C61B047F5400B56585 /* AVWebViewController.m in Sources */,
-				5C1755CB1B047F5400B56585 /* AVOSCloudSNSUtils.m in Sources */,
+				5C1755C61B047F5400B56585 /* LCWebViewController.m in Sources */,
+				5C1755CB1B047F5400B56585 /* LeanCloudSNSUtils.m in Sources */,
 				5C1755C81B047F5400B56585 /* NSURL+AVAdditions.m in Sources */,
-				5C1755C01B047F5400B56585 /* AVSNSLoginViewController.m in Sources */,
+				5C1755C01B047F5400B56585 /* LCSNSLoginViewController.m in Sources */,
 				5C5CD7771B063A4000E736B8 /* LCUtils.m in Sources */,
-				5C1755C41B047F5400B56585 /* AVSNSWebViewController.m in Sources */,
+				5C1755C41B047F5400B56585 /* LCSNSWebViewController.m in Sources */,
 				5C1755CC1B047F5400B56585 /* AVUser+SNS.m in Sources */,
-				5C1755BE1B047F5400B56585 /* AVOSCloudSNS.m in Sources */,
+				5C1755BE1B047F5400B56585 /* LeanCloudSNS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

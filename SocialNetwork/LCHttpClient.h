@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AFNetworking/AFNetworking.h>
 #import <AVOSCloud/AVOSCloud.h>
 #import <AVOSCloud/AVHTTPClient.h>
 

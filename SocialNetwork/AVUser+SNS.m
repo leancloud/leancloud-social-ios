@@ -8,7 +8,7 @@
 #import "AVUser+SNS.h"
 #import "LCHttpClient.h"
 #import "LCUtils.h"
-#import "AVOSCloudSNS.h"
+#import "LeanCloudSNS.h"
 
 NSString *const AVOSCloudSNSPlatformWeiBo = @"weibo";
 NSString *const AVOSCloudSNSPlatformQQ = @"qq";
@@ -98,7 +98,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     
     [self setObject:dict forKey:@"authData"];
     
-    [AVOSCloudSNS logout:type];
+    [LeanCloudSNS logout:type];
     __weak AVUser *ws=self;
     if (self.objectId && self.sessionToken) {
         [self saveEventually:^(BOOL succeeded, NSError *error) {

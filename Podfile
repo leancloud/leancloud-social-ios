@@ -6,6 +6,6 @@ target 'SocialNetwork' do
 end
 
 target 'SocialNetworkTests' do
-
+	pod 'AVOSCloud'
 end
 

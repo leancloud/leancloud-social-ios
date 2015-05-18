@@ -17,11 +17,11 @@
 @property (nonatomic, readonly, strong) AVHTTPClient * clientImpl;
 
 @property (nonatomic, readwrite, copy) NSString * applicationId;
-@property (nonatomic, readwrite, copy) NSString * clientKey;
+@property (nonatomic, readwrite, copy) NSString * applicationKey;
 @property (nonatomic, copy) NSString * baseURL;
 
 @property (nonatomic, readwrite, copy) NSString * applicationIdField;
-@property (nonatomic, readwrite, copy) NSString * apiKeyField;
+@property (nonatomic, readwrite, copy) NSString * applicationKeyField;
 @property (nonatomic, readwrite, copy) NSString * sessionTokenField;
 @property (nonatomic, readwrite, assign) NSTimeInterval timeoutInterval;
 

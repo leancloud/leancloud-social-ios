@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3688555CB55EF635254E1D57 /* libPods-SocialNetworkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0907024FEB366824626860 /* libPods-SocialNetworkTests.a */; };
 		5C17559F1B047DE100B56585 /* SocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1755931B047DE100B56585 /* SocialNetwork.framework */; };
 		5C1755A61B047DE100B56585 /* SocialNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1755A51B047DE100B56585 /* SocialNetworkTests.m */; };
 		5C1755BE1B047F5400B56585 /* LeanCloudSNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1755AF1B047F5400B56585 /* LeanCloudSNS.m */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		044BD5F2EBB332FB61BC2CAF /* Pods-SocialNetworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetworkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetworkTests/Pods-SocialNetworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4A87ED61B6D556BE2F651427 /* Pods-SocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		5C1755931B047DE100B56585 /* SocialNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocialNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1755971B047DE100B56585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +83,8 @@
 		5C5CD77C1B074DCC00E736B8 /* LeanCloudSNS_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanCloudSNS_.h; sourceTree = "<group>"; };
 		6A2B0C343CF22CFF1CD53C32 /* libPods-SocialNetwork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SocialNetwork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		909E23BE03517F6D8E4E995A /* Pods-SocialNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.debug.xcconfig"; sourceTree = "<group>"; };
+		C3E3E633F653C8E397440BD6 /* Pods-SocialNetworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetworkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetworkTests/Pods-SocialNetworkTests.release.xcconfig"; sourceTree = "<group>"; };
+		DE0907024FEB366824626860 /* libPods-SocialNetworkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SocialNetworkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C17559F1B047DE100B56585 /* SocialNetwork.framework in Frameworks */,
+				3688555CB55EF635254E1D57 /* libPods-SocialNetworkTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +191,8 @@
 			children = (
 				909E23BE03517F6D8E4E995A /* Pods-SocialNetwork.debug.xcconfig */,
 				4A87ED61B6D556BE2F651427 /* Pods-SocialNetwork.release.xcconfig */,
+				044BD5F2EBB332FB61BC2CAF /* Pods-SocialNetworkTests.debug.xcconfig */,
+				C3E3E633F653C8E397440BD6 /* Pods-SocialNetworkTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -200,6 +207,7 @@
 				5C1755CF1B047FB200B56585 /* CFNetwork.framework */,
 				5C1755CD1B047FA700B56585 /* MobileCoreServices.framework */,
 				6A2B0C343CF22CFF1CD53C32 /* libPods-SocialNetwork.a */,
+				DE0907024FEB366824626860 /* libPods-SocialNetworkTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -251,9 +259,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C1755AC1B047DE100B56585 /* Build configuration list for PBXNativeTarget "SocialNetworkTests" */;
 			buildPhases = (
+				9E02F397CC005603B3292DCE /* Check Pods Manifest.lock */,
 				5C17559A1B047DE100B56585 /* Sources */,
 				5C17559B1B047DE100B56585 /* Frameworks */,
 				5C17559C1B047DE100B56585 /* Resources */,
+				C46F4FDE67851C2D82275B2E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -346,6 +356,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9E02F397CC005603B3292DCE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C46F4FDE67851C2D82275B2E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialNetworkTests/Pods-SocialNetworkTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -508,6 +548,7 @@
 		};
 		5C1755AD1B047DE100B56585 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 044BD5F2EBB332FB61BC2CAF /* Pods-SocialNetworkTests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -525,6 +566,7 @@
 		};
 		5C1755AE1B047DE100B56585 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3E3E633F653C8E397440BD6 /* Pods-SocialNetworkTests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

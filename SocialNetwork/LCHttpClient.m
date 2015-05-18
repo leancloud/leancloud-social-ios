@@ -24,6 +24,8 @@
 @implementation LCHttpClient
 
 @synthesize clientImpl = _clientImpl;
+@synthesize applicationId, applicationIdField, applicationKey, applicationKeyField, sessionTokenField;
+@synthesize baseURL, timeoutInterval;
 
 + (LCHttpClient*)sharedInstance {
     static dispatch_once_t once;
@@ -32,9 +34,11 @@
         sharedInstance = [[self alloc] init];
         sharedInstance.timeoutInterval = kAVDefaultNetworkTimeoutInterval;
         sharedInstance.applicationIdField = @"X-avoscloud-Application-Id";
-        sharedInstance.apiKeyField = @"X-avoscloud-Application-Key";
+        sharedInstance.applicationKeyField = @"X-avoscloud-Application-Key";
         sharedInstance.sessionTokenField = @"X-avoscloud-Session-Token";
-
+        
+        sharedInstance.applicationId = [AVOSCloud getApplicationId];
+        sharedInstance.applicationKey = [AVOSCloud getClientKey];
     });
     return sharedInstance;
 }
@@ -57,17 +61,18 @@
 -(void)updateHeaders {
     
     NSString *timestamp=[NSString stringWithFormat:@"%.0f",1000*[[NSDate date] timeIntervalSince1970]];
-    NSString *sign=[LCUtils calMD5:[NSString stringWithFormat:@"%@%@",timestamp,self.clientKey]];
+    NSString *sign=[LCUtils calMD5:[NSString stringWithFormat:@"%@%@",timestamp,self.applicationKey]];
     NSString *headerValue=[NSString stringWithFormat:@"%@,%@",sign,timestamp];
     
     [_clientImpl setDefaultHeader:@"x-avoscloud-request-sign" value:headerValue];
     [_clientImpl setDefaultHeader:self.applicationIdField value:self.applicationId];
+    [_clientImpl setDefaultHeader:self.applicationKeyField value:self.applicationKey];
     [_clientImpl setDefaultHeader:@"Accept" value:@"application/json"];
 }
 
 - (dispatch_queue_t)completionQueue {
     if (!_completionQueue) {
-        _completionQueue = dispatch_queue_create("avos.paas.completionQueue", DISPATCH_QUEUE_CONCURRENT);
+        _completionQueue = dispatch_queue_create("com.leancloud.completionQueue", DISPATCH_QUEUE_CONCURRENT);
     }
     return _completionQueue;
 }

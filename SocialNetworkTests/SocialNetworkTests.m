@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import <AVOSCloud/AVOSCloud.h>
+#import "LeanCloudSNS.h"
+#import "AVUser+SNS.h"
 
 @interface SocialNetworkTests : XCTestCase
 
@@ -25,9 +28,8 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testRenrenAccount {
     // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
 }
 
 - (void)testPerformanceExample {

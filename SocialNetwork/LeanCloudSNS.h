@@ -214,7 +214,9 @@ typedef void (^AVSNSProgressBlock)(float percent);
  *  @param  callback    登录结果回调
  */
 +(void)refreshToken:(AVOSCloudSNSType)type withCallback:(AVSNSResultBlock)callback;
+
 @end
 
+typedef LeanCloudSNS AVOSCloudSNS;
 
 

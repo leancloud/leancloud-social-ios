@@ -19,7 +19,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
 +(NSString*)nameOfPlatform:(AVOSCloudSNSType)type{
     switch (type) {
         case AVOSCloudSNSQQ: return @"qq";
-        
+            
         case AVOSCloudSNSSinaWeibo: return @"weibo";
     }
     return nil;
@@ -43,11 +43,11 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     id expValue=authData[@"expires_at"];
     NSString *exp=[expValue isKindOfClass:[NSDate class]]?[LCUtils stringFromDate:expValue]:expValue;
     
-   return @{
-      idname:authData[@"id"],
-      @"access_token":authData[@"access_token"],
-      @"expires_at":exp,
-      };
+    return @{
+             idname:authData[@"id"],
+             @"access_token":authData[@"access_token"],
+             @"expires_at":exp,
+             };
 }
 
 +(NSDictionary *)authDataFromSNSResult:(NSDictionary*)authData platform:(NSString *)platform error:(NSError **)error {
@@ -138,25 +138,21 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
             
             [self setObject:dict forKey:@"authData"];
             
-            
             [self saveEventually:^(BOOL succeeded, NSError *error) {
                 if(block)[LCUtils callUserResultBlock:block user:ws error:error];
             }];
-            
-            
         }else{
             //这个是新产生的用户, 需要在服务器注册
-            
             NSDictionary *dict=@{@"authData":@{
                                          [[self class] nameOfPlatform:[authData[@"platform"] intValue]]:
                                              [[self class] authDataFromSNSResult:authData]
                                          }};
             [[LCHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
-                
                 if (error == nil)
                 {
                     [LCUtils copyDictionary:object toObject:ws];
                     [ws setObject:dict[@"authData"] forKey:@"authData"];
+// todo: fix me!
 //                    [ws.requestManager clear];
 //                    [[self class] changeCurrentUser:ws save:YES];
                 }
@@ -181,69 +177,68 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
         }
         return;
     }
-
-        
-        if (self.objectId && self.sessionToken) {
-            //目前API不支持添加 只会覆盖 所以临时会把用户所有的绑定数据同时发一次 (如果服务器准备好, 直接删除下面两行即可)
-            NSMutableDictionary *dict = [[self objectForKey:@"authData"] mutableCopy];
-            if (!dict) {
-                dict = [[NSMutableDictionary alloc] init];
+    
+    if (self.objectId && self.sessionToken) {
+        //目前API不支持添加 只会覆盖 所以临时会把用户所有的绑定数据同时发一次 (如果服务器准备好, 直接删除下面两行即可)
+        NSMutableDictionary *dict = [[self objectForKey:@"authData"] mutableCopy];
+        if (!dict) {
+            dict = [[NSMutableDictionary alloc] init];
+        }
+        [dict setObject:authDataResult forKey:platform];
+        [self setObject:dict forKey:@"authData"];
+        [self saveEventually:^(BOOL succeeded, NSError *error) {
+            if(block) {
+                [LCUtils callUserResultBlock:block user:self error:error];
             }
-            [dict setObject:authDataResult forKey:platform];
-            [self setObject:dict forKey:@"authData"];
-            [self saveEventually:^(BOOL succeeded, NSError *error) {
-                if(block) {
-                    [LCUtils callUserResultBlock:block user:self error:error];
-                }
-            }];
-        }else{
-            //这个是新产生的用户, 需要在服务器注册
-            NSDictionary *dict=@{@"authData":@{platform:authDataResult}};
-            [[LCHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
-                if (!error) {
-                    [LCUtils copyDictionary:object toObject:self];
-                    [self setObject:dict[@"authData"] forKey:@"authData"];
-                    // fix me!
+        }];
+    }else{
+        //这个是新产生的用户, 需要在服务器注册
+        NSDictionary *dict=@{@"authData":@{platform:authDataResult}};
+        [[LCHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
+            if (!error) {
+                [LCUtils copyDictionary:object toObject:self];
+                [self setObject:dict[@"authData"] forKey:@"authData"];
+// todo: fix me!
 //                    [self.requestManager clear];
 //                    [[self class] changeCurrentUser:self save:YES];
-                }
-                if(block) {
-                    [LCUtils callUserResultBlock:block user:self error:error];
-                }
-            }];
-        }
+            }
+            if(block) {
+                [LCUtils callUserResultBlock:block user:self error:error];
+            }
+        }];
+    }
 }
 
 +(void)loginWithAuthData:(NSDictionary*)authData
-                           block:(AVUserResultBlock)block{
+                   block:(AVUserResultBlock)block{
     
     
     
     NSDictionary *dict=@{@"authData":@{
                                  [self nameOfPlatform:[authData[@"platform"] intValue]]:
-                                 [self authDataFromSNSResult:authData]
+                                     [self authDataFromSNSResult:authData]
                                  }};
     
     
     [[LCHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
         
-            AVUser * user = nil;
-            if (error == nil)
-            {
-                user = [[self class] user];
-                [LCUtils copyDictionary:object toObject:user];
-                
-                if(object[@"authData"]==nil){
-                    [user setObject:dict[@"authData"] forKey:@"authData"];
-                }
-  
-                // fix me!
-//                [user.requestManager clear];
-//                [[self class] changeCurrentUser:user save:YES];
+        AVUser * user = nil;
+        if (error == nil)
+        {
+            user = [[self class] user];
+            [LCUtils copyDictionary:object toObject:user];
+            
+            if(object[@"authData"]==nil){
+                [user setObject:dict[@"authData"] forKey:@"authData"];
             }
             
+// todo: fix me!
+//                [user.requestManager clear];
+//                [[self class] changeCurrentUser:user save:YES];
+        }
         
-            if(block)[LCUtils callUserResultBlock:block user:user error:error];
+        
+        if(block)[LCUtils callUserResultBlock:block user:user error:error];
     }];
 }
 
@@ -267,9 +262,9 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
             if(!object[@"authData"]){
                 [user setObject:dict[@"authData"] forKey:@"authData"];
             }
-            // fix me!
+// todo: fix me!
 //            [user.requestManager clear];
-//            [self changeCurrentUser:user save:YES];
+//            [[self class] changeCurrentUser:user save:YES];
         }
         if(block) {
             [LCUtils callUserResultBlock:block user:user error:error];

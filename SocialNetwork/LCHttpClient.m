@@ -118,4 +118,29 @@
     [self enqueueHTTPRequestOperation:operation];
 }
 
+-(void)getObject:(NSString *)path
+  withParameters:(NSDictionary *)parameters
+           block:(AVIdResultBlock)block {
+    
+    NSMutableURLRequest *request = [self createRequest:@"GET" path:path parameters:parameters];
+    
+    [self goRequest:request saveResult:NO block:block retryTimes:0];
+}
+
+-(void)putObject:(NSString *)path
+  withParameters:(NSDictionary *)parameters
+           block:(AVIdResultBlock)block {
+    NSMutableURLRequest *request = [self createRequest:@"PUT" path:path parameters:parameters];
+    
+    [self goRequest:request saveResult:NO block:block retryTimes:0];
+}
+
+-(void)deleteObject:(NSString *)path
+     withParameters:(NSDictionary *)parameters
+              block:(AVIdResultBlock)block {
+    NSMutableURLRequest *request = [self createRequest:@"DELETE" path:path parameters:parameters];
+    
+    [self goRequest:request saveResult:NO block:block retryTimes:0];
+}
+
 @end

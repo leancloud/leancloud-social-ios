@@ -29,4 +29,16 @@
    withParameters:(NSDictionary *)parameters
             block:(AVIdResultBlock)block;
 
+-(void)getObject:(NSString *)path
+   withParameters:(NSDictionary *)parameters
+            block:(AVIdResultBlock)block;
+
+-(void)putObject:(NSString *)path
+  withParameters:(NSDictionary *)parameters
+           block:(AVIdResultBlock)block;
+
+-(void)deleteObject:(NSString *)path
+  withParameters:(NSDictionary *)parameters
+           block:(AVIdResultBlock)block;
+
 @end

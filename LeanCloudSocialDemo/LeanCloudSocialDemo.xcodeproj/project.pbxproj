@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5CC504A41B0EF46C004D0CB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC504A31B0EF46C004D0CB1 /* main.m */; };
+		5CC504A71B0EF46C004D0CB1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC504A61B0EF46C004D0CB1 /* AppDelegate.m */; };
+		5CC504AA1B0EF46C004D0CB1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC504A91B0EF46C004D0CB1 /* ViewController.m */; };
+		5CC504AD1B0EF46C004D0CB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CC504AB1B0EF46C004D0CB1 /* Main.storyboard */; };
+		5CC504AF1B0EF46C004D0CB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CC504AE1B0EF46C004D0CB1 /* Images.xcassets */; };
+		5CC504B21B0EF46C004D0CB1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CC504B01B0EF46C004D0CB1 /* LaunchScreen.xib */; };
+		5CC504BE1B0EF46C004D0CB1 /* LeanCloudSocialDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC504BD1B0EF46C004D0CB1 /* LeanCloudSocialDemoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5CC504B81B0EF46C004D0CB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CC504961B0EF46C004D0CB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CC5049D1B0EF46C004D0CB1;
+			remoteInfo = LeanCloudSocialDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5CC5049E1B0EF46C004D0CB1 /* LeanCloudSocialDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeanCloudSocialDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC504A21B0EF46C004D0CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CC504A31B0EF46C004D0CB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5CC504A51B0EF46C004D0CB1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5CC504A61B0EF46C004D0CB1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5CC504A81B0EF46C004D0CB1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5CC504A91B0EF46C004D0CB1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5CC504AC1B0EF46C004D0CB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5CC504AE1B0EF46C004D0CB1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5CC504B11B0EF46C004D0CB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5CC504B71B0EF46C004D0CB1 /* LeanCloudSocialDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeanCloudSocialDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC504BC1B0EF46C004D0CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CC504BD1B0EF46C004D0CB1 /* LeanCloudSocialDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanCloudSocialDemoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CC5049B1B0EF46C004D0CB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC504B41B0EF46C004D0CB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5CC504951B0EF46C004D0CB1 = {
+			isa = PBXGroup;
+			children = (
+				5CC504A01B0EF46C004D0CB1 /* LeanCloudSocialDemo */,
+				5CC504BA1B0EF46C004D0CB1 /* LeanCloudSocialDemoTests */,
+				5CC5049F1B0EF46C004D0CB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5CC5049F1B0EF46C004D0CB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CC5049E1B0EF46C004D0CB1 /* LeanCloudSocialDemo.app */,
+				5CC504B71B0EF46C004D0CB1 /* LeanCloudSocialDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5CC504A01B0EF46C004D0CB1 /* LeanCloudSocialDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5CC504A51B0EF46C004D0CB1 /* AppDelegate.h */,
+				5CC504A61B0EF46C004D0CB1 /* AppDelegate.m */,
+				5CC504A81B0EF46C004D0CB1 /* ViewController.h */,
+				5CC504A91B0EF46C004D0CB1 /* ViewController.m */,
+				5CC504AB1B0EF46C004D0CB1 /* Main.storyboard */,
+				5CC504AE1B0EF46C004D0CB1 /* Images.xcassets */,
+				5CC504B01B0EF46C004D0CB1 /* LaunchScreen.xib */,
+				5CC504A11B0EF46C004D0CB1 /* Supporting Files */,
+			);
+			path = LeanCloudSocialDemo;
+			sourceTree = "<group>";
+		};
+		5CC504A11B0EF46C004D0CB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CC504A21B0EF46C004D0CB1 /* Info.plist */,
+				5CC504A31B0EF46C004D0CB1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5CC504BA1B0EF46C004D0CB1 /* LeanCloudSocialDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				5CC504BD1B0EF46C004D0CB1 /* LeanCloudSocialDemoTests.m */,
+				5CC504BB1B0EF46C004D0CB1 /* Supporting Files */,
+			);
+			path = LeanCloudSocialDemoTests;
+			sourceTree = "<group>";
+		};
+		5CC504BB1B0EF46C004D0CB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CC504BC1B0EF46C004D0CB1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5CC5049D1B0EF46C004D0CB1 /* LeanCloudSocialDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CC504C11B0EF46C004D0CB1 /* Build configuration list for PBXNativeTarget "LeanCloudSocialDemo" */;
+			buildPhases = (
+				5CC5049A1B0EF46C004D0CB1 /* Sources */,
+				5CC5049B1B0EF46C004D0CB1 /* Frameworks */,
+				5CC5049C1B0EF46C004D0CB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeanCloudSocialDemo;
+			productName = LeanCloudSocialDemo;
+			productReference = 5CC5049E1B0EF46C004D0CB1 /* LeanCloudSocialDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5CC504B61B0EF46C004D0CB1 /* LeanCloudSocialDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CC504C41B0EF46C004D0CB1 /* Build configuration list for PBXNativeTarget "LeanCloudSocialDemoTests" */;
+			buildPhases = (
+				5CC504B31B0EF46C004D0CB1 /* Sources */,
+				5CC504B41B0EF46C004D0CB1 /* Frameworks */,
+				5CC504B51B0EF46C004D0CB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CC504B91B0EF46C004D0CB1 /* PBXTargetDependency */,
+			);
+			name = LeanCloudSocialDemoTests;
+			productName = LeanCloudSocialDemoTests;
+			productReference = 5CC504B71B0EF46C004D0CB1 /* LeanCloudSocialDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5CC504961B0EF46C004D0CB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = LeanCloud;
+				TargetAttributes = {
+					5CC5049D1B0EF46C004D0CB1 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					5CC504B61B0EF46C004D0CB1 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 5CC5049D1B0EF46C004D0CB1;
+					};
+				};
+			};
+			buildConfigurationList = 5CC504991B0EF46C004D0CB1 /* Build configuration list for PBXProject "LeanCloudSocialDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5CC504951B0EF46C004D0CB1;
+			productRefGroup = 5CC5049F1B0EF46C004D0CB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5CC5049D1B0EF46C004D0CB1 /* LeanCloudSocialDemo */,
+				5CC504B61B0EF46C004D0CB1 /* LeanCloudSocialDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5CC5049C1B0EF46C004D0CB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CC504AD1B0EF46C004D0CB1 /* Main.storyboard in Resources */,
+				5CC504B21B0EF46C004D0CB1 /* LaunchScreen.xib in Resources */,
+				5CC504AF1B0EF46C004D0CB1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC504B51B0EF46C004D0CB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CC5049A1B0EF46C004D0CB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CC504AA1B0EF46C004D0CB1 /* ViewController.m in Sources */,
+				5CC504A71B0EF46C004D0CB1 /* AppDelegate.m in Sources */,
+				5CC504A41B0EF46C004D0CB1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC504B31B0EF46C004D0CB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CC504BE1B0EF46C004D0CB1 /* LeanCloudSocialDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5CC504B91B0EF46C004D0CB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CC5049D1B0EF46C004D0CB1 /* LeanCloudSocialDemo */;
+			targetProxy = 5CC504B81B0EF46C004D0CB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5CC504AB1B0EF46C004D0CB1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CC504AC1B0EF46C004D0CB1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5CC504B01B0EF46C004D0CB1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CC504B11B0EF46C004D0CB1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5CC504BF1B0EF46C004D0CB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5CC504C01B0EF46C004D0CB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5CC504C21B0EF46C004D0CB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LeanCloudSocialDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5CC504C31B0EF46C004D0CB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LeanCloudSocialDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5CC504C51B0EF46C004D0CB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LeanCloudSocialDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeanCloudSocialDemo.app/LeanCloudSocialDemo";
+			};
+			name = Debug;
+		};
+		5CC504C61B0EF46C004D0CB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LeanCloudSocialDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeanCloudSocialDemo.app/LeanCloudSocialDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5CC504991B0EF46C004D0CB1 /* Build configuration list for PBXProject "LeanCloudSocialDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CC504BF1B0EF46C004D0CB1 /* Debug */,
+				5CC504C01B0EF46C004D0CB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CC504C11B0EF46C004D0CB1 /* Build configuration list for PBXNativeTarget "LeanCloudSocialDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CC504C21B0EF46C004D0CB1 /* Debug */,
+				5CC504C31B0EF46C004D0CB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5CC504C41B0EF46C004D0CB1 /* Build configuration list for PBXNativeTarget "LeanCloudSocialDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CC504C51B0EF46C004D0CB1 /* Debug */,
+				5CC504C61B0EF46C004D0CB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5CC504961B0EF46C004D0CB1 /* Project object */;
+}

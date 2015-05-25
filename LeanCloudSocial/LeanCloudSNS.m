@@ -606,7 +606,11 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
         UINavigationController *nvc=[[UINavigationController alloc] initWithRootViewController:vc];
         
         [[self ssoConfigs] setObject:vc forKey:@"tmpvc"];
-        
+
+        if ([rootC isKindOfClass:[UINavigationController class]]) {
+            rootC = [(UINavigationController*)rootC visibleViewController];
+        }
+
         [rootC presentViewController:nvc animated:YES completion:nil];
     }
 }

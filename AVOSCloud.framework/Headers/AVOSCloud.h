@@ -214,6 +214,17 @@ typedef enum AVLogLevel : NSUInteger {
                             callback:(AVBooleanResultBlock)callback;
 
 /*!
+ * 请求语音短信验证码，需要开启手机短信验证 API 选项
+ * 发送语音短信到指定手机上
+ * @param phoneNumber 11 位电话号码
+ * @param IDD 号码的所在地国家代码，如果传 nil，默认为 "+86"
+ * @param callback 回调结果
+ */
++(void)requestVoiceCodeWithPhoneNumber:(NSString *)phoneNumber
+                                   IDD:(NSString *)IDD
+                              callback:(AVBooleanResultBlock)callback;
+
+/*!
  *  验证短信验证码，需要开启手机短信验证 API 选项。
  *  发送验证码给服务器进行验证。
  *  @param code 6位手机验证码

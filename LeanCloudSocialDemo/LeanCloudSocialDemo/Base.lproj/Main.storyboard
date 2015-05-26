@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,7 +16,59 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJT-vP-NV4">
+                                <rect key="frame" x="36" y="100" width="528" height="30"/>
+                                <state key="normal" title="新浪微博登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="weiboLogin:" destination="x5A-6p-PRh" eventType="touchUpInside" id="Q7f-yT-8C2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0u-v7-tRz">
+                                <rect key="frame" x="36" y="200" width="528" height="30"/>
+                                <state key="normal" title="微信登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="weixinLogin:" destination="x5A-6p-PRh" eventType="touchUpInside" id="C0a-tN-5qZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="274-Bq-aZO">
+                                <rect key="frame" x="36" y="250" width="528" height="30"/>
+                                <state key="normal" title="人人账户登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="renrenLogin:" destination="x5A-6p-PRh" eventType="touchUpInside" id="dJg-Jw-H0l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilD-ZX-Ker">
+                                <rect key="frame" x="36" y="150" width="528" height="30"/>
+                                <state key="normal" title="腾讯 QQ 登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="qzoneLogin:" destination="x5A-6p-PRh" eventType="touchUpInside" id="tUB-aD-waf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EJT-vP-NV4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="1Bn-kH-E9E"/>
+                            <constraint firstItem="ilD-ZX-Ker" firstAttribute="top" secondItem="EJT-vP-NV4" secondAttribute="bottom" constant="20" id="4Aa-HN-Cud"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EJT-vP-NV4" secondAttribute="trailing" constant="20" id="6uj-1c-6er"/>
+                            <constraint firstItem="274-Bq-aZO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="9pf-Ob-PP7"/>
+                            <constraint firstItem="e0u-v7-tRz" firstAttribute="top" secondItem="ilD-ZX-Ker" secondAttribute="bottom" constant="20" id="G53-pc-ZkD"/>
+                            <constraint firstItem="ilD-ZX-Ker" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="JXK-u5-Leb"/>
+                            <constraint firstItem="274-Bq-aZO" firstAttribute="top" secondItem="e0u-v7-tRz" secondAttribute="bottom" constant="20" id="L5e-FL-vfy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="274-Bq-aZO" secondAttribute="trailing" constant="20" id="PZE-4Q-eay"/>
+                            <constraint firstItem="e0u-v7-tRz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="Plo-NJ-jAG"/>
+                            <constraint firstItem="EJT-vP-NV4" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="80" id="kBQ-XU-4AK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ilD-ZX-Ker" secondAttribute="trailing" constant="20" id="m1o-gm-igX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e0u-v7-tRz" secondAttribute="trailing" constant="20" id="oFC-KM-ulQ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

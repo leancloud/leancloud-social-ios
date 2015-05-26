@@ -154,7 +154,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
                     [ws setObject:dict[@"authData"] forKey:@"authData"];
 // todo: fix me!
 //                    [ws.requestManager clear];
-//                    [[self class] changeCurrentUser:ws save:YES];
+                    [[self class] changeCurrentUser:ws save:YES];
                 }
                 
                 
@@ -200,7 +200,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
                 [self setObject:dict[@"authData"] forKey:@"authData"];
 // todo: fix me!
 //                    [self.requestManager clear];
-//                    [[self class] changeCurrentUser:self save:YES];
+                [[self class] changeCurrentUser:self save:YES];
             }
             if(block) {
                 [LCUtils callUserResultBlock:block user:self error:error];
@@ -234,7 +234,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
             
 // todo: fix me!
 //                [user.requestManager clear];
-//                [[self class] changeCurrentUser:user save:YES];
+            [[self class] changeCurrentUser:user save:YES];
         }
         
         
@@ -264,7 +264,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
             }
 // todo: fix me!
 //            [user.requestManager clear];
-//            [[self class] changeCurrentUser:user save:YES];
+            [[self class] changeCurrentUser:user save:YES];
         }
         if(block) {
             [LCUtils callUserResultBlock:block user:user error:error];

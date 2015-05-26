@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <AVOSCloud/AVOSCloud.h>
+#import <LeanCloudSocial/LeanCloudSocial.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSString *appId = @"2jjvnj3938p6pns11r41dlte2n98bm6m7bkblm1cysttm7in";
+    NSString *appKey = @"7dtvdetcfggpalwtf91pdoootc7csxx0vxyi3ayqtbnlklq2";
+    [AVOSCloud setApplicationId:appId clientKey:appKey];
+    NSLog(@"setAppId:%@, appKey:%@", appId, appKey);
+    
+    [LeanCloudSNS setupPlatform:AVOSCloudSNSSinaWeibo withAppKey:@"3204693755" andAppSecret:@"4946001e214ce387693dde961c29e148" andRedirectURI:@"http://leansocial.avosapps.com"];
+    [LeanCloudSNS setupPlatform:AVOSCloudSNSQQ withAppKey:@"1104663626" andAppSecret:@"f48pqrZNcW2pmDLu" andRedirectURI:nil];
+    
+    [AVOSCloud setVerbosePolicy:kAVVerboseShow];
+    [AVLogger addLoggerDomain:AVLoggerDomainIM];
+    [AVLogger addLoggerDomain:AVLoggerDomainCURL];
+    [AVLogger setLoggerLevelMask:AVLoggerLevelAll];
+
     return YES;
 }
 

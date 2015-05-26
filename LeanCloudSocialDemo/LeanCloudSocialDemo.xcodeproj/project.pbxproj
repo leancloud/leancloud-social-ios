@@ -29,6 +29,7 @@
 		5CC505BF1B145C04004D0CB1 /* LeanCloudSNSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC505B41B145C04004D0CB1 /* LeanCloudSNSUtils.m */; };
 		5CC505C01B145C04004D0CB1 /* NSURL+AVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC505B71B145C04004D0CB1 /* NSURL+AVAdditions.m */; };
 		5CC505C21B145C35004D0CB1 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC505C11B145C35004D0CB1 /* AVOSCloud.framework */; };
+		5CC505C51B146051004D0CB1 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC505C41B146051004D0CB1 /* ResultViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		5CC505B61B145C04004D0CB1 /* NSURL+AVAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+AVAdditions.h"; path = "../../LeanCloudSocial/NSURL+AVAdditions.h"; sourceTree = "<group>"; };
 		5CC505B71B145C04004D0CB1 /* NSURL+AVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+AVAdditions.m"; path = "../../LeanCloudSocial/NSURL+AVAdditions.m"; sourceTree = "<group>"; };
 		5CC505C11B145C35004D0CB1 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVOSCloud.framework; path = ../AVOSCloud.framework; sourceTree = "<group>"; };
+		5CC505C31B146051004D0CB1 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		5CC505C41B146051004D0CB1 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				5CC504AE1B0EF46C004D0CB1 /* Images.xcassets */,
 				5CC504B01B0EF46C004D0CB1 /* LaunchScreen.xib */,
 				5CC504A11B0EF46C004D0CB1 /* Supporting Files */,
+				5CC505C31B146051004D0CB1 /* ResultViewController.h */,
+				5CC505C41B146051004D0CB1 /* ResultViewController.m */,
 			);
 			path = LeanCloudSocialDemo;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				5CC505BD1B145C04004D0CB1 /* LCUtils.m in Sources */,
 				5CC505BF1B145C04004D0CB1 /* LeanCloudSNSUtils.m in Sources */,
 				5CC504A41B0EF46C004D0CB1 /* main.m in Sources */,
+				5CC505C51B146051004D0CB1 /* ResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,6 +24,7 @@
                                 </state>
                                 <connections>
                                     <action selector="weiboLogin:" destination="x5A-6p-PRh" eventType="touchUpInside" id="Q7f-yT-8C2"/>
+                                    <segue destination="Byc-IT-joB" kind="show" identifier="WeiboResult" id="g7j-Wv-KHr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0u-v7-tRz">
@@ -51,6 +52,7 @@
                                 </state>
                                 <connections>
                                     <action selector="qzoneLogin:" destination="x5A-6p-PRh" eventType="touchUpInside" id="tUB-aD-waf"/>
+                                    <segue destination="Byc-IT-joB" kind="show" identifier="QQResult" id="fX4-3v-OM4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,6 +75,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="462" y="441"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="ztX-6a-saG">
+            <objects>
+                <viewController id="Byc-IT-joB" customClass="ResultViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rKE-Hr-vfX"/>
+                        <viewControllerLayoutGuide type="bottom" id="xce-e0-yAL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IDj-cu-bRG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录成功！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8a-nQ-hB1">
+                                <rect key="frame" x="96" y="78" width="408" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDB-Ax-hYQ">
+                                <rect key="frame" x="96" y="140" width="408" height="30"/>
+                                <state key="normal" title="返回">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dPI-hm-8OK" kind="unwind" unwindAction="unwindToMainMenu:" id="68t-qb-6eg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YDB-Ax-hYQ" firstAttribute="leading" secondItem="IDj-cu-bRG" secondAttribute="leadingMargin" constant="80" id="Bgh-hC-kOu"/>
+                            <constraint firstItem="w8a-nQ-hB1" firstAttribute="leading" secondItem="IDj-cu-bRG" secondAttribute="leadingMargin" constant="80" id="Ds8-eX-8U1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YDB-Ax-hYQ" secondAttribute="trailing" constant="80" id="YC8-oj-hZd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w8a-nQ-hB1" secondAttribute="trailing" constant="80" id="bS8-YZ-Og3"/>
+                            <constraint firstItem="YDB-Ax-hYQ" firstAttribute="top" secondItem="w8a-nQ-hB1" secondAttribute="bottom" constant="41" id="ofd-c0-P9I"/>
+                            <constraint firstItem="w8a-nQ-hB1" firstAttribute="top" secondItem="rKE-Hr-vfX" secondAttribute="bottom" constant="58" id="otk-mt-qW0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y5n-bh-yff" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dPI-hm-8OK" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1170" y="468"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="g7j-Wv-KHr"/>
+    </inferredMetricsTieBreakers>
 </document>

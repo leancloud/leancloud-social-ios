@@ -22,23 +22,6 @@ LeanCloud Social Network 模块是 [LeanCloud](https://leancloud.cn) 开源的�
 └── README.md
 ```
 
-## 核心概念
-### LCFeedbackReply
-FeedbackReply 代表了反馈系统中间，用户或者开发者的每一次回复。不同的类型可以通过 ReplyType 属性来指定。FeedbackReply 内部主要记录有如下信息：
-
-* content，反馈的文本内容
-* replyType，类型标识，表明是用户提交的，还是开发者回复的
-* attachment，反馈对应的附件信息
-
-### LCFeedbackThread
-代表了用户与开发者的整个交流过程，与用户一一对应。一个用户只有一个 FeedbackThread，一个 FeedbackThread 内含有多个 FeedbackReply。FeedbackThread 内部主要记录有如下信息：
-
-* contact，用户联系方式
-* content，用户第一次反馈的文本
-* status，当前状态：open 还是 close
-* remarks，预留字段，开发者可以用来标记的一些其他信息
-
-
 ## 如何编译
 ### Xcode 编译
 在 Xcode 中选择 UniversalFramework Target，设备选为 iOS Device，在 Product 菜单中选择 Archive 即可开始编译。编译完成之后会在当前 build 目录下

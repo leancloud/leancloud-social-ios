@@ -11,7 +11,7 @@
 
 #define NameStringOfParam(param) [NSString stringWithFormat:@"%s", #param]
 
-@interface AVOSCloudSNSUtils : NSObject
+@interface LeanCloudSNSUtils : NSObject
 + (NSString *)serializeURL:(NSString *)baseURL params:(NSDictionary *)params;
 + (NSDictionary *)unserializeURL:(NSString *)url;
 + (NSDictionary *)unserializeJSONP:(NSString *)jsonp;

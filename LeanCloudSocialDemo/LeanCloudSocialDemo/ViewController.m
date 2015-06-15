@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <LeanCloudSocial/LeanCloudSocial.h>
+#import "AVOSCloudSocial.h"
 
 @interface ViewController () {
     BOOL _weiboSucc;
@@ -40,7 +40,7 @@
 
 - (IBAction)weiboLogin:(id)sender {
     _weiboSucc = NO;
-    [LeanCloudSNS loginWithCallback:^(id object, NSError *error) {
+    [AVOSCloudSNS loginWithCallback:^(id object, NSError *error) {
         if (error) {
             NSLog(@"failed to get authentication from weibo. error: %@", error.description);
         } else {
@@ -58,7 +58,7 @@
 
 - (IBAction)qzoneLogin:(id)sender {
     _qqSucc = NO;
-    [LeanCloudSNS loginWithCallback:^(id object, NSError *error) {
+    [AVOSCloudSNS loginWithCallback:^(id object, NSError *error) {
         if (error) {
             NSLog(@"failed to get authentication from weibo. error: %@", error.description);
         } else {
@@ -76,11 +76,14 @@
 
 - (IBAction)weixinLogin:(id)sender {
     _weixinSucc = NO;
-    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注意" message:@"本 Demo 尚未实现微信账号登录，请你自己申请微信开放平台账号，并导入。" delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 - (IBAction)renrenLogin:(id)sender {
     _renrenSucc = NO;
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注意" message:@"本 Demo 尚未实现人人账号登录，请你自己申请人人网开放平台账号，并导入。" delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 - (IBAction)unwindToMainMenu:(UIStoryboardSegue*)sender

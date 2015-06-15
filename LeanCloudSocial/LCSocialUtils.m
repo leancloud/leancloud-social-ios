@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 LeanCloud. All rights reserved.
 //
 
-#import "AVUtils.h"
+#import "LCSocialUtils.h"
 #import <AVOSCloud/AVGlobal.h>
 
 #import <CommonCrypto/CommonDigest.h>
 
 
-@implementation AVUtils
+@implementation LCSocialUtils
 
 +(NSString *)stringFromDate:(NSDate *)date
 {

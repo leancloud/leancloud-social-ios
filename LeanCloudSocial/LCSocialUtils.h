@@ -15,7 +15,7 @@
 #import <CoreServices/CoreServices.h>
 #endif
 
-@interface AVUtils : NSObject
+@interface LCSocialUtils : NSObject
 
 +(NSString *)stringFromDate:(NSDate *)date;
 

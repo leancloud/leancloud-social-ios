@@ -7,7 +7,7 @@
 //
 #import "AVUser+SNS.h"
 #import "LCHttpClient.h"
-#import "AVUtils.h"
+#import "LCSocialUtils.h"
 #import "AVOSCloudSocial.h"
 
 NSString *const AVOSCloudSNSPlatformWeiBo = @"weibo";
@@ -41,7 +41,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     }
     
     id expValue=authData[@"expires_at"];
-    NSString *exp=[expValue isKindOfClass:[NSDate class]]?[AVUtils stringFromDate:expValue]:expValue;
+    NSString *exp=[expValue isKindOfClass:[NSDate class]]?[LCSocialUtils stringFromDate:expValue]:expValue;
     
     return @{
              idname:authData[@"id"],
@@ -102,10 +102,10 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     __weak AVUser *ws=self;
     if (self.objectId && self.sessionToken) {
         [self saveEventually:^(BOOL succeeded, NSError *error) {
-            if(block)[AVUtils callUserResultBlock:block user:ws error:error];
+            if(block)[LCSocialUtils callUserResultBlock:block user:ws error:error];
         }];
     }else{
-        if(block)[AVUtils callUserResultBlock:block user:self error:nil];
+        if(block)[LCSocialUtils callUserResultBlock:block user:self error:nil];
     }
 }
 
@@ -115,13 +115,13 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     if (self.objectId && self.sessionToken) {
         [self saveEventually:^(BOOL succeeded, NSError *error) {
             if(block) {
-                [AVUtils callUserResultBlock:block user:self error:error];
+                [LCSocialUtils callUserResultBlock:block user:self error:error];
             }
         }];
     } else {
         if (block) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [AVUtils callUserResultBlock:block user:self error:nil];
+                [LCSocialUtils callUserResultBlock:block user:self error:nil];
             });
         }
     }
@@ -139,7 +139,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
             [self setObject:dict forKey:@"authData"];
             
             [self saveEventually:^(BOOL succeeded, NSError *error) {
-                if(block)[AVUtils callUserResultBlock:block user:ws error:error];
+                if(block)[LCSocialUtils callUserResultBlock:block user:ws error:error];
             }];
         }else{
             //这个是新产生的用户, 需要在服务器注册
@@ -150,7 +150,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
             [[LCHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
                 if (error == nil)
                 {
-                    [AVUtils copyDictionary:object toObject:ws];
+                    [LCSocialUtils copyDictionary:object toObject:ws];
                     [ws setObject:dict[@"authData"] forKey:@"authData"];
 // todo: fix me!
 //                    [ws.requestManager clear];
@@ -158,7 +158,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
                 }
                 
                 
-                if(block)[AVUtils callUserResultBlock:block user:ws error:error];
+                if(block)[LCSocialUtils callUserResultBlock:block user:ws error:error];
             }];
         }
         
@@ -172,7 +172,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     if (error) {
         if(block) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [AVUtils callUserResultBlock:block user:self error:error];
+                [LCSocialUtils callUserResultBlock:block user:self error:error];
             });
         }
         return;
@@ -188,7 +188,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
         [self setObject:dict forKey:@"authData"];
         [self saveEventually:^(BOOL succeeded, NSError *error) {
             if(block) {
-                [AVUtils callUserResultBlock:block user:self error:error];
+                [LCSocialUtils callUserResultBlock:block user:self error:error];
             }
         }];
     }else{
@@ -196,14 +196,14 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
         NSDictionary *dict=@{@"authData":@{platform:authDataResult}};
         [[LCHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
             if (!error) {
-                [AVUtils copyDictionary:object toObject:self];
+                [LCSocialUtils copyDictionary:object toObject:self];
                 [self setObject:dict[@"authData"] forKey:@"authData"];
 // todo: fix me!
 //                    [self.requestManager clear];
                 [[self class] changeCurrentUser:self save:YES];
             }
             if(block) {
-                [AVUtils callUserResultBlock:block user:self error:error];
+                [LCSocialUtils callUserResultBlock:block user:self error:error];
             }
         }];
     }
@@ -226,7 +226,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
         if (error == nil)
         {
             user = [[self class] user];
-            [AVUtils copyDictionary:object toObject:user];
+            [LCSocialUtils copyDictionary:object toObject:user];
             
             if(object[@"authData"]==nil){
                 [user setObject:dict[@"authData"] forKey:@"authData"];
@@ -238,7 +238,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
         }
         
         
-        if(block)[AVUtils callUserResultBlock:block user:user error:error];
+        if(block)[LCSocialUtils callUserResultBlock:block user:user error:error];
     }];
 }
 
@@ -248,7 +248,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     if (error) {
         if(block) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [AVUtils callUserResultBlock:block user:nil error:error];
+                [LCSocialUtils callUserResultBlock:block user:nil error:error];
             });
         }
         return;
@@ -258,7 +258,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
         AVUser * user = nil;
         if (!error) {
             user = [self user];
-            [AVUtils copyDictionary:object toObject:user];
+            [LCSocialUtils copyDictionary:object toObject:user];
             if(!object[@"authData"]){
                 [user setObject:dict[@"authData"] forKey:@"authData"];
             }
@@ -267,7 +267,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
             [[self class] changeCurrentUser:user save:YES];
         }
         if(block) {
-            [AVUtils callUserResultBlock:block user:user error:error];
+            [LCSocialUtils callUserResultBlock:block user:user error:error];
         }
     }];
 }

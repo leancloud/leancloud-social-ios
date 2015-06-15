@@ -8,7 +8,7 @@
 
 #import "LCHttpClient.h"
 #import <AVOSCloud/AVJSONRequestOperation.h>
-#import "LCUtils.h"
+#import "AVUtils.h"
 
 @interface LCHttpClient ()
 
@@ -61,7 +61,7 @@
 -(void)updateHeaders {
     
     NSString *timestamp=[NSString stringWithFormat:@"%.0f",1000*[[NSDate date] timeIntervalSince1970]];
-    NSString *sign=[LCUtils calMD5:[NSString stringWithFormat:@"%@%@",timestamp,self.applicationKey]];
+    NSString *sign=[AVUtils calMD5:[NSString stringWithFormat:@"%@%@",timestamp,self.applicationKey]];
     NSString *headerValue=[NSString stringWithFormat:@"%@,%@",sign,timestamp];
     
     [_clientImpl setDefaultHeader:@"x-avoscloud-request-sign" value:headerValue];

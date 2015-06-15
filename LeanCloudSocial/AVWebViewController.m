@@ -6,13 +6,13 @@
 //
 //
 
-#import "LCWebViewController.h"
+#import "AVWebViewController.h"
 
-@interface LCWebViewController ()
+@interface AVWebViewController ()
 
 @end
 
-@implementation LCWebViewController
+@implementation AVWebViewController
 
 - (id)init
 {

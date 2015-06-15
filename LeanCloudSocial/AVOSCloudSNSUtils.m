@@ -6,9 +6,9 @@
 //  Copyright (c) 2013年 AVOS. All rights reserved.
 //
 
-#import "LeanCloudSNSUtils.h"
+#import "AVOSCloudSNSUtils.h"
 
-@implementation LeanCloudSNSUtils
+@implementation AVOSCloudSNSUtils
 + (NSString *)serializeURL:(NSString *)baseURL params:(NSDictionary *)params{
     NSURL* parsedURL = [NSURL URLWithString:baseURL];
     

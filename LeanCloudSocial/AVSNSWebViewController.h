@@ -6,8 +6,8 @@
 //
 //
 
-#import "LCWebViewController.h"
-#import "LeanCloudSocial.h"
-@interface LCSNSWebViewController : LCWebViewController
+#import "AVWebViewController.h"
+#import "AVOSCloudSocial.h"
+@interface AVSNSWebViewController : AVWebViewController
 @property(nonatomic, copy)AVSNSResultBlock callback;
 @end

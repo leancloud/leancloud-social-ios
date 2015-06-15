@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LeanCloudSocial.h"
+#import "AVOSCloudSocial.h"
 
 #define NameStringOfParam(param) [NSString stringWithFormat:@"%s", #param]
 
-@interface LeanCloudSNSUtils : NSObject
+@interface AVOSCloudSNSUtils : NSObject
 + (NSString *)serializeURL:(NSString *)baseURL params:(NSDictionary *)params;
 + (NSDictionary *)unserializeURL:(NSString *)url;
 + (NSDictionary *)unserializeJSONP:(NSString *)jsonp;

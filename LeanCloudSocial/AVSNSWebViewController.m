@@ -6,15 +6,15 @@
 //
 //
 
-#import "LCSNSWebViewController.h"
+#import "AVSNSWebViewController.h"
 #import "NSURL+AVAdditions.h"
 
 extern NSString * const AVOSCloudSNSErrorDomain;
-@interface LCSNSWebViewController ()
+@interface AVSNSWebViewController ()
 
 @end
 
-@implementation LCSNSWebViewController
+@implementation AVSNSWebViewController
 
 - (NSDictionary *)extractParamsFromUrl:(NSURL *)url {
     NSMutableDictionary *params = [[url av_queryDictionary] mutableCopy];

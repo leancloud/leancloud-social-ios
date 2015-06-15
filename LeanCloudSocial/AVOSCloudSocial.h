@@ -1,6 +1,6 @@
 //
-//  LeanCloudSocial.h
-//  LeanCloudSocial
+//  AVOSCloudSocial.h
+//  AVOSCloudSocial
 //
 //  Created by Feng Junwen on 5/22/15.
 //  Copyright (c) 2015 LeanCloud. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for LeanCloudSocial.
-FOUNDATION_EXPORT double LeanCloudSocialVersionNumber;
+//! Project version number for AVOSCloudSocial.
+FOUNDATION_EXPORT double AVOSCloudSocialVersionNumber;
 
-//! Project version string for LeanCloudSocial.
-FOUNDATION_EXPORT const unsigned char LeanCloudSocialVersionString[];
+//! Project version string for AVOSCloudSocial.
+FOUNDATION_EXPORT const unsigned char AVOSCloudSocialVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <LeanCloudSocial/PublicHeader.h>
 
@@ -70,7 +70,7 @@ typedef void (^AVSNSProgressBlock)(float percent);
  *  AVOSCloudSNS 是一个轻量级的社交平台助手
  *  几行代码就可以实现登录和发布内容
  */
-@interface LeanCloudSNS : NSObject
+@interface AVOSCloudSNS : NSObject
 
 /**
  *  设置平台所需要的参数

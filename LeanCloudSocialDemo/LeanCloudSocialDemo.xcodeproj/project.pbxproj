@@ -444,7 +444,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					../,
 					../LeanCloudSocial,
-					"/Users/fengjunwen/Work/Meiwei/leancloud/LeanCloud-Social-iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"\"$(OBJROOT)/UninstalledProducts/include\"",
@@ -464,7 +463,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					../,
 					../LeanCloudSocial,
-					"/Users/fengjunwen/Work/Meiwei/leancloud/LeanCloud-Social-iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"\"$(OBJROOT)/UninstalledProducts/include\"",

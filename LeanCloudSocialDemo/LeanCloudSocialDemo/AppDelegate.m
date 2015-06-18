@@ -24,8 +24,8 @@
     [AVOSCloud setApplicationId:appId clientKey:appKey];
     NSLog(@"setAppId:%@, appKey:%@", appId, appKey);
     
-    [AVOSCloudSNS setupPlatform:AVOSCloudSNSSinaWeibo withAppKey:@"3204693755" andAppSecret:@"4946001e214ce387693dde961c29e148" andRedirectURI:@"http://leansocial.avosapps.com"];
-    [AVOSCloudSNS setupPlatform:AVOSCloudSNSQQ withAppKey:@"1104663626" andAppSecret:@"f48pqrZNcW2pmDLu" andRedirectURI:nil];
+    [AVOSCloudSNS setupPlatform:AVOSCloudSNSSinaWeibo withAppKey:@"2548122881" andAppSecret:@"ba37a6eb3018590b0d75da733c4998f8" andRedirectURI:@"http://wanpaiapp.com/oauth/callback/sina"];
+    [AVOSCloudSNS setupPlatform:AVOSCloudSNSQQ withAppKey:@"100512940" andAppSecret:@"afbfdff94b95a2fb8fe58a8e24c4ba5f" andRedirectURI:nil];
     
     [AVOSCloud setVerbosePolicy:kAVVerboseShow];
     [AVLogger addLoggerDomain:AVLoggerDomainIM];

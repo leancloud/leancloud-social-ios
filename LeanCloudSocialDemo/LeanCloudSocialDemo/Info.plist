@@ -27,7 +27,7 @@
 			<string>weibo</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>sinaweibosso.3204693755</string>
+				<string>sinaweibosso.2548122881</string>
 			</array>
 		</dict>
 		<dict>
@@ -37,7 +37,7 @@
 			<string>qzone</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>tencent1104663626</string>
+				<string>tencent100512940</string>
 			</array>
 		</dict>
 	</array>

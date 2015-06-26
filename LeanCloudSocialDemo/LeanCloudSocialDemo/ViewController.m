@@ -49,6 +49,8 @@
                     NSLog(@"failed to login leancloud. error: %@", error.description);
                 } else {
                     _weiboSucc = YES;
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"登录成功" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                    [alertView show];
                     [self performSegueWithIdentifier:@"WeiboResult" sender:sender];
                 }
             }];
@@ -67,6 +69,8 @@
                     NSLog(@"failed to login leancloud. error: %@", error.description);
                 } else {
                     _qqSucc = YES;
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"登录成功" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                    [alertView show];
                     [self performSegueWithIdentifier:@"QQResult" sender:sender];
                 }
             }];

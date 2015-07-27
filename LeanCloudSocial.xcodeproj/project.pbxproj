@@ -54,16 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C92CDB73C81797BB67BBC2A /* Pods-LeanCloudSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocial.release.xcconfig"; path = "LeanCloudSocialDemo/Pods/Target Support Files/Pods-LeanCloudSocial/Pods-LeanCloudSocial.release.xcconfig"; sourceTree = "<group>"; };
+		40595F669DA649C66885DC13 /* Pods-LeanCloudSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocial.debug.xcconfig"; path = "LeanCloudSocialDemo/Pods/Target Support Files/Pods-LeanCloudSocial/Pods-LeanCloudSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		5CC504411B0EC5B8004D0CB1 /* LeanCloudSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanCloudSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC504451B0EC5B8004D0CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CC5044C1B0EC5B9004D0CB1 /* LeanCloudSocialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeanCloudSocialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC504521B0EC5B9004D0CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CC504531B0EC5B9004D0CB1 /* LeanCloudSocialTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanCloudSocialTests.m; sourceTree = "<group>"; };
-		5CC5048B1B0EF3A4004D0CB1 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
-		5CC5048D1B0EF3B3004D0CB1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		5CC5048F1B0EF3BC004D0CB1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		5CC504911B0EF3C7004D0CB1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		5CC504931B0EF3D0004D0CB1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		70A6A14C1B661BA6005C2D21 /* AVOSCloudSNS_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVOSCloudSNS_.h; sourceTree = "<group>"; };
 		70A6A14D1B661BA6005C2D21 /* AVOSCloudSNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVOSCloudSNS.h; sourceTree = "<group>"; };
 		70A6A14E1B661BA6005C2D21 /* AVOSCloudSNS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVOSCloudSNS.m; sourceTree = "<group>"; };
@@ -81,9 +78,7 @@
 		70A6A15A1B661BA6005C2D21 /* LCHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCHttpClient.m; sourceTree = "<group>"; };
 		70A6A15B1B661BA6005C2D21 /* NSURL+AVAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+AVAdditions.h"; sourceTree = "<group>"; };
 		70A6A15C1B661BA6005C2D21 /* NSURL+AVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+AVAdditions.m"; sourceTree = "<group>"; };
-		9AFDD10493E1E4CF996AF646 /* Pods-LeanCloudSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeanCloudSocial/Pods-LeanCloudSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		C904EA0C993C8E9F1446505C /* libPods-LeanCloudSocial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeanCloudSocial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C930D00C225985DBCDB35DE5 /* Pods-LeanCloudSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeanCloudSocial/Pods-LeanCloudSocial.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +104,6 @@
 		5CC504371B0EC5B8004D0CB1 = {
 			isa = PBXGroup;
 			children = (
-				5CC504621B0EC9E7004D0CB1 /* frameworks */,
 				5CC504431B0EC5B8004D0CB1 /* LeanCloudSocial */,
 				5CC504501B0EC5B9004D0CB1 /* LeanCloudSocialTests */,
 				5CC504421B0EC5B8004D0CB1 /* Products */,
@@ -177,23 +171,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5CC504621B0EC9E7004D0CB1 /* frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5CC504931B0EF3D0004D0CB1 /* SystemConfiguration.framework */,
-				5CC504911B0EF3C7004D0CB1 /* MobileCoreServices.framework */,
-				5CC5048F1B0EF3BC004D0CB1 /* CoreTelephony.framework */,
-				5CC5048D1B0EF3B3004D0CB1 /* CoreLocation.framework */,
-				5CC5048B1B0EF3A4004D0CB1 /* libicucore.dylib */,
-			);
-			name = frameworks;
-			sourceTree = "<group>";
-		};
 		5D1E654D59321818BE3C9B78 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9AFDD10493E1E4CF996AF646 /* Pods-LeanCloudSocial.debug.xcconfig */,
-				C930D00C225985DBCDB35DE5 /* Pods-LeanCloudSocial.release.xcconfig */,
+				40595F669DA649C66885DC13 /* Pods-LeanCloudSocial.debug.xcconfig */,
+				0C92CDB73C81797BB67BBC2A /* Pods-LeanCloudSocial.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -363,7 +345,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LeanCloudSocial/Pods-LeanCloudSocial-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/LeanCloudSocialDemo/Pods/Target Support Files/Pods-LeanCloudSocial/Pods-LeanCloudSocial-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -493,7 +475,7 @@
 		};
 		5CC504581B0EC5B9004D0CB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AFDD10493E1E4CF996AF646 /* Pods-LeanCloudSocial.debug.xcconfig */;
+			baseConfigurationReference = 40595F669DA649C66885DC13 /* Pods-LeanCloudSocial.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -515,7 +497,7 @@
 		};
 		5CC504591B0EC5B9004D0CB1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C930D00C225985DBCDB35DE5 /* Pods-LeanCloudSocial.release.xcconfig */;
+			baseConfigurationReference = 0C92CDB73C81797BB67BBC2A /* Pods-LeanCloudSocial.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

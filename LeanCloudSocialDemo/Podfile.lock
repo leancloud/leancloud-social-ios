@@ -6,6 +6,8 @@ PODS:
     - AVOSCloud (~> 3.1)
 
 DEPENDENCIES:
+  - AFNetworking (~> 1.0)
+  - AVOSCloud (~> 3.1)
   - LeanCloudSocial (from `../`)
 
 EXTERNAL SOURCES:
@@ -15,6 +17,6 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
   AVOSCloud: 534bef9ffbf9d9acd7e96f74ca6faf590f4acf28
-  LeanCloudSocial: 1eba6715c1fb830d474370126047319d02e8aae5
+  LeanCloudSocial: 564d0e5ab0eef8351e68da9b0ebc233f1e97943e
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2

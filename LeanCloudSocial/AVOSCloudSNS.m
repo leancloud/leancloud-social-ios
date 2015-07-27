@@ -6,8 +6,8 @@
 //  Copyright (c) 2013年 AVOS. All rights reserved.
 //
 
-#import "AVOSCloudSocial.h"
-#import "LeanCloudSNSUtils.h"
+#import "AVOSCloudSNS.h"
+#import "AVOSCloudSNSUtils.h"
 #import "AVSNSLoginViewController.h"
 
 #import <AVOSCloud/AVJSONRequestOperation.h>
@@ -137,7 +137,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
         red_uri=@"http://";
     }
     
-    NSString *appAuthURL = [LeanCloudSNSUtils serializeURL:appAuthBaseURL
+    NSString *appAuthURL = [AVOSCloudSNSUtils serializeURL:appAuthBaseURL
                                                params:@{
                                                         @"client_id":config[@"appkey"],
                                                         @"redirect_uri":red_uri,
@@ -268,7 +268,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     
     NSInteger offset=[[tuser valueForKeyPath:@"access-token.expires-in"] integerValue];
     
-    NSDate *expireDate=[LeanCloudSNSUtils expireDateWithOffset:offset];
+    NSDate *expireDate=[AVOSCloudSNSUtils expireDateWithOffset:offset];
     [tuser setObject:expireDate forKey:@"expires_at"];
     
     [tuser removeObjectForKey:@"access-token"];
@@ -466,7 +466,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
 +(BOOL)handleOpenURL:(NSURL *)url{
     NSString *scheme=url.scheme;
     
-    NSDictionary *params=[LeanCloudSNSUtils unserializeURL:[url absoluteString]];
+    NSDictionary *params=[AVOSCloudSNSUtils unserializeURL:[url absoluteString]];
     //NSLog(@"Params: %@",[params description]);
     if ([scheme hasPrefix:@"sinaweibosso"]) {
         

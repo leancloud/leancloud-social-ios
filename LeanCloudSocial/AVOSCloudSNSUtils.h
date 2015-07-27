@@ -1,21 +1,23 @@
 //
-//  AVUtils.h
-//  SocialNetwork
+//  AVOSCloudSNSUtils.h
+//  AVOSCloudSNS
 //
-//  Created by Feng Junwen on 5/15/15.
-//  Copyright (c) 2015 LeanCloud. All rights reserved.
+//  Created by Travis on 13-10-21.
+//  Copyright (c) 2013年 AVOS. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import "AVOSCloudSNS.h"
 #import <AVOSCloud/AVOSCloud.h>
 
-#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
-#import <MobileCoreServices/MobileCoreServices.h>
-#else
-#import <CoreServices/CoreServices.h>
-#endif
+#define NameStringOfParam(param) [NSString stringWithFormat:@"%s", #param]
 
-@interface LCSocialUtils : NSObject
+@interface AVOSCloudSNSUtils : NSObject
++ (NSString *)serializeURL:(NSString *)baseURL params:(NSDictionary *)params;
++ (NSDictionary *)unserializeURL:(NSString *)url;
++ (NSDictionary *)unserializeJSONP:(NSString *)jsonp;
+
++(NSDate*)expireDateWithOffset:(NSInteger)offset;
 
 +(NSString *)stringFromDate:(NSDate *)date;
 
@@ -66,5 +68,6 @@
                            error:error;
 
 + (NSString*)calMD5:(NSString*)input;
+
 
 @end

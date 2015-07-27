@@ -1,5 +1,5 @@
 //
-//  AVOSCloudSocial.h
+//  AVOSCloudSNS.h
 //  AVOSCloudSocial
 //
 //  Created by Feng Junwen on 5/22/15.

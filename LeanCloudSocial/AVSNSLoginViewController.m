@@ -6,9 +6,9 @@
 //  Copyright (c) 2013年 AVOS. All rights reserved.
 //
 
-#import "AVOSCloudSocial.h"
+#import "AVOSCloudSNS.h"
 #import "AVSNSLoginViewController.h"
-#import "LeanCloudSNSUtils.h"
+#import "AVOSCloudSNSUtils.h"
 #import "AVOSCloudSNS_.h"
 
 static NSString * const AVOS_SNS_BASE_URL=@"cn.avoscloud.com";
@@ -250,7 +250,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
         }
         
     }else if(self.redirect_uri && [url hasPrefix:self.redirect_uri]){
-        NSDictionary *param= [LeanCloudSNSUtils unserializeURL:url];
+        NSDictionary *param= [AVOSCloudSNSUtils unserializeURL:url];
         NSString *code=param[@"code"];
         NSString *token=param[@"access_token"];
         if (code) {
@@ -259,7 +259,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
         }else if (token && self.type==AVOSCloudSNSQQ){
             [[AVOSCloudSNS client] getPath:[NSString stringWithFormat:@"https://graph.qq.com/oauth2.0/me?access_token=%@",token] parameters:nil success:^(AVHTTPRequestOperation *operation, id responseObject) {
                 NSString *string=[[NSString alloc] initWithBytes:[responseObject bytes] length:[responseObject length] encoding:NSUTF8StringEncoding];
-                NSDictionary *ret= [LeanCloudSNSUtils unserializeJSONP:string];
+                NSDictionary *ret= [AVOSCloudSNSUtils unserializeJSONP:string];
                 NSString *openid=ret[@"openid"];
                 [AVOSCloudSNS onSuccess:self.type withToken:token andExpires:param[@"expires_in"] andUid:openid];
             } failure:^(AVHTTPRequestOperation *operation, NSError *error) {

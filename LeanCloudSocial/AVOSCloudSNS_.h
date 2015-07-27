@@ -9,7 +9,7 @@
 #ifndef AVOSCloudSNS_AVOSCloudSNS__h
 #define AVOSCloudSNS_AVOSCloudSNS__h
 
-#import "AVOSCloudSocial.h"
+#import "AVOSCloudSNS.h"
 #import <AVOSCloud/AVHTTPClient.h>
 
 @interface AVOSCloudSNS ()

@@ -10,11 +10,11 @@
 #define AVOSCloudSNS_AVOSCloudSNS__h
 
 #import "AVOSCloudSNS.h"
-#import <AVOSCloud/AVHTTPClient.h>
+#import <AFNetworking/AFNetworking.h>
 
 @interface AVOSCloudSNS ()
 +(NSMutableDictionary*)ssoConfigs;
-+(AVHTTPClient*)client;
++(AFHTTPClient*)client;
 
 +(void)onSuccess:(AVOSCloudSNSType)type withToken:(NSString*)token andExpires:(NSString*)expires andUid:(NSString*)uid;
 +(void)onSuccess:(AVOSCloudSNSType)type withParams:(NSDictionary*)info;

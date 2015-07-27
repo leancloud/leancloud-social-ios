@@ -6,9 +6,10 @@
 //  Copyright (c) 2013年 AVOS. All rights reserved.
 //
 
+#define dateFormat   @"yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSS'Z'"
+
 #import "AVOSCloudSNSUtils.h"
 #import <CommonCrypto/CommonDigest.h>
-#import <AVOSCloud/AVGlobal.h>
 
 @implementation AVOSCloudSNSUtils
 + (NSString *)serializeURL:(NSString *)baseURL params:(NSDictionary *)params{
@@ -206,6 +207,15 @@ block(first_param, error); \
              result[8], result[9], result[10], result[11],
              result[12], result[13], result[14], result[15]
              ] lowercaseString];
+}
+
++ (NSError *)errorWithText:(NSString *)format, ... NS_FORMAT_FUNCTION(1, 2) {
+    va_list ap;
+    va_start(ap, format);
+    NSDictionary *errorInfo = @{NSLocalizedDescriptionKey : [[NSString alloc] initWithFormat:format arguments:ap]};
+    va_end(ap);
+    NSError *error = [NSError errorWithDomain:@"LeanCloudSocial Domain" code:0 userInfo:errorInfo];
+    return error;
 }
 
 @end

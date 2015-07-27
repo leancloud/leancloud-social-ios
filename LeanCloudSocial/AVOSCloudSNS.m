@@ -10,10 +10,10 @@
 #import "AVOSCloudSNSUtils.h"
 #import "AVSNSLoginViewController.h"
 
-#import <AVOSCloud/AVJSONRequestOperation.h>
-#import <AVOSCloud/AVHTTPRequestOperation.h>
+#import <AFNetworking/AFJSONRequestOperation.h>
+#import <AFNetworking/AFHTTPRequestOperation.h>
 
-#import <AVOSCloud/AVNetworking.h>
+#import <AFNetworking/AFNetworking.h>
 #import "AVSNSWebViewController.h"
 
 NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
@@ -24,13 +24,13 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
 
 @implementation AVOSCloudSNS
 
-+(AVHTTPClient*)client{
-    static AVHTTPClient *sharedClient=nil;
++(AFHTTPClient*)client {
+    static AFHTTPClient *sharedClient=nil;
     
     if (sharedClient==nil) {
-        sharedClient=[[AVHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://avoscloud.com"]];
+        sharedClient=[[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://avoscloud.com"]];
         sharedClient.stringEncoding=NSUTF8StringEncoding;
-        [sharedClient registerHTTPOperationClass:[AVHTTPRequestOperation class]];
+        [sharedClient registerHTTPOperationClass:[AFHTTPRequestOperation class]];
 
     }
     
@@ -352,7 +352,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
             break;
     }
     
-    [[self client] getPath:url parameters:params success:^(AVHTTPRequestOperation *operation, id responseObject) {
+    [[self client] getPath:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *params= [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         NSString *error=params[@"error"];
         if (error) {
@@ -383,7 +383,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
             [AVOSCloudSNS onSuccess:type withParams:dict];
             
         }
-    } failure:^(AVHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [AVOSCloudSNS onFail:type withError:error];
     }];
     
@@ -442,8 +442,8 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
             if (dict) {
                 NSString *token=[dict objectForKey:@"access_token"];
 
-                [[AVOSCloudSNS client] getPath:@"https://api.weibo.com/oauth2/revokeoauth2" parameters:@{@"access_token":token} success:^(AVHTTPRequestOperation *operation, id responseObject) {
-                } failure:^(AVHTTPRequestOperation *operation, NSError *error) {
+                [[AVOSCloudSNS client] getPath:@"https://api.weibo.com/oauth2/revokeoauth2" parameters:@{@"access_token":token} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 }];
             }
         }
@@ -618,7 +618,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
 
 +(void)request:(NSURLRequest*)req withCallback:(AVSNSResultBlock)callback andProgress:(AVSNSProgressBlock)progressBlock{
     
-    AVJSONRequestOperation *opt=[AVJSONRequestOperation JSONRequestOperationWithRequest:req success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+    AFJSONRequestOperation *opt=[AFJSONRequestOperation JSONRequestOperationWithRequest:req success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         callback(JSON,nil);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         if ([JSON isKindOfClass:[NSDictionary class]]) {
@@ -629,7 +629,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     }];
     
     if (progressBlock) {
-        [opt setUploadProgressBlock:^(AVURLConnectionOperation *operation, NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
+        [opt setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
             progressBlock(totalBytesWritten*1.0f/totalBytesExpectedToWrite);
         }];
     }
@@ -657,7 +657,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
         request =[[self client] multipartFormRequestWithMethod:@"POST"
                                                           path:urlString
                                                     parameters:parameters
-                                     constructingBodyWithBlock:^(id<AVMultipartFormData> formData) {
+                                     constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
                                          NSData *imageData=UIImageJPEGRepresentation(image, 0.8);
                                          [formData appendPartWithFormData:imageData name:@"pic"];
                                          [formData appendPartWithFileData:imageData name:@"pic" fileName:@"image" mimeType:@"image/jpeg"];

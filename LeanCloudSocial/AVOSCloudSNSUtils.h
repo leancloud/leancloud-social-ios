@@ -10,6 +10,12 @@
 #import "AVOSCloudSNS.h"
 #import <AVOSCloud/AVOSCloud.h>
 
+#ifdef DEBUG
+#   define SLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#   define SLog(fmt, ...)
+#endif
+
 #define NameStringOfParam(param) [NSString stringWithFormat:@"%s", #param]
 
 @interface AVOSCloudSNSUtils : NSObject
@@ -22,6 +28,8 @@
 #pragma mark -
 
 +(NSString *)stringFromDate:(NSDate *)date;
+
++ (NSError *)errorWithText:(NSString *)format, ... NS_FORMAT_FUNCTION(1, 2);
 
 +(void)copyDictionary:(NSDictionary *)src
              toObject:(AVObject *)target;

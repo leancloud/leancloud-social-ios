@@ -169,7 +169,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
             return;
     }
     
-    [[AVOSCloudSNS client] postPath:url parameters:param success:^(AVHTTPRequestOperation *operation, id responseObject) {
+    [[AVOSCloudSNS client] postPath:url parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *info=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         
         NSString *token=info[@"access_token"];
@@ -186,7 +186,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
             //TODO: return unknow error
             [AVOSCloudSNS onFail:self.type withError:error];
         }
-    } failure:^(AVHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [AVOSCloudSNS onFail:self.type withError:error];
     }];
     
@@ -207,7 +207,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
         
         if(hasCode){
             //avos返回用户信息
-            [[AVOSCloudSNS client] getPath:url parameters:nil success:^(AVHTTPRequestOperation *operation, id responseObject) {
+            [[AVOSCloudSNS client] getPath:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 NSDictionary *info=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
                 info=info[@"user"];
                 if (info) {
@@ -217,7 +217,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
                     NSError *err=[NSError errorWithDomain:AVOSCloudSNSErrorDomain code:9999 userInfo:info];
                     [AVOSCloudSNS onFail:self.type withError:err];
                 }
-            } failure:^(AVHTTPRequestOperation *operation, NSError *error) {
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 [AVOSCloudSNS onFail:self.type withError:error];
             }];
             
@@ -257,12 +257,12 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
             [self getAccessToken:code];
             return NO;
         }else if (token && self.type==AVOSCloudSNSQQ){
-            [[AVOSCloudSNS client] getPath:[NSString stringWithFormat:@"https://graph.qq.com/oauth2.0/me?access_token=%@",token] parameters:nil success:^(AVHTTPRequestOperation *operation, id responseObject) {
+            [[AVOSCloudSNS client] getPath:[NSString stringWithFormat:@"https://graph.qq.com/oauth2.0/me?access_token=%@",token] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 NSString *string=[[NSString alloc] initWithBytes:[responseObject bytes] length:[responseObject length] encoding:NSUTF8StringEncoding];
                 NSDictionary *ret= [AVOSCloudSNSUtils unserializeJSONP:string];
                 NSString *openid=ret[@"openid"];
                 [AVOSCloudSNS onSuccess:self.type withToken:token andExpires:param[@"expires_in"] andUid:openid];
-            } failure:^(AVHTTPRequestOperation *operation, NSError *error) {
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 [AVOSCloudSNS onFail:AVOSCloudSNSQQ withError:error];
             }];
             

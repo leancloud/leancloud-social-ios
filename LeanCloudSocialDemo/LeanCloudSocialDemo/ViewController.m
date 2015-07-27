@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "AVOSCloudSocial.h"
+#import "AVOSCloudSNS.h"
 
 @interface ViewController () {
     BOOL _weiboSucc;

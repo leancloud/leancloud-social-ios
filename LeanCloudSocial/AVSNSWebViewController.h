@@ -7,7 +7,7 @@
 //
 
 #import "AVWebViewController.h"
-#import "AVOSCloudSocial.h"
+#import "AVOSCloudSNS.h"
 @interface AVSNSWebViewController : AVWebViewController
 @property(nonatomic, copy)AVSNSResultBlock callback;
 @end

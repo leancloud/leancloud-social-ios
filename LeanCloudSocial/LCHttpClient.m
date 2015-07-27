@@ -7,140 +7,128 @@
 //
 
 #import "LCHttpClient.h"
-#import <AVOSCloud/AVJSONRequestOperation.h>
-#import "LCSocialUtils.h"
+#import "AVOSCloudSNSUtils.h"
 
 @interface LCHttpClient ()
 
-#if OS_OBJECT_USE_OBJC
-@property (nonatomic, strong) dispatch_queue_t completionQueue;
-#else
-@property (nonatomic, assign) dispatch_queue_t completionQueue;
-#endif
-
+@property (nonatomic, strong) NSURL *baseURL;
+@property (nonatomic, strong) NSOperationQueue *operationQueue;
 
 @end
 
 @implementation LCHttpClient
-
-@synthesize clientImpl = _clientImpl;
-@synthesize applicationId, applicationIdField, applicationKey, applicationKeyField, sessionTokenField;
-@synthesize baseURL, timeoutInterval;
 
 + (LCHttpClient*)sharedInstance {
     static dispatch_once_t once;
     static LCHttpClient * sharedInstance;
     dispatch_once(&once, ^{
         sharedInstance = [[self alloc] init];
-        sharedInstance.timeoutInterval = kAVDefaultNetworkTimeoutInterval;
-        sharedInstance.applicationIdField = @"X-avoscloud-Application-Id";
-        sharedInstance.applicationKeyField = @"X-avoscloud-Application-Key";
-        sharedInstance.sessionTokenField = @"X-avoscloud-Session-Token";
-        
-        sharedInstance.applicationId = [AVOSCloud getApplicationId];
-        sharedInstance.applicationKey = [AVOSCloud getClientKey];
+        sharedInstance.baseURL = [NSURL URLWithString:@"https://api.leancloud.cn/1.1/"];
+        sharedInstance.operationQueue = [[NSOperationQueue alloc] init];
     });
     return sharedInstance;
 }
 
-- (AVHTTPClient *)clientImpl {
-    if (!_clientImpl) {
-        NSURL * url = [NSURL URLWithString:@"https://api.leancloud.cn/1.1"];
-        _clientImpl = [AVHTTPClient clientWithBaseURL:url];
-        
-        //最大并发请求数 4
-        _clientImpl.operationQueue.maxConcurrentOperationCount=4;
-        
-        [_clientImpl registerHTTPOperationClass:[AVJSONRequestOperation class]];
-        [_clientImpl setParameterEncoding:AVJSONParameterEncoding];
+- (NSString *)queryStringFromParameters:(NSDictionary *)parameters {
+    NSMutableString *queries = [[NSMutableString alloc] init];
+    NSArray *keys = [parameters allKeys];
+    for (int i = 0; i < keys.count; i++) {
+        if (i != 0) {
+            [queries appendString:@"&"];
+        }
+        NSString *value = [parameters valueForKey:keys[i]];
+        [queries appendFormat:@"%@=%@", keys[i], value];
     }
-    [self updateHeaders];
-    return _clientImpl;
+    return [queries stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
--(void)updateHeaders {
+- (NSMutableURLRequest *)requestWithMethod:(NSString *)method path:(NSString *)path parameters:(NSDictionary *)parameters {
+    NSURL *url = [NSURL URLWithString:path relativeToURL:self.baseURL];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request setValue:[AVOSCloud getApplicationId] forHTTPHeaderField:@"X-AVOSCloud-Application-Id"];
     
     NSString *timestamp=[NSString stringWithFormat:@"%.0f",1000*[[NSDate date] timeIntervalSince1970]];
-    NSString *sign=[LCSocialUtils calMD5:[NSString stringWithFormat:@"%@%@",timestamp,self.applicationKey]];
+    NSString *sign=[AVOSCloudSNSUtils calMD5:[NSString stringWithFormat:@"%@%@",timestamp,[AVOSCloud getClientKey]]];
     NSString *headerValue=[NSString stringWithFormat:@"%@,%@",sign,timestamp];
+    [request setValue:headerValue forHTTPHeaderField:@"X-AVOSCloud-Request-Sign"];
     
-    [_clientImpl setDefaultHeader:@"x-avoscloud-request-sign" value:headerValue];
-    [_clientImpl setDefaultHeader:self.applicationIdField value:self.applicationId];
-    [_clientImpl setDefaultHeader:self.applicationKeyField value:self.applicationKey];
-    [_clientImpl setDefaultHeader:@"Accept" value:@"application/json"];
-}
-
-- (dispatch_queue_t)completionQueue {
-    if (!_completionQueue) {
-        _completionQueue = dispatch_queue_create("com.leancloud.completionQueue", DISPATCH_QUEUE_CONCURRENT);
+    //    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setTimeoutInterval:kAVDefaultNetworkTimeoutInterval];
+    [request setHTTPMethod:method];
+    if ([method isEqualToString:@"GET"] || [method isEqualToString:@"DELETE"]) {
+        url = [NSURL URLWithString:[[url absoluteString] stringByAppendingFormat:@"?%@", [self queryStringFromParameters:parameters]]];
+        [request setURL:url];
+    } else {
+        [request setValue:[NSString stringWithFormat:@"application/json"] forHTTPHeaderField:@"Content-Type"];
+        NSError *error;
+        [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:parameters options:0 error:&error]];
+        if (error) {
+            SLog(@"%@ error : %@", [self class], error);
+        }
     }
-    return _completionQueue;
-}
-
--(NSMutableURLRequest *)createRequest:(NSString *)method
-                                 path:(NSString *)path
-                           parameters:(NSDictionary *)parameters
-{
-    NSMutableURLRequest *request = [self.clientImpl requestWithMethod:method path:path parameters:parameters];
-    [request setTimeoutInterval:self.timeoutInterval];
     return request;
 }
 
--(void)enqueueHTTPRequestOperation:(AVHTTPRequestOperation *)operation
-{
-    [self.clientImpl enqueueHTTPRequestOperation:operation];
+- (void)goRequest:(NSURLRequest *)request block:(AVIdResultBlock)block {
+    SLog(@"request url : %@", request.URL);
+    SLog(@"request headers : %@", [request allHTTPHeaderFields]);
+    SLog(@"request body %@", [[NSString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding]);
+    [NSURLConnection sendAsynchronousRequest:request queue:self.operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (connectionError) {
+            block(nil, connectionError);
+        } else {
+            if (response && data) {
+                NSError *error;
+                NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+                if (error) {
+                    NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                    SLog(@"reponse : %@", responseString);
+                    block(nil, [AVOSCloudSNSUtils errorWithText:@"Http request failed, reponse string : %@", responseString]);
+                } else {
+                    block(dictionary, nil);
+                }
+            }
+        }
+    }];
+}
+
+- (NSDictionary *)whereDictionaryFromConditions:(NSDictionary *)conditions {
+    NSDictionary *where = [NSDictionary dictionary];
+    if (conditions.count>0) {
+        NSData *data = [NSJSONSerialization dataWithJSONObject:conditions options:0 error:nil];
+        NSString *conditionString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        where = @{@"where":conditionString};
+    }
+    return where;
+}
+
+-(void)getObject:(NSString *)path
+  withParameters:(NSDictionary *)parameters
+           block:(AVIdResultBlock)block {
+    NSMutableURLRequest *request = [self requestWithMethod:@"GET" path:path parameters:[self whereDictionaryFromConditions:parameters]];
+    [self goRequest:request block:block];
 }
 
 -(void)postObject:(NSString *)path
    withParameters:(NSDictionary *)parameters
             block:(AVIdResultBlock)block
 {
-    NSMutableURLRequest *request = [self createRequest:@"POST" path:path parameters:parameters];
-
-    [self goRequest:request saveResult:NO block:block retryTimes:0];
-}
-
-- (void)goRequest:(NSURLRequest *)request saveResult:(BOOL)save block:(AVIdResultBlock)block retryTimes:(int)times {
-    AVJSONRequestOperation *operation = [[AVJSONRequestOperation alloc] initWithRequest:request];
-    operation.successCallbackQueue = self.completionQueue;
-    operation.failureCallbackQueue = self.completionQueue;
-    [operation setCompletionBlockWithSuccess:^(AVHTTPRequestOperation *operation, id responseObject) {
-        if (block && ![operation isCancelled]) {
-            block(responseObject, nil);
-        }
-    } failure:^(AVHTTPRequestOperation *operation, NSError *error) {
-        // if this operation isn't cancelled
-        if (![operation isCancelled]) {
-            block([(AVJSONRequestOperation *)operation responseJSON], error);
-        };
-    }];
-    
-    [self enqueueHTTPRequestOperation:operation];
-}
-
--(void)getObject:(NSString *)path
-  withParameters:(NSDictionary *)parameters
-           block:(AVIdResultBlock)block {
-    
-    NSMutableURLRequest *request = [self createRequest:@"GET" path:path parameters:parameters];
-    
-    [self goRequest:request saveResult:NO block:block retryTimes:0];
+    NSMutableURLRequest *request= [self requestWithMethod:@"POST" path:path parameters:parameters];
+    [self goRequest:request block:block];
 }
 
 -(void)putObject:(NSString *)path
   withParameters:(NSDictionary *)parameters
            block:(AVIdResultBlock)block {
-    NSMutableURLRequest *request = [self createRequest:@"PUT" path:path parameters:parameters];
-    
-    [self goRequest:request saveResult:NO block:block retryTimes:0];
+    NSMutableURLRequest *request = [self requestWithMethod:@"PUT" path:path parameters:parameters];
+    [self goRequest:request block:block];
 }
 
 -(void)deleteObject:(NSString *)path
      withParameters:(NSDictionary *)parameters
               block:(AVIdResultBlock)block {
-    NSMutableURLRequest *request = [self createRequest:@"DELETE" path:path parameters:parameters];
-    
-    [self goRequest:request saveResult:NO block:block retryTimes:0];
+    NSMutableURLRequest *request = [self requestWithMethod:@"DELETE" path:path parameters:parameters];
+    [self goRequest:request block:block];
 }
 
 @end

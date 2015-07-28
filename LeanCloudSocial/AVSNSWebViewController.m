@@ -16,6 +16,12 @@ extern NSString * const AVOSCloudSNSErrorDomain;
 
 @implementation AVSNSWebViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.title = @"账号绑定";
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(close)];
+}
+
 - (NSDictionary *)extractParamsFromUrl:(NSURL *)url {
     NSMutableDictionary *params = [[url av_queryDictionary] mutableCopy];
     return params;

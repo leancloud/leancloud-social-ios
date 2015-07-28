@@ -19,7 +19,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJT-vP-NV4">
                                 <rect key="frame" x="36" y="100" width="528" height="30"/>
-                                <state key="normal" title="新浪微博登录">
+                                <state key="normal" title="微博登录">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -47,12 +47,39 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilD-ZX-Ker">
                                 <rect key="frame" x="36" y="150" width="528" height="30"/>
-                                <state key="normal" title="腾讯 QQ 登录">
+                                <state key="normal" title="QQ 登录">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="qzoneLogin:" destination="x5A-6p-PRh" eventType="touchUpInside" id="tUB-aD-waf"/>
                                     <segue destination="Byc-IT-joB" kind="show" identifier="QQResult" id="fX4-3v-OM4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfi-RE-sgf">
+                                <rect key="frame" x="255" y="298" width="90" height="30"/>
+                                <state key="normal" title="微博网页登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="weiboLogin2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FHi-qH-9Sg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErE-Yi-cst">
+                                <rect key="frame" x="255" y="389" width="90" height="30"/>
+                                <state key="normal" title="微信网页登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="wechatLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IXb-gi-QDK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4U-QD-nvc">
+                                <rect key="frame" x="256" y="345" width="88" height="30"/>
+                                <state key="normal" title="QQ 网页登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="qzoneLogin2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KHe-pg-6zQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,15 +88,21 @@
                             <constraint firstItem="EJT-vP-NV4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="1Bn-kH-E9E"/>
                             <constraint firstItem="ilD-ZX-Ker" firstAttribute="top" secondItem="EJT-vP-NV4" secondAttribute="bottom" constant="20" id="4Aa-HN-Cud"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EJT-vP-NV4" secondAttribute="trailing" constant="20" id="6uj-1c-6er"/>
+                            <constraint firstAttribute="centerX" secondItem="ErE-Yi-cst" secondAttribute="centerX" id="9LD-WG-eNj"/>
                             <constraint firstItem="274-Bq-aZO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="9pf-Ob-PP7"/>
                             <constraint firstItem="e0u-v7-tRz" firstAttribute="top" secondItem="ilD-ZX-Ker" secondAttribute="bottom" constant="20" id="G53-pc-ZkD"/>
+                            <constraint firstAttribute="centerX" secondItem="Hfi-RE-sgf" secondAttribute="centerX" id="JQc-E1-ZPv"/>
                             <constraint firstItem="ilD-ZX-Ker" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="JXK-u5-Leb"/>
                             <constraint firstItem="274-Bq-aZO" firstAttribute="top" secondItem="e0u-v7-tRz" secondAttribute="bottom" constant="20" id="L5e-FL-vfy"/>
+                            <constraint firstItem="Hfi-RE-sgf" firstAttribute="top" secondItem="274-Bq-aZO" secondAttribute="bottom" constant="18" id="Niq-vj-b4l"/>
                             <constraint firstAttribute="trailingMargin" secondItem="274-Bq-aZO" secondAttribute="trailing" constant="20" id="PZE-4Q-eay"/>
                             <constraint firstItem="e0u-v7-tRz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="Plo-NJ-jAG"/>
+                            <constraint firstItem="B4U-QD-nvc" firstAttribute="top" secondItem="Hfi-RE-sgf" secondAttribute="bottom" constant="17" id="QwW-vc-DL6"/>
+                            <constraint firstAttribute="centerX" secondItem="B4U-QD-nvc" secondAttribute="centerX" id="cVc-KL-dCS"/>
                             <constraint firstItem="EJT-vP-NV4" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="80" id="kBQ-XU-4AK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ilD-ZX-Ker" secondAttribute="trailing" constant="20" id="m1o-gm-igX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="e0u-v7-tRz" secondAttribute="trailing" constant="20" id="oFC-KM-ulQ"/>
+                            <constraint firstItem="ErE-Yi-cst" firstAttribute="top" secondItem="B4U-QD-nvc" secondAttribute="bottom" constant="14" id="wBt-RD-KaP"/>
                         </constraints>
                     </view>
                 </viewController>

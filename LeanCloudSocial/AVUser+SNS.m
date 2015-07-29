@@ -257,8 +257,19 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     [[AVSNSHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
         AVUser * user = nil;
         if (!error) {
+            // 第一次会返回
+//            objectId = 55b8b76400b066e34529d4a6;
+//            sessionToken = fzs03y5g7hr4r22iikhv2babe;
+//            createdAt = "2015-07-29T11:33:03.642Z";
+//            username = mzv62gzwrwzqtz75rv51kzye6;
+            
             user = [self user];
-            [AVOSCloudSNSUtils copyDictionary:object toObject:user];
+//            user = [AVObject objectWithClassName:@"_User" dictionary:object];
+            user.objectId = object[@"objectId"];
+            user.sessionToken = object[@"sessionToken"];
+            user.username = object[@"username"];
+            // createdAt 不能赋值 readOnly
+//            user.createdAt = object[@"createdAt"];
             if(!object[@"authData"]){
                 [user setObject:dict[@"authData"] forKey:@"authData"];
             }

@@ -23,16 +23,16 @@
     NSString *appKey = @"7dtvdetcfggpalwtf91pdoootc7csxx0vxyi3ayqtbnlklq2";
     [AVOSCloud setApplicationId:appId clientKey:appKey];
     NSLog(@"setAppId:%@, appKey:%@", appId, appKey);
+    [AVOSCloud setAllLogsEnabled:YES];
+    [AVOSCloud setLastModifyEnabled:YES];
     
     [AVOSCloudSNS setupPlatform:AVOSCloudSNSSinaWeibo withAppKey:@"2548122881" andAppSecret:@"ba37a6eb3018590b0d75da733c4998f8" andRedirectURI:@"http://wanpaiapp.com/oauth/callback/sina"];
     [AVOSCloudSNS setupPlatform:AVOSCloudSNSQQ withAppKey:@"100512940" andAppSecret:@"afbfdff94b95a2fb8fe58a8e24c4ba5f" andRedirectURI:nil];
-    
-    [AVOSCloud setVerbosePolicy:kAVVerboseShow];
-    [AVLogger addLoggerDomain:AVLoggerDomainIM];
-    [AVLogger addLoggerDomain:AVLoggerDomainCURL];
-    [AVLogger setLoggerLevelMask:AVLoggerLevelAll];
-
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [AVOSCloudSNS handleOpenURL:url];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

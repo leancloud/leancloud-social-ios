@@ -19,12 +19,11 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJT-vP-NV4">
                                 <rect key="frame" x="36" y="100" width="528" height="30"/>
-                                <state key="normal" title="新浪微博登录">
+                                <state key="normal" title="微博登录">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="weiboLogin:" destination="x5A-6p-PRh" eventType="touchUpInside" id="Q7f-yT-8C2"/>
-                                    <segue destination="Byc-IT-joB" kind="show" identifier="WeiboResult" id="g7j-Wv-KHr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0u-v7-tRz">
@@ -36,23 +35,40 @@
                                     <action selector="weixinLogin:" destination="x5A-6p-PRh" eventType="touchUpInside" id="C0a-tN-5qZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="274-Bq-aZO">
-                                <rect key="frame" x="36" y="250" width="528" height="30"/>
-                                <state key="normal" title="人人账户登录">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="renrenLogin:" destination="x5A-6p-PRh" eventType="touchUpInside" id="dJg-Jw-H0l"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilD-ZX-Ker">
                                 <rect key="frame" x="36" y="150" width="528" height="30"/>
-                                <state key="normal" title="腾讯 QQ 登录">
+                                <state key="normal" title="QQ 登录">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="qzoneLogin:" destination="x5A-6p-PRh" eventType="touchUpInside" id="tUB-aD-waf"/>
-                                    <segue destination="Byc-IT-joB" kind="show" identifier="QQResult" id="fX4-3v-OM4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErE-Yi-cst">
+                                <rect key="frame" x="255" y="350" width="90" height="30"/>
+                                <state key="normal" title="微信网页登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="wechatLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IXb-gi-QDK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4U-QD-nvc">
+                                <rect key="frame" x="256" y="300" width="88" height="30"/>
+                                <state key="normal" title="QQ 网页登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="qzoneLogin2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KHe-pg-6zQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfi-RE-sgf">
+                                <rect key="frame" x="255" y="250" width="90" height="30"/>
+                                <state key="normal" title="微博网页登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="weiboWebLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="b72-VL-s7h"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,15 +77,18 @@
                             <constraint firstItem="EJT-vP-NV4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="1Bn-kH-E9E"/>
                             <constraint firstItem="ilD-ZX-Ker" firstAttribute="top" secondItem="EJT-vP-NV4" secondAttribute="bottom" constant="20" id="4Aa-HN-Cud"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EJT-vP-NV4" secondAttribute="trailing" constant="20" id="6uj-1c-6er"/>
-                            <constraint firstItem="274-Bq-aZO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="9pf-Ob-PP7"/>
+                            <constraint firstAttribute="centerX" secondItem="ErE-Yi-cst" secondAttribute="centerX" id="9LD-WG-eNj"/>
                             <constraint firstItem="e0u-v7-tRz" firstAttribute="top" secondItem="ilD-ZX-Ker" secondAttribute="bottom" constant="20" id="G53-pc-ZkD"/>
+                            <constraint firstAttribute="centerX" secondItem="Hfi-RE-sgf" secondAttribute="centerX" id="JQc-E1-ZPv"/>
                             <constraint firstItem="ilD-ZX-Ker" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="JXK-u5-Leb"/>
-                            <constraint firstItem="274-Bq-aZO" firstAttribute="top" secondItem="e0u-v7-tRz" secondAttribute="bottom" constant="20" id="L5e-FL-vfy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="274-Bq-aZO" secondAttribute="trailing" constant="20" id="PZE-4Q-eay"/>
                             <constraint firstItem="e0u-v7-tRz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="Plo-NJ-jAG"/>
+                            <constraint firstItem="B4U-QD-nvc" firstAttribute="top" secondItem="Hfi-RE-sgf" secondAttribute="bottom" constant="20" id="QwW-vc-DL6"/>
+                            <constraint firstAttribute="centerX" secondItem="B4U-QD-nvc" secondAttribute="centerX" id="cVc-KL-dCS"/>
                             <constraint firstItem="EJT-vP-NV4" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="80" id="kBQ-XU-4AK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ilD-ZX-Ker" secondAttribute="trailing" constant="20" id="m1o-gm-igX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="e0u-v7-tRz" secondAttribute="trailing" constant="20" id="oFC-KM-ulQ"/>
+                            <constraint firstItem="ErE-Yi-cst" firstAttribute="top" secondItem="B4U-QD-nvc" secondAttribute="bottom" constant="20" id="wBt-RD-KaP"/>
+                            <constraint firstItem="Hfi-RE-sgf" firstAttribute="top" secondItem="e0u-v7-tRz" secondAttribute="bottom" constant="20" id="xgP-Gq-1y8"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -80,7 +99,7 @@
         <!--Result View Controller-->
         <scene sceneID="ztX-6a-saG">
             <objects>
-                <viewController id="Byc-IT-joB" customClass="ResultViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewControllerID" id="Byc-IT-joB" customClass="ResultViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rKE-Hr-vfX"/>
                         <viewControllerLayoutGuide type="bottom" id="xce-e0-yAL"/>
@@ -90,13 +109,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录成功！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8a-nQ-hB1">
-                                <rect key="frame" x="96" y="78" width="408" height="21"/>
+                                <rect key="frame" x="96" y="78" width="408" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8T-BV-tyj">
+                                <rect key="frame" x="42" y="108.5" width="516" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="zVy-9N-mne"/>
+                                </constraints>
+                                <string key="text">Strictly, this user property doesn't need to be public. For example, if the table view internally obtains the list of users itself, there is not need to access it from outside.
+
+The "users" array is the data of the table view which shall be displayed in rows. Each row shows a "summary" of a user.
+
+More details of a user should be displayed in a detail view controller. The detail view controller's data is a single user of type User.
+
+When the user tabs a certain row in the table view, the detail view controller will be displayed. Before it will be displayed, the table view controller must configure the detail view controller: the table view controller assigns the detail view controller's "data property" the current selected user. Thus, the detail view controller should have a public property user:</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDB-Ax-hYQ">
-                                <rect key="frame" x="96" y="140" width="408" height="30"/>
+                                <rect key="frame" x="96" y="466.5" width="408" height="30"/>
                                 <state key="normal" title="返回">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -107,14 +142,27 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="D8T-BV-tyj" secondAttribute="trailing" constant="26" id="6wX-0B-qQz"/>
+                            <constraint firstItem="D8T-BV-tyj" firstAttribute="leading" secondItem="IDj-cu-bRG" secondAttribute="leadingMargin" constant="26" id="BQL-Qc-2Df"/>
                             <constraint firstItem="YDB-Ax-hYQ" firstAttribute="leading" secondItem="IDj-cu-bRG" secondAttribute="leadingMargin" constant="80" id="Bgh-hC-kOu"/>
                             <constraint firstItem="w8a-nQ-hB1" firstAttribute="leading" secondItem="IDj-cu-bRG" secondAttribute="leadingMargin" constant="80" id="Ds8-eX-8U1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YDB-Ax-hYQ" secondAttribute="trailing" constant="80" id="YC8-oj-hZd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="w8a-nQ-hB1" secondAttribute="trailing" constant="80" id="bS8-YZ-Og3"/>
-                            <constraint firstItem="YDB-Ax-hYQ" firstAttribute="top" secondItem="w8a-nQ-hB1" secondAttribute="bottom" constant="41" id="ofd-c0-P9I"/>
+                            <constraint firstItem="D8T-BV-tyj" firstAttribute="top" secondItem="w8a-nQ-hB1" secondAttribute="bottom" constant="10" id="hof-Li-CpM"/>
+                            <constraint firstAttribute="centerX" secondItem="D8T-BV-tyj" secondAttribute="centerX" id="nSV-Us-93o"/>
+                            <constraint firstItem="YDB-Ax-hYQ" firstAttribute="top" secondItem="w8a-nQ-hB1" secondAttribute="bottom" constant="100" id="ofd-c0-P9I"/>
                             <constraint firstItem="w8a-nQ-hB1" firstAttribute="top" secondItem="rKE-Hr-vfX" secondAttribute="bottom" constant="58" id="otk-mt-qW0"/>
+                            <constraint firstItem="YDB-Ax-hYQ" firstAttribute="top" secondItem="D8T-BV-tyj" secondAttribute="bottom" constant="58" id="tpO-UJ-ogZ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ofd-c0-P9I"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="D8T-BV-tyj" id="LV9-xg-1zC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y5n-bh-yff" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="dPI-hm-8OK" userLabel="Exit" sceneMemberID="exit"/>
@@ -122,7 +170,4 @@
             <point key="canvasLocation" x="1170" y="468"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="g7j-Wv-KHr"/>
-    </inferredMetricsTieBreakers>
 </document>

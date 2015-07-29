@@ -10,13 +10,15 @@
 
 @interface ResultViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+
 @end
 
 @implementation ResultViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.infoLabel.text = self.infoText;
 }
 
 - (void)didReceiveMemoryWarning {

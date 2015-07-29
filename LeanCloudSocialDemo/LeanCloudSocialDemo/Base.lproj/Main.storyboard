@@ -45,7 +45,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErE-Yi-cst">
-                                <rect key="frame" x="255" y="348" width="90" height="30"/>
+                                <rect key="frame" x="255" y="350" width="90" height="30"/>
                                 <state key="normal" title="微信网页登录">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4U-QD-nvc">
-                                <rect key="frame" x="256" y="304" width="88" height="30"/>
+                                <rect key="frame" x="256" y="300" width="88" height="30"/>
                                 <state key="normal" title="QQ 网页登录">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -63,7 +63,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfi-RE-sgf">
-                                <rect key="frame" x="255" y="257" width="90" height="30"/>
+                                <rect key="frame" x="255" y="250" width="90" height="30"/>
                                 <state key="normal" title="微博网页登录">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -82,13 +82,13 @@
                             <constraint firstAttribute="centerX" secondItem="Hfi-RE-sgf" secondAttribute="centerX" id="JQc-E1-ZPv"/>
                             <constraint firstItem="ilD-ZX-Ker" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="JXK-u5-Leb"/>
                             <constraint firstItem="e0u-v7-tRz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="Plo-NJ-jAG"/>
-                            <constraint firstItem="B4U-QD-nvc" firstAttribute="top" secondItem="Hfi-RE-sgf" secondAttribute="bottom" constant="17" id="QwW-vc-DL6"/>
+                            <constraint firstItem="B4U-QD-nvc" firstAttribute="top" secondItem="Hfi-RE-sgf" secondAttribute="bottom" constant="20" id="QwW-vc-DL6"/>
                             <constraint firstAttribute="centerX" secondItem="B4U-QD-nvc" secondAttribute="centerX" id="cVc-KL-dCS"/>
                             <constraint firstItem="EJT-vP-NV4" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="80" id="kBQ-XU-4AK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ilD-ZX-Ker" secondAttribute="trailing" constant="20" id="m1o-gm-igX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="e0u-v7-tRz" secondAttribute="trailing" constant="20" id="oFC-KM-ulQ"/>
-                            <constraint firstItem="ErE-Yi-cst" firstAttribute="top" secondItem="B4U-QD-nvc" secondAttribute="bottom" constant="14" id="wBt-RD-KaP"/>
-                            <constraint firstItem="Hfi-RE-sgf" firstAttribute="top" secondItem="e0u-v7-tRz" secondAttribute="bottom" constant="27" id="xgP-Gq-1y8"/>
+                            <constraint firstItem="ErE-Yi-cst" firstAttribute="top" secondItem="B4U-QD-nvc" secondAttribute="bottom" constant="20" id="wBt-RD-KaP"/>
+                            <constraint firstItem="Hfi-RE-sgf" firstAttribute="top" secondItem="e0u-v7-tRz" secondAttribute="bottom" constant="20" id="xgP-Gq-1y8"/>
                         </constraints>
                     </view>
                 </viewController>

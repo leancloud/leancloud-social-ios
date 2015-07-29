@@ -26,6 +26,7 @@
 }
 
 - (IBAction)weiboLogin:(id)sender {
+    // 如果安装了微博，直接跳转到微博应用，否则跳转至网页登录
     [AVOSCloudSNS loginWithCallback:^(id object, NSError *error) {
         if (error) {
             NSLog(@"failed to get authentication from weibo. error: %@", error.description);
@@ -39,8 +40,9 @@
     } toPlatform:AVOSCloudSNSSinaWeibo];
 }
 
-- (IBAction)weiboLogin2:(id)sender {
-    //此处的 URL 从网站管理台获取，组件->社交
+- (IBAction)weiboWebLogin:(id)sender {
+    //此处的 URL 从网站管理台获取，组件->社交，把 AppId 和 Secret Key 写在管理台
+    //管理台生成网页url，来跳转至第三方登录的地址
     [AVOSCloudSNS loginWithURL:[NSURL URLWithString:@"https://leancloud.cn/1.1/sns/goto/vdhgf2lq96udqd73"] callback:^(id object, NSError *error) {
         NSLog(@"object : %@, error : %@", object, error);
         if ([self filerError:error]) {
@@ -54,6 +56,7 @@
 }
 
 - (IBAction)qzoneLogin:(id)sender {
+    // 如果安装了QQ，则跳转至应用，否则跳转至网页
     [AVOSCloudSNS loginWithCallback:^(id object, NSError *error) {
         if (error) {
             NSLog(@"failed to get authentication from weibo. error: %@", error.description);
@@ -87,12 +90,8 @@
 }
 
 - (IBAction)weixinLogin:(id)sender {
+    // 需要自己去下载微信的 sdk，获得 authData，之后用 +[AVUser loginWithAuthData:block] 来登录
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注意" message:@"本 Demo 尚未实现微信账号登录，请你自己申请微信开放平台账号，并导入。" delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
-    [alert show];
-}
-
-- (IBAction)renrenLogin:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注意" message:@"本 Demo 尚未实现人人账号登录，请你自己申请人人网开放平台账号，并导入。" delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
     [alert show];
 }
 

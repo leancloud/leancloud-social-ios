@@ -35,15 +35,6 @@
                                     <action selector="weixinLogin:" destination="x5A-6p-PRh" eventType="touchUpInside" id="C0a-tN-5qZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="274-Bq-aZO">
-                                <rect key="frame" x="36" y="250" width="528" height="30"/>
-                                <state key="normal" title="人人账户登录">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="renrenLogin:" destination="x5A-6p-PRh" eventType="touchUpInside" id="dJg-Jw-H0l"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilD-ZX-Ker">
                                 <rect key="frame" x="36" y="150" width="528" height="30"/>
                                 <state key="normal" title="QQ 登录">
@@ -53,17 +44,8 @@
                                     <action selector="qzoneLogin:" destination="x5A-6p-PRh" eventType="touchUpInside" id="tUB-aD-waf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfi-RE-sgf">
-                                <rect key="frame" x="255" y="298" width="90" height="30"/>
-                                <state key="normal" title="微博网页登录">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="weiboLogin2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FHi-qH-9Sg"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErE-Yi-cst">
-                                <rect key="frame" x="255" y="389" width="90" height="30"/>
+                                <rect key="frame" x="255" y="348" width="90" height="30"/>
                                 <state key="normal" title="微信网页登录">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -72,12 +54,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4U-QD-nvc">
-                                <rect key="frame" x="256" y="345" width="88" height="30"/>
+                                <rect key="frame" x="256" y="304" width="88" height="30"/>
                                 <state key="normal" title="QQ 网页登录">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="qzoneLogin2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KHe-pg-6zQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfi-RE-sgf">
+                                <rect key="frame" x="255" y="257" width="90" height="30"/>
+                                <state key="normal" title="微博网页登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="weiboWebLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="b72-VL-s7h"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,13 +78,9 @@
                             <constraint firstItem="ilD-ZX-Ker" firstAttribute="top" secondItem="EJT-vP-NV4" secondAttribute="bottom" constant="20" id="4Aa-HN-Cud"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EJT-vP-NV4" secondAttribute="trailing" constant="20" id="6uj-1c-6er"/>
                             <constraint firstAttribute="centerX" secondItem="ErE-Yi-cst" secondAttribute="centerX" id="9LD-WG-eNj"/>
-                            <constraint firstItem="274-Bq-aZO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="9pf-Ob-PP7"/>
                             <constraint firstItem="e0u-v7-tRz" firstAttribute="top" secondItem="ilD-ZX-Ker" secondAttribute="bottom" constant="20" id="G53-pc-ZkD"/>
                             <constraint firstAttribute="centerX" secondItem="Hfi-RE-sgf" secondAttribute="centerX" id="JQc-E1-ZPv"/>
                             <constraint firstItem="ilD-ZX-Ker" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="JXK-u5-Leb"/>
-                            <constraint firstItem="274-Bq-aZO" firstAttribute="top" secondItem="e0u-v7-tRz" secondAttribute="bottom" constant="20" id="L5e-FL-vfy"/>
-                            <constraint firstItem="Hfi-RE-sgf" firstAttribute="top" secondItem="274-Bq-aZO" secondAttribute="bottom" constant="18" id="Niq-vj-b4l"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="274-Bq-aZO" secondAttribute="trailing" constant="20" id="PZE-4Q-eay"/>
                             <constraint firstItem="e0u-v7-tRz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="Plo-NJ-jAG"/>
                             <constraint firstItem="B4U-QD-nvc" firstAttribute="top" secondItem="Hfi-RE-sgf" secondAttribute="bottom" constant="17" id="QwW-vc-DL6"/>
                             <constraint firstAttribute="centerX" secondItem="B4U-QD-nvc" secondAttribute="centerX" id="cVc-KL-dCS"/>
@@ -101,6 +88,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ilD-ZX-Ker" secondAttribute="trailing" constant="20" id="m1o-gm-igX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="e0u-v7-tRz" secondAttribute="trailing" constant="20" id="oFC-KM-ulQ"/>
                             <constraint firstItem="ErE-Yi-cst" firstAttribute="top" secondItem="B4U-QD-nvc" secondAttribute="bottom" constant="14" id="wBt-RD-KaP"/>
+                            <constraint firstItem="Hfi-RE-sgf" firstAttribute="top" secondItem="e0u-v7-tRz" secondAttribute="bottom" constant="27" id="xgP-Gq-1y8"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -131,13 +119,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="zVy-9N-mne"/>
                                 </constraints>
-                                <mutableString key="text">Strictly, this user property doesn't need to be public. For example, if the table view internally obtains the list of users itself, there is not need to access it from outside.
+                                <string key="text">Strictly, this user property doesn't need to be public. For example, if the table view internally obtains the list of users itself, there is not need to access it from outside.
 
 The "users" array is the data of the table view which shall be displayed in rows. Each row shows a "summary" of a user.
 
 More details of a user should be displayed in a detail view controller. The detail view controller's data is a single user of type User.
 
-When the user tabs a certain row in the table view, the detail view controller will be displayed. Before it will be displayed, the table view controller must configure the detail view controller: the table view controller assigns the detail view controller's "data property" the current selected user. Thus, the detail view controller should have a public property user:</mutableString>
+When the user tabs a certain row in the table view, the detail view controller will be displayed. Before it will be displayed, the table view controller must configure the detail view controller: the table view controller assigns the detail view controller's "data property" the current selected user. Thus, the detail view controller should have a public property user:</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>

@@ -264,12 +264,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
 //            username = mzv62gzwrwzqtz75rv51kzye6;
             
             user = [self user];
-//            user = [AVObject objectWithClassName:@"_User" dictionary:object];
-            user.objectId = object[@"objectId"];
-            user.sessionToken = object[@"sessionToken"];
-            user.username = object[@"username"];
-            // createdAt 不能赋值 readOnly
-//            user.createdAt = object[@"createdAt"];
+            [user objectFromDictionary:object];
             if(!object[@"authData"]){
                 [user setObject:dict[@"authData"] forKey:@"authData"];
             }

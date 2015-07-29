@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 AVOS. All rights reserved.
 //
 #import "AVUser+SNS.h"
-#import "LCHttpClient.h"
+#import "AVSNSHttpClient.h"
 #import "AVOSCloudSNSUtils.h"
 #import "AVOSCloudSNS.h"
 
@@ -147,7 +147,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
                                          [[self class] nameOfPlatform:[authData[@"platform"] intValue]]:
                                              [[self class] authDataFromSNSResult:authData]
                                          }};
-            [[LCHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
+            [[AVSNSHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
                 if (error == nil)
                 {
                     [AVOSCloudSNSUtils copyDictionary:object toObject:ws];
@@ -194,7 +194,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     }else{
         //这个是新产生的用户, 需要在服务器注册
         NSDictionary *dict=@{@"authData":@{platform:authDataResult}};
-        [[LCHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
+        [[AVSNSHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
             if (!error) {
                 [AVOSCloudSNSUtils copyDictionary:object toObject:self];
                 [self setObject:dict[@"authData"] forKey:@"authData"];
@@ -220,7 +220,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
                                  }};
     
     
-    [[LCHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
+    [[AVSNSHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
         
         AVUser * user = nil;
         if (error == nil)
@@ -254,11 +254,17 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
         return;
     }
     NSDictionary *dict=@{@"authData":@{platform:authDataResult}};
-    [[LCHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
+    [[AVSNSHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
         AVUser * user = nil;
         if (!error) {
+            // 第一次会返回
+//            objectId = 55b8b76400b066e34529d4a6;
+//            sessionToken = fzs03y5g7hr4r22iikhv2babe;
+//            createdAt = "2015-07-29T11:33:03.642Z";
+//            username = mzv62gzwrwzqtz75rv51kzye6;
+            
             user = [self user];
-            [AVOSCloudSNSUtils copyDictionary:object toObject:user];
+            [user objectFromDictionary:object];
             if(!object[@"authData"]){
                 [user setObject:dict[@"authData"] forKey:@"authData"];
             }

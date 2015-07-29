@@ -10,9 +10,6 @@
 #import "AVOSCloudSNSUtils.h"
 #import "AVSNSLoginViewController.h"
 
-#import <AFNetworking/AFJSONRequestOperation.h>
-#import <AFNetworking/AFHTTPRequestOperation.h>
-
 #import <AFNetworking/AFNetworking.h>
 #import "AVSNSWebViewController.h"
 
@@ -24,17 +21,13 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
 
 @implementation AVOSCloudSNS
 
-+(AFHTTPClient*)client {
-    static AFHTTPClient *sharedClient=nil;
-    
-    if (sharedClient==nil) {
-        sharedClient=[[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://avoscloud.com"]];
-        sharedClient.stringEncoding=NSUTF8StringEncoding;
-        [sharedClient registerHTTPOperationClass:[AFHTTPRequestOperation class]];
-
++ (AFHTTPRequestOperationManager *)requestManager {
+    static AFHTTPRequestOperationManager *requestManager;
+    @synchronized (self) {
+        requestManager = [AFHTTPRequestOperationManager manager];
+        requestManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     }
-    
-    return sharedClient;
+    return requestManager;
 }
 
 
@@ -351,8 +344,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
             NSAssert(NO, @"不支持的平台类型");
             break;
     }
-    
-    [[self client] getPath:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [[self requestManager] GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *params= [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         NSString *error=params[@"error"];
         if (error) {
@@ -386,9 +378,6 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [AVOSCloudSNS onFail:type withError:error];
     }];
-    
-    
-    
 }
 
 +(void)onSuccess:(AVOSCloudSNSType)type withParams:(NSDictionary*)info{
@@ -442,7 +431,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
             if (dict) {
                 NSString *token=[dict objectForKey:@"access_token"];
 
-                [[AVOSCloudSNS client] getPath:@"https://api.weibo.com/oauth2/revokeoauth2" parameters:@{@"access_token":token} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                [[self requestManager] GET:@"https://api.weibo.com/oauth2/revokeoauth2" parameters:@{@"access_token":token} success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 }];
             }
@@ -618,16 +607,14 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
 
 +(void)request:(NSURLRequest*)req withCallback:(AVSNSResultBlock)callback andProgress:(AVSNSProgressBlock)progressBlock{
     
-    AFJSONRequestOperation *opt=[AFJSONRequestOperation JSONRequestOperationWithRequest:req success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        callback(JSON,nil);
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        if ([JSON isKindOfClass:[NSDictionary class]]) {
-            //TODO: 详细描述返回错误
-            //error=[NSError errorWithDomain:<#(NSString *)#> code:<#(NSInteger)#> userInfo:<#(NSDictionary *)#>];
-        }
-        callback(JSON,error);
+    AFHTTPRequestOperation *opt = [[AFHTTPRequestOperation alloc] initWithRequest:req];
+    opt.responseSerializer = [AFJSONResponseSerializer serializer];
+    [opt setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        callback(responseObject,nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        callback(nil,error);
     }];
-    
+
     if (progressBlock) {
         [opt setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
             progressBlock(totalBytesWritten*1.0f/totalBytesExpectedToWrite);
@@ -635,8 +622,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     }
     
     [opt setQueuePriority:NSOperationQueuePriorityHigh];
-    
-    [[self client] enqueueHTTPRequestOperation:opt];
+    [[NSOperationQueue mainQueue] addOperation:opt];
 }
 
 
@@ -653,19 +639,24 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     NSMutableURLRequest *request=nil;
     if (image) {
         urlString=[NSString stringWithFormat:updateUrl,@"upload"];
-        
-        request =[[self client] multipartFormRequestWithMethod:@"POST"
-                                                          path:urlString
-                                                    parameters:parameters
-                                     constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-                                         NSData *imageData=UIImageJPEGRepresentation(image, 0.8);
-                                         [formData appendPartWithFormData:imageData name:@"pic"];
-                                         [formData appendPartWithFileData:imageData name:@"pic" fileName:@"image" mimeType:@"image/jpeg"];
-                                     }];
-       
+        NSError *error;
+        request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:urlString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+            NSData *imageData=UIImageJPEGRepresentation(image, 0.8);
+            [formData appendPartWithFormData:imageData name:@"pic"];
+            [formData appendPartWithFileData:imageData name:@"pic" fileName:@"image" mimeType:@"image/jpeg"];
+        } error:&error];
+        if (error) {
+            callback(nil, error);
+            return;
+        }
     }else{
         urlString=[NSString stringWithFormat:updateUrl,@"update"];
-        request=[[self client] requestWithMethod:@"POST" path:urlString parameters:parameters];
+        NSError *error;
+        request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:urlString parameters:parameters error:&error];
+        if (error) {
+            callback(nil, error);
+            return;
+        }
     }
     
     [self request:request withCallback:callback andProgress:progressBlock];

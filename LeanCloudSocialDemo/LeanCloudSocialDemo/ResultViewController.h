@@ -10,4 +10,6 @@
 
 @interface ResultViewController : UIViewController
 
+@property (nonatomic, strong) NSString *infoText;
+
 @end

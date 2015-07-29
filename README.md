@@ -62,7 +62,7 @@ xcodebuild -target UniversalFramework -config Release
 我可以使用其他 SDK 来做登录，然后把授权信息绑定到 AVUser 吗？
 
 ## ChangeLog
-发布流程：更改 podspec 版本，打 tag，推送到仓库，执行 pod trunk。
+发布流程：更改 podspec 版本，打 tag，推送到仓库，执行`pod trunk push LeanCloudSocial.podspec --verbose --allow-warnings --use-libraries`。
 
 0.0.3
 重命名 LCHttpClient 至 AVSNSHttpClient，避免和其它LC的模块冲突

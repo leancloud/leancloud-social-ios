@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <AVOSCloud/AVOSCloud.h>
 
-@interface LCHttpClient : NSObject
+@interface AVSNSHttpClient : NSObject
 
-+(LCHttpClient *)sharedInstance;
++(AVSNSHttpClient *)sharedInstance;
 
 -(void)postObject:(NSString *)path
    withParameters:(NSDictionary *)parameters

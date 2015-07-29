@@ -64,6 +64,9 @@ xcodebuild -target UniversalFramework -config Release
 ## ChangeLog
 发布流程：更改 podspec 版本，打 tag，推送到仓库，执行 pod trunk。
 
+0.0.3
+重命名 LCHttpClient 至 AVSNSHttpClient，避免和其它LC的模块冲突
+
 0.0.2
 使用 AFNetworking ~2.0 版本，使得主项目能够和此库共用同一个 AFNetworking 版本。如果主项目使用的是 AFNetworking 1.0，推荐使用 LeanCloudSocial 0.0.1 版本。
 

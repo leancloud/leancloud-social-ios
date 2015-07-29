@@ -6,21 +6,21 @@
 //  Copyright (c) 2015 LeanCloud. All rights reserved.
 //
 
-#import "LCHttpClient.h"
+#import "AVSNSHttpClient.h"
 #import "AVOSCloudSNSUtils.h"
 
-@interface LCHttpClient ()
+@interface AVSNSHttpClient ()
 
 @property (nonatomic, strong) NSURL *baseURL;
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
 
 @end
 
-@implementation LCHttpClient
+@implementation AVSNSHttpClient
 
-+ (LCHttpClient*)sharedInstance {
++ (AVSNSHttpClient*)sharedInstance {
     static dispatch_once_t once;
-    static LCHttpClient * sharedInstance;
+    static AVSNSHttpClient * sharedInstance;
     dispatch_once(&once, ^{
         sharedInstance = [[self alloc] init];
         sharedInstance.baseURL = [NSURL URLWithString:@"https://api.leancloud.cn/1.1/"];

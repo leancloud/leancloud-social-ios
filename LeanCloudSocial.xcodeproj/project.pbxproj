@@ -36,8 +36,8 @@
 		70A6A1671B661BA6005C2D21 /* AVUser+SNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A6A1561B661BA6005C2D21 /* AVUser+SNS.m */; };
 		70A6A1681B661BA6005C2D21 /* AVWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A6A1571B661BA6005C2D21 /* AVWebViewController.h */; };
 		70A6A1691B661BA6005C2D21 /* AVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A6A1581B661BA6005C2D21 /* AVWebViewController.m */; };
-		70A6A16A1B661BA6005C2D21 /* LCHttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A6A1591B661BA6005C2D21 /* LCHttpClient.h */; };
-		70A6A16B1B661BA6005C2D21 /* LCHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A6A15A1B661BA6005C2D21 /* LCHttpClient.m */; };
+		70A6A16A1B661BA6005C2D21 /* AVSNSHttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A6A1591B661BA6005C2D21 /* AVSNSHttpClient.h */; };
+		70A6A16B1B661BA6005C2D21 /* AVSNSHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A6A15A1B661BA6005C2D21 /* AVSNSHttpClient.m */; };
 		70A6A16C1B661BA6005C2D21 /* NSURL+AVAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A6A15B1B661BA6005C2D21 /* NSURL+AVAdditions.h */; };
 		70A6A16D1B661BA6005C2D21 /* NSURL+AVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A6A15C1B661BA6005C2D21 /* NSURL+AVAdditions.m */; };
 		FD22A6DD2631A2D9293AAC93 /* libPods-LeanCloudSocial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C904EA0C993C8E9F1446505C /* libPods-LeanCloudSocial.a */; };
@@ -74,8 +74,8 @@
 		70A6A1561B661BA6005C2D21 /* AVUser+SNS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVUser+SNS.m"; sourceTree = "<group>"; };
 		70A6A1571B661BA6005C2D21 /* AVWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVWebViewController.h; sourceTree = "<group>"; };
 		70A6A1581B661BA6005C2D21 /* AVWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVWebViewController.m; sourceTree = "<group>"; };
-		70A6A1591B661BA6005C2D21 /* LCHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCHttpClient.h; sourceTree = "<group>"; };
-		70A6A15A1B661BA6005C2D21 /* LCHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCHttpClient.m; sourceTree = "<group>"; };
+		70A6A1591B661BA6005C2D21 /* AVSNSHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSNSHttpClient.h; sourceTree = "<group>"; };
+		70A6A15A1B661BA6005C2D21 /* AVSNSHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSNSHttpClient.m; sourceTree = "<group>"; };
 		70A6A15B1B661BA6005C2D21 /* NSURL+AVAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+AVAdditions.h"; sourceTree = "<group>"; };
 		70A6A15C1B661BA6005C2D21 /* NSURL+AVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+AVAdditions.m"; sourceTree = "<group>"; };
 		C904EA0C993C8E9F1446505C /* libPods-LeanCloudSocial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeanCloudSocial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,8 +137,8 @@
 				70A6A1561B661BA6005C2D21 /* AVUser+SNS.m */,
 				70A6A1571B661BA6005C2D21 /* AVWebViewController.h */,
 				70A6A1581B661BA6005C2D21 /* AVWebViewController.m */,
-				70A6A1591B661BA6005C2D21 /* LCHttpClient.h */,
-				70A6A15A1B661BA6005C2D21 /* LCHttpClient.m */,
+				70A6A1591B661BA6005C2D21 /* AVSNSHttpClient.h */,
+				70A6A15A1B661BA6005C2D21 /* AVSNSHttpClient.m */,
 				70A6A15B1B661BA6005C2D21 /* NSURL+AVAdditions.h */,
 				70A6A15C1B661BA6005C2D21 /* NSURL+AVAdditions.m */,
 				5CC504441B0EC5B8004D0CB1 /* Supporting Files */,
@@ -198,7 +198,7 @@
 				70A6A1641B661BA6005C2D21 /* AVSNSWebViewController.h in Headers */,
 				70A6A16C1B661BA6005C2D21 /* NSURL+AVAdditions.h in Headers */,
 				70A6A15E1B661BA6005C2D21 /* AVOSCloudSNS.h in Headers */,
-				70A6A16A1B661BA6005C2D21 /* LCHttpClient.h in Headers */,
+				70A6A16A1B661BA6005C2D21 /* AVSNSHttpClient.h in Headers */,
 				70A6A1681B661BA6005C2D21 /* AVWebViewController.h in Headers */,
 				70A6A1601B661BA6005C2D21 /* AVOSCloudSNSUtils.h in Headers */,
 				70A6A1661B661BA6005C2D21 /* AVUser+SNS.h in Headers */,
@@ -362,7 +362,7 @@
 				70A6A1631B661BA6005C2D21 /* AVSNSLoginViewController.m in Sources */,
 				70A6A1691B661BA6005C2D21 /* AVWebViewController.m in Sources */,
 				70A6A1651B661BA6005C2D21 /* AVSNSWebViewController.m in Sources */,
-				70A6A16B1B661BA6005C2D21 /* LCHttpClient.m in Sources */,
+				70A6A16B1B661BA6005C2D21 /* AVSNSHttpClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

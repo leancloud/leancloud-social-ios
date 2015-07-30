@@ -2,10 +2,32 @@
 
 LeanCloud Social Network 模块是 [LeanCloud](https://leancloud.cn) 开源的一个第三方平台登录、分享组件，目前支持 QQ 空间和新浪微博两个平台，具体使用方法可以参看[文档](https://leancloud.cn/docs/sns.html)。
 
+## 视频演示
+请用浏览器打开[此视频链接](http://ac-x3o016bx.clouddn.com/a294809feb0c6a8a.mp4) ，相应的代码见[这里](https://github.com/leancloud/leanchat-ios/blob/master/LeanChat/LeanChat/controllers/entry/CDLoginVC.m#L252-L278)。 
 
+## 如何运行 demo
+
+```
+ 	cd LeanCloudSocialDemo
+ 	pod install --verbose (如果本地安装过 AVOSCloud 库，则可以加选项 --no-repo-update，加快速度)
+ 	open LeanCloudSocialDemo.xcworkspace
+```
+
+## 在我的项目中如何使用这一组件
+具体的使用方法可以参看[文档](https://leancloud.cn/docs/sns.html)。
+我们推荐用 pod 方式来安装这一组件
+```
+	pod 'LeanCloudSocial'
+```
+
+也可参考 [LeanChat](https://github.com/leancloud/leanchat-ios)，这个应用使用了这一组件来实现第三方登录，像上面视频所演示的那样。相应代码见[这里](https://github.com/leancloud/leanchat-ios/blob/master/LeanChat/LeanChat/controllers/entry/CDLoginVC.m#L181-L278)。
+
+## 宝贵意见
+如果有任何问题，欢迎提 [issue](https://github.com/leancloud/leancloud-social-ios/issues) ，写上你不明白的地方，看到后会尽快给予帮助。
 
 ## 如何贡献
 你可以通过提 issue 或者发 pull request 的方式，来贡献代码。开源世界因你我参与而更加美好。
+
 
 ## 项目结构
 为了便于测试，我们将 Social Network 模块的代码和 demo 都放在了一起，整个 repo 结构如下：
@@ -45,16 +67,6 @@ xcodebuild -target UniversalFramework -config Release
 ```
 
 编译之后的结果文件目录和上面示例一致。
-
-
-## 如何运行 demo
-在 LeanCloudSocialDemo 目录下，直接用 xcode 打开 LeanCloudSocialDemo.xcodeproj 工程即可。
-
-
-## 在我的项目中如何使用这一组件
-为了调试方便，我们推荐大家直接把本项目的源代码加入自己工程来使用 Social Network 组件。
-具体的使用方法可以参看[文档](https://leancloud.cn/docs/sns.html)。
-
 
 ## 其他问题
 我要增加其他平台，该怎么做？

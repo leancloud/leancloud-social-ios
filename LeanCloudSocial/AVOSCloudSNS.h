@@ -27,6 +27,8 @@ typedef NS_ENUM(int, AVOSCloudSNSType){
     /// QQ
     AVOSCloudSNSQQ         =2,
     
+    /// 微信
+    AVOSCloudSNSWeiXin      =3,
 } ;
 
 #import "AVUser+SNS.h"
@@ -48,6 +50,11 @@ typedef NS_ENUM(int, AVOSCloudSNSErrorCode){
     /// Token过期
     AVOSCloudSNSErrorTokenExpired=4,
     
+    /// 操作不支持。当微信没有安装时，调用 -[loginWithCallback:platform] 会返回该错误，暂不支持微信网页登录
+    AVOSCloudSNSErrorCodeNotSupported = 5,
+    
+    /// 无效的第三方数据
+    AVOSCloudSNSErrorCodeAuthDataError = 6,
 };
 
 #import "AVUser+SNS.h"
@@ -84,6 +91,13 @@ typedef void (^AVSNSProgressBlock)(float percent);
  */
 +(void)setupPlatform:(AVOSCloudSNSType)type
           withAppKey:(NSString*)appkey andAppSecret:(NSString*)appsec andRedirectURI:(NSString*)redirect_uri;
+
+/**
+ *  相应的 App 是否有安装，如果有安装的话，说明可以用 SSO 跳转登录。没有安装的话，QQ 和微博将跳转至网页登录，微信暂时不支持网页登录，请隐藏微信按钮。
+ *  @param type 支持 QQ、WeiXin、Weibo
+ *  @return
+ */
++ (BOOL)isAppInstalledForType:(AVOSCloudSNSType)type;
 
 /**
  *  用社交平台登录, 并获取手动显示登录界面

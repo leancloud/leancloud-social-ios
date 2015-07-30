@@ -21,6 +21,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
         case AVOSCloudSNSQQ: return @"qq";
             
         case AVOSCloudSNSSinaWeibo: return @"weibo";
+        case AVOSCloudSNSWeiXin: return AVOSCloudSNSPlatformWeiXin;
     }
     return nil;
 }
@@ -33,7 +34,9 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
         case AVOSCloudSNSQQ:
             idname=@"openid";
             break;
-            
+        case AVOSCloudSNSWeiXin:
+            idname = @"openid";
+            break;
         case AVOSCloudSNSSinaWeibo:
         default:
             idname=@"uid";
@@ -55,7 +58,8 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
         NSNumber *platform = [authData objectForKey:@"platform"];
         if ([platform isKindOfClass:[NSNumber class]]) {
             AVOSCloudSNSType type = [platform intValue];
-            if (type == AVOSCloudSNSQQ || type == AVOSCloudSNSSinaWeibo) {
+            if (type == AVOSCloudSNSQQ || type == AVOSCloudSNSSinaWeibo
+                || type == AVOSCloudSNSWeiXin) {
                 return [self authDataFromSNSResult:authData];
             }
         }
@@ -257,20 +261,25 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     [[AVSNSHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
         AVUser * user = nil;
         if (!error) {
-//            第一次会返回
-//            objectId = 55b8b76400b066e34529d4a6;
-//            sessionToken = fzs03y5g7hr4r22iikhv2babe;
-//            createdAt = "2015-07-29T11:33:03.642Z";
-//            username = mzv62gzwrwzqtz75rv51kzye6;
-            
-            user = [self user];
-            [user objectFromDictionary:object];
-            if(!object[@"authData"]){
-                [user setObject:dict[@"authData"] forKey:@"authData"];
+            if ([object objectForKey:@"objectId"]) {
+                //            第一次会返回
+                //            objectId = 55b8b76400b066e34529d4a6;
+                //            sessionToken = fzs03y5g7hr4r22iikhv2babe;
+                //            createdAt = "2015-07-29T11:33:03.642Z";
+                //            username = mzv62gzwrwzqtz75rv51kzye6;
+                
+                user = [self user];
+                [user objectFromDictionary:object];
+                if(!object[@"authData"]){
+                    [user setObject:dict[@"authData"] forKey:@"authData"];
+                }
+                // todo: fix me!
+                //            [user.requestManager clear];
+                [[self class] changeCurrentUser:user save:YES];
+            } else {
+//                {code = 1;error = "无效的第三方数据";}
+                error = [NSError errorWithDomain:AVOSCloudSNSErrorDomain code:AVOSCloudSNSErrorCodeAuthDataError userInfo:@{NSLocalizedFailureReasonErrorKey: object}];
             }
-// todo: fix me!
-//            [user.requestManager clear];
-            [[self class] changeCurrentUser:user save:YES];
         }
         if(block) {
             [AVOSCloudSNSUtils callUserResultBlock:block user:user error:error];

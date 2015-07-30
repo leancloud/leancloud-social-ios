@@ -30,6 +30,15 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     return requestManager;
 }
 
++ (AFHTTPRequestOperationManager *)jsonRequestManager {
+    static AFHTTPRequestOperationManager *jsonRequestManager;
+    @synchronized (self) {
+        jsonRequestManager = [AFHTTPRequestOperationManager manager];
+        // 避免服务器不规范，没有返回 application/json
+        jsonRequestManager.responseSerializer.acceptableContentTypes = [jsonRequestManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
+    }
+    return jsonRequestManager;
+}
 
 /**
  *  保存SSO相关配置
@@ -70,11 +79,14 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
         switch (type) {
             case AVOSCloudSNSSinaWeibo:
                 rightOne = [NSString stringWithFormat:@"sinaweibosso.%@", appkey];
-                
                 break;
              
             case AVOSCloudSNSQQ:
                 rightOne = [NSString stringWithFormat:@"tencent%@", appkey];
+                break;
+                
+            case AVOSCloudSNSWeiXin:
+                rightOne = appkey;
                 break;
                 
             default:
@@ -116,14 +128,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     if (callback_uri==nil) return NO;
     
     //用打开客户端
-    NSString *appAuthBaseURL=nil;
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
-        // 用iPad微博打开
-        appAuthBaseURL = @"sinaweibohdsso://login";
-    }else{
-        //用iPhone微博打开
-        appAuthBaseURL = @"sinaweibosso://login";
-    }
+    NSString *appAuthBaseURL= [NSString stringWithFormat:@"%@login", [self getWeiboSSOPrefix]];
     
     NSString *red_uri=config[@"redirect_uri"];
     if (red_uri==nil) {
@@ -196,6 +201,32 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     return ssoLoggingIn;
 }
 
++ (BOOL)isConfigCorrectWithType:(AVOSCloudSNSType)type {
+    NSDictionary *config=[[self ssoConfigs] objectForKey:@(type)];
+    
+    //无SSO配置直接返回
+    if (config==nil) return NO;
+    
+    //无回调地址直接返回
+    NSString *callback_uri=[self getSSOSchemeWithPlatform:type];
+    if (callback_uri==nil) return NO;
+    
+    return YES;
+}
+
++ (BOOL)weixinSSO {
+    BOOL ssoLoggingIn=NO;
+    if ([self isConfigCorrectWithType:AVOSCloudSNSWeiXin] == NO) {
+        return NO;
+    }
+    NSDictionary *config=[[self ssoConfigs] objectForKey:@(AVOSCloudSNSWeiXin)];
+    // ipad 不一样？
+    NSString *baseAuthUrl = [NSString stringWithFormat:@"weixin://app/%@/auth/", config[@"appkey"]];
+    NSString *appAuthUrl = [AVOSCloudSNSUtils serializeURL:baseAuthUrl params:@{@"scope":@"snsapi_userinfo", @"state": @"Weixinauth"}];
+    ssoLoggingIn = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appAuthUrl]];
+    return ssoLoggingIn;
+}
+
 +(BOOL)SSO:(AVOSCloudSNSType)type{
     switch (type) {
         case AVOSCloudSNSSinaWeibo:
@@ -206,9 +237,49 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
             return [AVOSCloudSNS qqSSO];
             break;
             
+        case AVOSCloudSNSWeiXin:
+            return [AVOSCloudSNS weixinSSO];
+            
     }
-    
     return NO;
+}
+
++(BOOL)canOpen:(NSString*)url{
+    return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:url]];
+}
+
++ (NSString *)getWeiboSSOPrefix {
+    NSString *prefix;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+        // 用iPad微博打开
+        prefix = @"sinaweibohdsso://";
+    }else{
+        //用iPhone微博打开
+        prefix = @"sinaweibosso://";
+    }
+    return prefix;
+}
+
++ (BOOL)isAppInstalledWithType:(AVOSCloudSNSType)type {
+    NSString *prefix;
+    switch (type) {
+        case AVOSCloudSNSQQ:
+            prefix = @"mqqOpensdkSSoLogin://";
+            break;
+        case AVOSCloudSNSSinaWeibo:
+            prefix = [self getWeiboSSOPrefix];
+            break;
+        case AVOSCloudSNSWeiXin:
+            prefix = @"weixin://";
+            break;
+        default:
+            break;
+    }
+    if (prefix) {
+        return [self canOpen:prefix];
+    } else {
+        return NO;
+    }
 }
 
 #pragma mark -
@@ -245,6 +316,10 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
                 break;
             case AVOSCloudSNSQQ:
                 avatar=[user valueForKeyPath:@"raw-user.figureurl_qq_2"];
+                break;
+            case AVOSCloudSNSWeiXin:
+                avatar=[user valueForKeyPath:@"raw-user.headimgurl"];
+                break;
             default:
                 break;
         }
@@ -320,14 +395,14 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     NSDictionary *params=nil;
     switch (type) {
             
-        case AVOSCloudSNSSinaWeibo:
+        case AVOSCloudSNSSinaWeibo: {
             url=@"https://api.weibo.com/2/users/show.json";
             params=@{
-                      @"access_token":token,
-                      @"uid":uid
-                      };
+                     @"access_token":token,
+                     @"uid":uid
+                     };
             break;
-            
+        }
         case AVOSCloudSNSQQ:
         {
             NSDictionary *config=[[self ssoConfigs] objectForKey:@(type)];
@@ -336,10 +411,13 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
                 @"oauth_consumer_key":config[@"appkey"],
                 @"openid":uid};
             url=@"https://openmobile.qq.com/user/get_simple_userinfo";
-            
         }
             break;
-            
+        case AVOSCloudSNSWeiXin: {
+            params = @{@"access_token":token, @"openid":uid};
+            url = @"https://api.weixin.qq.com/sns/userinfo";
+            break;
+        }
         default:
             NSAssert(NO, @"不支持的平台类型");
             break;
@@ -364,7 +442,9 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
                 case AVOSCloudSNSQQ:
                     [dict setObject:[params objectForKey:@"nickname"] forKey:@"username"];
                     break;
-                    
+                case AVOSCloudSNSWeiXin:
+                    [dict setObject:[params objectForKey:@"nickname"] forKey:@"username"];
+                    break;
                 default:
                     break;
             }
@@ -456,7 +536,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     NSString *scheme=url.scheme;
     
     NSDictionary *params=[AVOSCloudSNSUtils unserializeURL:[url absoluteString]];
-    //NSLog(@"Params: %@",[params description]);
+    NSLog(@"Params: %@",[params description]);
     if ([scheme hasPrefix:@"sinaweibosso"]) {
         
         NSString *token=params[@"access_token"];
@@ -495,16 +575,51 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
                     }
                 }
             }
-            
-            
         }
-        
-        
-    }else{
+    }else if ([scheme hasPrefix:@"wx"]){
+        if ([url.absoluteString rangeOfString:@"://oauth"].location != NSNotFound) {
+            NSLog(@"wexin : %@", params);
+            NSString *code = params[@"code"];
+            if (code) {
+                // success
+                [self getWeixinAccessTokenByCode:code block:^(id object, NSError *error) {
+                    if (error) {
+                        [self onFail:AVOSCloudSNSWeiXin withError:error];
+                    } else {
+                        NSString *openId = [object objectForKey:@"openid"];
+                        NSString *expires = [object objectForKey:@"expires_in"];
+                        NSString *accessToken = [object objectForKey:@"access_token"];
+                        [self onSuccess:AVOSCloudSNSWeiXin withToken:accessToken andExpires:expires andUid:openId];
+                    }
+                }];
+            } else {
+                //用户取消授权 ?
+            }
+        }
+    } else {
         return NO;
     }
     return YES;
 }
+
++ (void)getWeixinAccessTokenByCode:(NSString *)code block:(AVSNSResultBlock)block{
+    NSDictionary *config = [[self ssoConfigs] objectForKey:@(AVOSCloudSNSWeiXin)];
+    NSString *appId = config[@"appkey"];
+    NSString *secret = config[@"appsec"];
+    NSDictionary *params = @{@"appid":appId, @"secret": secret, @"code":code, @"grant_type":@"authorization_code"};
+    AFHTTPRequestOperationManager *manager = [self jsonRequestManager];
+    [manager GET:@"https://api.weixin.qq.com/sns/oauth2/access_token" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if ([responseObject objectForKey:@"access_token"]) {
+            block(responseObject, nil);
+        } else {
+            // weixin system error
+            block(nil, [NSError errorWithDomain:AVOSCloudSNSErrorDomain code:AVOSCloudSNSErrorLoginFail userInfo:@{NSLocalizedDescriptionKey: [responseObject objectForKey:@"errmsg"]}]);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        block(nil, error);
+    }];
+}
+
 +(void)setupPlatform:(AVOSCloudSNSType)type
           withAppKey:(NSString*)appkey andAppSecret:(NSString*)appsec andRedirectURI:(NSString*)redirect_uri{
     
@@ -523,6 +638,10 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
             case AVOSCloudSNSSinaWeibo:
                 NSParameterAssert(redirect_uri);
             
+                break;
+            case AVOSCloudSNSWeiXin:
+                //FIXME:
+                redirect_uri = @"";
                 break;
         }
         
@@ -556,11 +675,16 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     //检查是否SSO登录
     if ([self SSO:type]) return nil;
     
-    //网页登录
-    AVSNSLoginViewController *vc=[[AVSNSLoginViewController alloc] init];
-    vc.type=type;
-    [vc loginToPlatform:type];
-    return vc;
+    if (type == AVOSCloudSNSWeiXin) {
+        callback(nil, [NSError errorWithDomain:AVOSCloudSNSErrorDomain code:AVOSCloudSNSErrorCodeNotSupported userInfo:@{NSLocalizedDescriptionKey:@"操作不支持"}]);
+        return nil;
+    } else {
+        //网页登录
+        AVSNSLoginViewController *vc=[[AVSNSLoginViewController alloc] init];
+        vc.type=type;
+        [vc loginToPlatform:type];
+        return vc;
+    }
 }
 
 +(UIViewController *)loginManualyWithURL:(NSURL *)url callback:(AVSNSResultBlock)callback {
@@ -577,7 +701,6 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
 
 +(void)loginWithCallback:(AVSNSResultBlock)callback toPlatform:(AVOSCloudSNSType)type{
     UIViewController *vc= [self loginManualyWithCallback:callback toPlatform:type];
-    
     [self tryOpenViewController:vc];
 }
 

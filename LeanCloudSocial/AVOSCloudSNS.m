@@ -33,9 +33,11 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
 + (AFHTTPRequestOperationManager *)jsonRequestManager {
     static AFHTTPRequestOperationManager *jsonRequestManager;
     @synchronized (self) {
-        jsonRequestManager = [AFHTTPRequestOperationManager manager];
-        // 避免服务器不规范，没有返回 application/json
-        jsonRequestManager.responseSerializer.acceptableContentTypes = [jsonRequestManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
+        if (!jsonRequestManager) {
+            jsonRequestManager = [AFHTTPRequestOperationManager manager];
+            // 避免服务器不规范，没有返回 application/json
+            jsonRequestManager.responseSerializer.acceptableContentTypes = [jsonRequestManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
+        }
     }
     return jsonRequestManager;
 }

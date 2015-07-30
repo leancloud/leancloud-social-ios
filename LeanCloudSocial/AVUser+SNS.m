@@ -257,7 +257,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     [[AVSNSHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
         AVUser * user = nil;
         if (!error) {
-            // 第一次会返回
+//            第一次会返回
 //            objectId = 55b8b76400b066e34529d4a6;
 //            sessionToken = fzs03y5g7hr4r22iikhv2babe;
 //            createdAt = "2015-07-29T11:33:03.642Z";

@@ -76,6 +76,9 @@ xcodebuild -target UniversalFramework -config Release
 ## 发布日志
 发布流程：更改 podspec 版本，打 tag，推送到仓库，执行`pod trunk push LeanCloudSocial.podspec --verbose --allow-warnings --use-libraries`。
 
+0.0.5	
+重构部分函数，使命名更符合 Cocoa 规范
+
 0.0.4	
 支持微信 SSO 登录，对 -[AVOSCloudSNS loginWithCallback:toPlatform] 第二个参数传入 AVOSCloudSNSWeiXin 即可。
 同时提供 -[AVOSCloudSNS isAppInstalledWithType] 来检测相应的应用有没安装。

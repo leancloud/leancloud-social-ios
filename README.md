@@ -3,7 +3,7 @@
 LeanCloud Social Network 模块是 [LeanCloud](https://leancloud.cn) 开源的一个第三方平台登录、分享组件，目前支持 QQ 空间和新浪微博两个平台，具体使用方法可以参看[文档](https://leancloud.cn/docs/sns.html)。
 
 ## 视频演示
-请用浏览器打开[此视频链接](http://ac-x3o016bx.clouddn.com/a294809feb0c6a8a.mp4) ，相应的代码见[这里](https://github.com/leancloud/leanchat-ios/blob/master/LeanChat/LeanChat/controllers/entry/CDLoginVC.m#L252-L278)。 
+请用浏览器打开[视频](http://ac-x3o016bx.clouddn.com/a294809feb0c6a8a.mp4) ，相应的代码见[这里](https://github.com/leancloud/leanchat-ios/blob/master/LeanChat/LeanChat/controllers/entry/CDLoginVC.m#L252-L278)。 
 
 ## 如何运行 demo
 
@@ -13,9 +13,9 @@ LeanCloud Social Network 模块是 [LeanCloud](https://leancloud.cn) 开源的�
  	open LeanCloudSocialDemo.xcworkspace
 ```
 
-## 在我的项目中如何使用这一组件
+## 使用方法
 具体的使用方法可以参看[文档](https://leancloud.cn/docs/sns.html)。
-我们推荐用 pod 方式来安装这一组件
+我们推荐用 pod 方式来安装这一组件	
 ```
 	pod 'LeanCloudSocial'
 ```
@@ -73,7 +73,7 @@ xcodebuild -target UniversalFramework -config Release
 
 我可以使用其他 SDK 来做登录，然后把授权信息绑定到 AVUser 吗？
 
-## ChangeLog
+## 发布日志
 发布流程：更改 podspec 版本，打 tag，推送到仓库，执行`pod trunk push LeanCloudSocial.podspec --verbose --allow-warnings --use-libraries`。
 
 0.0.4	
@@ -88,3 +88,6 @@ xcodebuild -target UniversalFramework -config Release
 
 0.0.1	
 重命名模块后发布
+
+## License
+MIT

@@ -1,6 +1,6 @@
 # leancloud-social-ios
 
-LeanCloud Social Network 模块是 [LeanCloud](https://leancloud.cn) 开源的一个第三方平台登录、分享组件，目前支持 QQ 空间和新浪微博两个平台，具体使用方法可以参看[文档](https://leancloud.cn/docs/sns.html)。
+LeanCloud Social Network 模块是 [LeanCloud](https://leancloud.cn) 开源的一个第三方平台登录、分享组件，目前支持 QQ 空间、新浪微博、微信三个平台，具体使用方法可以参看[文档](https://leancloud.cn/docs/sns.html)。
 
 ## 视频演示
 请用浏览器打开[视频](http://ac-x3o016bx.clouddn.com/a294809feb0c6a8a.mp4) ，相应的代码见[这里](https://github.com/leancloud/leanchat-ios/blob/master/LeanChat/LeanChat/controllers/entry/CDLoginVC.m#L252-L278)。 

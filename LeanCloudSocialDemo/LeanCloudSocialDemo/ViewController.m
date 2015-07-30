@@ -93,7 +93,7 @@
 }
 
 - (IBAction)weixinLogin:(id)sender {
-    if ([AVOSCloudSNS isApplicationInstalledForType:AVOSCloudSNSWeiXin]) {
+    if ([AVOSCloudSNS isAppInstalledForType:AVOSCloudSNSWeiXin]) {
         // 请到真机测试
         [AVOSCloudSNS loginWithCallback:^(id object, NSError *error) {
             //        {

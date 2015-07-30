@@ -97,7 +97,7 @@ typedef void (^AVSNSProgressBlock)(float percent);
  *  @param type 支持 QQ、WeiXin、Weibo
  *  @return
  */
-+ (BOOL)isApplicationInstalledForType:(AVOSCloudSNSType)type;
++ (BOOL)isAppInstalledForType:(AVOSCloudSNSType)type;
 
 /**
  *  用社交平台登录, 并获取手动显示登录界面

@@ -262,7 +262,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     return prefix;
 }
 
-+ (BOOL)isApplicationInstalledForType:(AVOSCloudSNSType)type {
++ (BOOL)isAppInstalledForType:(AVOSCloudSNSType)type {
     NSString *prefix;
     switch (type) {
         case AVOSCloudSNSQQ:

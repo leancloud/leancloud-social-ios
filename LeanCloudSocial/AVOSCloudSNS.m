@@ -577,7 +577,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
             }
         }
     }else if ([scheme hasPrefix:@"wx"]){
-        if ([url.absoluteString rangeOfString:@"://oauth"].location != NSNotFound) {
+        if (params) {
             NSLog(@"wexin : %@", params);
             NSString *code = params[@"code"];
             if (code) {
@@ -592,14 +592,19 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
                         [self onSuccess:AVOSCloudSNSWeiXin withToken:accessToken andExpires:expires andUid:openId];
                     }
                 }];
-            } else {
-                //用户取消授权 ?
             }
+        } else {
+            //用户取消授权 ?
+            [self onFail:AVOSCloudSNSWeiXin withError:[self errorWithCode:AVOSCloudSNSErrorUserCancel text:@"用户取消了授权"]];
         }
     } else {
         return NO;
     }
     return YES;
+}
+
++ (NSError *)errorWithCode:(NSInteger)code text:(NSString *)text {
+    return [NSError errorWithDomain:AVOSCloudSNSErrorDomain code:code userInfo:@{NSLocalizedDescriptionKey:text}];
 }
 
 + (void)getWeixinAccessTokenByCode:(NSString *)code block:(AVSNSResultBlock)block{

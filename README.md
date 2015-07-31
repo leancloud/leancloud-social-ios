@@ -35,40 +35,13 @@ LeanCloud Social Network 模块是 [LeanCloud](https://leancloud.cn) 开源的�
 ```
 .
 ├── LeanCloudSocial  <--- LeanCloudSocial 框架代码
-│   ├── AVOSCloudSNS.h
-│   ├── AVOSCloudSNS.m
-│   ├── AVOSCloudSNSUtils.h
-│   ├── AVOSCloudSNSUtils.m
-│   ├── AVOSCloudSNS_.h
-│   ├── AVSNSHttpClient.h
-│   ├── AVSNSHttpClient.m
-│   ├── AVSNSLoginViewController.h
-│   ├── AVSNSLoginViewController.m
-│   ├── AVSNSWebViewController.h
-│   ├── AVSNSWebViewController.m
-│   ├── AVUser+SNS.h
-│   ├── AVUser+SNS.m
-│   ├── AVWebViewController.h
-│   ├── AVWebViewController.m
-│   ├── Info.plist
-│   ├── NSURL+AVAdditions.h
-│   └── NSURL+AVAdditions.m
 ├── LeanCloudSocial.podspec  <--- podspec 描述
-├── LeanCloudSocial.xcodeproj <--- 框架project，不从这里打开
-│   ├── project.pbxproj
-│   ├── project.xcworkspace
-│   └── xcuserdata
-├── LeanCloudSocialDemo  <--- Demo 代码
+├── LeanCloudSocialDemo  <--- Demo 项目
 │   ├── LeanCloudSocialDemo
 │   ├── LeanCloudSocialDemo.xcodeproj
-│   ├── LeanCloudSocialDemo.xcworkspace <--- Demo及框架代码，这里打开
-│   ├── LeanCloudSocialDemoTests
-│   ├── Podfile    <--- Demo和框架的 Podfile 
-│   ├── Podfile.lock
-│   └── Pods
+│   ├── LeanCloudSocialDemo.xcworkspace <--- Demo及框架 workspace，这里打开
+│   └── Podfile   <--- Demo和框架的 Podfile 
 ├── LeanCloudSocialTests
-│   ├── Info.plist
-│   └── LeanCloudSocialTests.m
 └── README.md
 ```
 

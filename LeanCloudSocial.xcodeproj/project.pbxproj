@@ -24,7 +24,7 @@
 		5CC5044D1B0EC5B9004D0CB1 /* LeanCloudSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC504411B0EC5B8004D0CB1 /* LeanCloudSocial.framework */; };
 		5CC504541B0EC5B9004D0CB1 /* LeanCloudSocialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC504531B0EC5B9004D0CB1 /* LeanCloudSocialTests.m */; };
 		70A6A15D1B661BA6005C2D21 /* AVOSCloudSNS_.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A6A14C1B661BA6005C2D21 /* AVOSCloudSNS_.h */; };
-		70A6A15E1B661BA6005C2D21 /* AVOSCloudSNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A6A14D1B661BA6005C2D21 /* AVOSCloudSNS.h */; };
+		70A6A15E1B661BA6005C2D21 /* AVOSCloudSNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A6A14D1B661BA6005C2D21 /* AVOSCloudSNS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70A6A15F1B661BA6005C2D21 /* AVOSCloudSNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A6A14E1B661BA6005C2D21 /* AVOSCloudSNS.m */; };
 		70A6A1601B661BA6005C2D21 /* AVOSCloudSNSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A6A14F1B661BA6005C2D21 /* AVOSCloudSNSUtils.h */; };
 		70A6A1611B661BA6005C2D21 /* AVOSCloudSNSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A6A1501B661BA6005C2D21 /* AVOSCloudSNSUtils.m */; };
@@ -195,9 +195,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70A6A15E1B661BA6005C2D21 /* AVOSCloudSNS.h in Headers */,
 				70A6A1641B661BA6005C2D21 /* AVSNSWebViewController.h in Headers */,
 				70A6A16C1B661BA6005C2D21 /* NSURL+AVAdditions.h in Headers */,
-				70A6A15E1B661BA6005C2D21 /* AVOSCloudSNS.h in Headers */,
 				70A6A16A1B661BA6005C2D21 /* AVSNSHttpClient.h in Headers */,
 				70A6A1681B661BA6005C2D21 /* AVWebViewController.h in Headers */,
 				70A6A1601B661BA6005C2D21 /* AVOSCloudSNSUtils.h in Headers */,
@@ -486,11 +486,9 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LeanCloudSocial/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -508,11 +506,9 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LeanCloudSocial/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

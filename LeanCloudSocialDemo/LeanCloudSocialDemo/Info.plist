@@ -69,5 +69,58 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <!-- QQ、Qzone URL Scheme 白名单-->
+        <string>mqqOpensdkSSoLogin</string>
+        
+        <!-- 微信 URL Scheme 白名单-->
+        <string>weixin</string>
+        
+        <!-- 新浪微博 URL Scheme 白名单-->
+        <string>sinaweibohdsso</string>
+        <string>sinaweibosso</string>
+    </array>
+    
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            
+            <!-- 集成新浪微博对应的HTTP白名单-->
+            <key>weibo.cn</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+            <key>weibo.com</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+            <!-- 新浪微博-->
+            
+            <!-- 集成微信、QQ、Qzone、腾讯微博授权对应的HTTP白名单-->
+            <key>qq.com</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+            <!-- 腾讯授权-->
+            
+        </dict>
+    </dict>
+
 </dict>
 </plist>

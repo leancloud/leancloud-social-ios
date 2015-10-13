@@ -22,47 +22,47 @@
 
 /* Begin PBXBuildFile section */
 		471B4AFE1F14272C84CC0228 /* libPods-LeanCloudSocialDynamic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DF40ABA53FE42DFCD0F859 /* libPods-LeanCloudSocialDynamic.a */; };
-		70A6A15D1B661BA6005C2D21 /* AVOSCloudSNS_.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A6A14C1B661BA6005C2D21 /* AVOSCloudSNS_.h */; };
-		70A6A15E1B661BA6005C2D21 /* AVOSCloudSNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A6A14D1B661BA6005C2D21 /* AVOSCloudSNS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70A6A15F1B661BA6005C2D21 /* AVOSCloudSNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A6A14E1B661BA6005C2D21 /* AVOSCloudSNS.m */; };
-		70A6A1601B661BA6005C2D21 /* AVOSCloudSNSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A6A14F1B661BA6005C2D21 /* AVOSCloudSNSUtils.h */; };
-		70A6A1611B661BA6005C2D21 /* AVOSCloudSNSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A6A1501B661BA6005C2D21 /* AVOSCloudSNSUtils.m */; };
-		70A6A1621B661BA6005C2D21 /* AVSNSLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A6A1511B661BA6005C2D21 /* AVSNSLoginViewController.h */; };
-		70A6A1631B661BA6005C2D21 /* AVSNSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A6A1521B661BA6005C2D21 /* AVSNSLoginViewController.m */; };
-		70A6A1641B661BA6005C2D21 /* AVSNSWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A6A1531B661BA6005C2D21 /* AVSNSWebViewController.h */; };
-		70A6A1651B661BA6005C2D21 /* AVSNSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A6A1541B661BA6005C2D21 /* AVSNSWebViewController.m */; };
-		70A6A1661B661BA6005C2D21 /* AVUser+SNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A6A1551B661BA6005C2D21 /* AVUser+SNS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70A6A1671B661BA6005C2D21 /* AVUser+SNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A6A1561B661BA6005C2D21 /* AVUser+SNS.m */; };
-		70A6A1681B661BA6005C2D21 /* AVWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A6A1571B661BA6005C2D21 /* AVWebViewController.h */; };
-		70A6A1691B661BA6005C2D21 /* AVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A6A1581B661BA6005C2D21 /* AVWebViewController.m */; };
-		70A6A16A1B661BA6005C2D21 /* AVSNSHttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A6A1591B661BA6005C2D21 /* AVSNSHttpClient.h */; };
-		70A6A16B1B661BA6005C2D21 /* AVSNSHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A6A15A1B661BA6005C2D21 /* AVSNSHttpClient.m */; };
-		70A6A16C1B661BA6005C2D21 /* NSURL+AVAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A6A15B1B661BA6005C2D21 /* NSURL+AVAdditions.h */; };
-		70A6A16D1B661BA6005C2D21 /* NSURL+AVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A6A15C1B661BA6005C2D21 /* NSURL+AVAdditions.m */; };
+		70E3D69E1BCCED0A00E4D167 /* AVOSCloudSNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E3D68D1BCCED0A00E4D167 /* AVOSCloudSNS.h */; settings = {ASSET_TAGS = (); }; };
+		70E3D69F1BCCED0A00E4D167 /* AVOSCloudSNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3D68E1BCCED0A00E4D167 /* AVOSCloudSNS.m */; settings = {ASSET_TAGS = (); }; };
+		70E3D6A01BCCED0A00E4D167 /* AVOSCloudSNS_.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E3D68F1BCCED0A00E4D167 /* AVOSCloudSNS_.h */; settings = {ASSET_TAGS = (); }; };
+		70E3D6A11BCCED0A00E4D167 /* AVOSCloudSNSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E3D6901BCCED0A00E4D167 /* AVOSCloudSNSUtils.h */; settings = {ASSET_TAGS = (); }; };
+		70E3D6A21BCCED0A00E4D167 /* AVOSCloudSNSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3D6911BCCED0A00E4D167 /* AVOSCloudSNSUtils.m */; settings = {ASSET_TAGS = (); }; };
+		70E3D6A31BCCED0A00E4D167 /* AVSNSHttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E3D6921BCCED0A00E4D167 /* AVSNSHttpClient.h */; settings = {ASSET_TAGS = (); }; };
+		70E3D6A41BCCED0A00E4D167 /* AVSNSHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3D6931BCCED0A00E4D167 /* AVSNSHttpClient.m */; settings = {ASSET_TAGS = (); }; };
+		70E3D6A51BCCED0A00E4D167 /* AVSNSLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E3D6941BCCED0A00E4D167 /* AVSNSLoginViewController.h */; settings = {ASSET_TAGS = (); }; };
+		70E3D6A61BCCED0A00E4D167 /* AVSNSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3D6951BCCED0A00E4D167 /* AVSNSLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		70E3D6A71BCCED0A00E4D167 /* AVSNSWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E3D6961BCCED0A00E4D167 /* AVSNSWebViewController.h */; settings = {ASSET_TAGS = (); }; };
+		70E3D6A81BCCED0A00E4D167 /* AVSNSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3D6971BCCED0A00E4D167 /* AVSNSWebViewController.m */; settings = {ASSET_TAGS = (); }; };
+		70E3D6A91BCCED0A00E4D167 /* AVUser+SNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E3D6981BCCED0A00E4D167 /* AVUser+SNS.h */; settings = {ASSET_TAGS = (); }; };
+		70E3D6AA1BCCED0A00E4D167 /* AVUser+SNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3D6991BCCED0A00E4D167 /* AVUser+SNS.m */; settings = {ASSET_TAGS = (); }; };
+		70E3D6AB1BCCED0A00E4D167 /* AVWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E3D69A1BCCED0A00E4D167 /* AVWebViewController.h */; settings = {ASSET_TAGS = (); }; };
+		70E3D6AC1BCCED0A00E4D167 /* AVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3D69B1BCCED0A00E4D167 /* AVWebViewController.m */; settings = {ASSET_TAGS = (); }; };
+		70E3D6AD1BCCED0A00E4D167 /* NSURL+AVAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E3D69C1BCCED0A00E4D167 /* NSURL+AVAdditions.h */; settings = {ASSET_TAGS = (); }; };
+		70E3D6AE1BCCED0A00E4D167 /* NSURL+AVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3D69D1BCCED0A00E4D167 /* NSURL+AVAdditions.m */; settings = {ASSET_TAGS = (); }; };
 		FD22A6DD2631A2D9293AAC93 /* libPods-LeanCloudSocial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C904EA0C993C8E9F1446505C /* libPods-LeanCloudSocial.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		404FA68EC2A1991396A9EAC0 /* Pods-LeanCloudSocialDynamic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDynamic.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocialDynamic/Pods-LeanCloudSocialDynamic.debug.xcconfig"; sourceTree = "<group>"; };
 		5CC504411B0EC5B8004D0CB1 /* LeanCloudSocialDynamic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanCloudSocialDynamic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		70A6A14C1B661BA6005C2D21 /* AVOSCloudSNS_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVOSCloudSNS_.h; sourceTree = "<group>"; };
-		70A6A14D1B661BA6005C2D21 /* AVOSCloudSNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVOSCloudSNS.h; sourceTree = "<group>"; };
-		70A6A14E1B661BA6005C2D21 /* AVOSCloudSNS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVOSCloudSNS.m; sourceTree = "<group>"; };
-		70A6A14F1B661BA6005C2D21 /* AVOSCloudSNSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVOSCloudSNSUtils.h; sourceTree = "<group>"; };
-		70A6A1501B661BA6005C2D21 /* AVOSCloudSNSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVOSCloudSNSUtils.m; sourceTree = "<group>"; };
-		70A6A1511B661BA6005C2D21 /* AVSNSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSNSLoginViewController.h; sourceTree = "<group>"; };
-		70A6A1521B661BA6005C2D21 /* AVSNSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSNSLoginViewController.m; sourceTree = "<group>"; };
-		70A6A1531B661BA6005C2D21 /* AVSNSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSNSWebViewController.h; sourceTree = "<group>"; };
-		70A6A1541B661BA6005C2D21 /* AVSNSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSNSWebViewController.m; sourceTree = "<group>"; };
-		70A6A1551B661BA6005C2D21 /* AVUser+SNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVUser+SNS.h"; sourceTree = "<group>"; };
-		70A6A1561B661BA6005C2D21 /* AVUser+SNS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVUser+SNS.m"; sourceTree = "<group>"; };
-		70A6A1571B661BA6005C2D21 /* AVWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVWebViewController.h; sourceTree = "<group>"; };
-		70A6A1581B661BA6005C2D21 /* AVWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVWebViewController.m; sourceTree = "<group>"; };
-		70A6A1591B661BA6005C2D21 /* AVSNSHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSNSHttpClient.h; sourceTree = "<group>"; };
-		70A6A15A1B661BA6005C2D21 /* AVSNSHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSNSHttpClient.m; sourceTree = "<group>"; };
-		70A6A15B1B661BA6005C2D21 /* NSURL+AVAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+AVAdditions.h"; sourceTree = "<group>"; };
-		70A6A15C1B661BA6005C2D21 /* NSURL+AVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+AVAdditions.m"; sourceTree = "<group>"; };
 		70E3D6261BCCE42600E4D167 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70E3D68D1BCCED0A00E4D167 /* AVOSCloudSNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVOSCloudSNS.h; sourceTree = "<group>"; };
+		70E3D68E1BCCED0A00E4D167 /* AVOSCloudSNS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVOSCloudSNS.m; sourceTree = "<group>"; };
+		70E3D68F1BCCED0A00E4D167 /* AVOSCloudSNS_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVOSCloudSNS_.h; sourceTree = "<group>"; };
+		70E3D6901BCCED0A00E4D167 /* AVOSCloudSNSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVOSCloudSNSUtils.h; sourceTree = "<group>"; };
+		70E3D6911BCCED0A00E4D167 /* AVOSCloudSNSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVOSCloudSNSUtils.m; sourceTree = "<group>"; };
+		70E3D6921BCCED0A00E4D167 /* AVSNSHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSNSHttpClient.h; sourceTree = "<group>"; };
+		70E3D6931BCCED0A00E4D167 /* AVSNSHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSNSHttpClient.m; sourceTree = "<group>"; };
+		70E3D6941BCCED0A00E4D167 /* AVSNSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSNSLoginViewController.h; sourceTree = "<group>"; };
+		70E3D6951BCCED0A00E4D167 /* AVSNSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSNSLoginViewController.m; sourceTree = "<group>"; };
+		70E3D6961BCCED0A00E4D167 /* AVSNSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSNSWebViewController.h; sourceTree = "<group>"; };
+		70E3D6971BCCED0A00E4D167 /* AVSNSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSNSWebViewController.m; sourceTree = "<group>"; };
+		70E3D6981BCCED0A00E4D167 /* AVUser+SNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVUser+SNS.h"; sourceTree = "<group>"; };
+		70E3D6991BCCED0A00E4D167 /* AVUser+SNS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVUser+SNS.m"; sourceTree = "<group>"; };
+		70E3D69A1BCCED0A00E4D167 /* AVWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVWebViewController.h; sourceTree = "<group>"; };
+		70E3D69B1BCCED0A00E4D167 /* AVWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVWebViewController.m; sourceTree = "<group>"; };
+		70E3D69C1BCCED0A00E4D167 /* NSURL+AVAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+AVAdditions.h"; sourceTree = "<group>"; };
+		70E3D69D1BCCED0A00E4D167 /* NSURL+AVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+AVAdditions.m"; sourceTree = "<group>"; };
 		87DF40ABA53FE42DFCD0F859 /* libPods-LeanCloudSocialDynamic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeanCloudSocialDynamic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C904EA0C993C8E9F1446505C /* libPods-LeanCloudSocial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeanCloudSocial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD41E084F9664954FDF0AED0 /* Pods-LeanCloudSocialDynamic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDynamic.release.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocialDynamic/Pods-LeanCloudSocialDynamic.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,8 +84,8 @@
 		5CC504371B0EC5B8004D0CB1 = {
 			isa = PBXGroup;
 			children = (
+				70E3D68C1BCCED0A00E4D167 /* Classes */,
 				70E3D6251BCCE42600E4D167 /* LeanCloudSocialDynamic */,
-				5CC504431B0EC5B8004D0CB1 /* LeanCloudSocial */,
 				5CC504421B0EC5B8004D0CB1 /* Products */,
 				78B1131A531E7DB383E8BE76 /* Frameworks */,
 				BCEF777B00E665CDF5991D71 /* Pods */,
@@ -100,36 +100,37 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5CC504431B0EC5B8004D0CB1 /* LeanCloudSocial */ = {
-			isa = PBXGroup;
-			children = (
-				70A6A14C1B661BA6005C2D21 /* AVOSCloudSNS_.h */,
-				70A6A14D1B661BA6005C2D21 /* AVOSCloudSNS.h */,
-				70A6A14E1B661BA6005C2D21 /* AVOSCloudSNS.m */,
-				70A6A14F1B661BA6005C2D21 /* AVOSCloudSNSUtils.h */,
-				70A6A1501B661BA6005C2D21 /* AVOSCloudSNSUtils.m */,
-				70A6A1511B661BA6005C2D21 /* AVSNSLoginViewController.h */,
-				70A6A1521B661BA6005C2D21 /* AVSNSLoginViewController.m */,
-				70A6A1531B661BA6005C2D21 /* AVSNSWebViewController.h */,
-				70A6A1541B661BA6005C2D21 /* AVSNSWebViewController.m */,
-				70A6A1551B661BA6005C2D21 /* AVUser+SNS.h */,
-				70A6A1561B661BA6005C2D21 /* AVUser+SNS.m */,
-				70A6A1571B661BA6005C2D21 /* AVWebViewController.h */,
-				70A6A1581B661BA6005C2D21 /* AVWebViewController.m */,
-				70A6A1591B661BA6005C2D21 /* AVSNSHttpClient.h */,
-				70A6A15A1B661BA6005C2D21 /* AVSNSHttpClient.m */,
-				70A6A15B1B661BA6005C2D21 /* NSURL+AVAdditions.h */,
-				70A6A15C1B661BA6005C2D21 /* NSURL+AVAdditions.m */,
-			);
-			path = LeanCloudSocial;
-			sourceTree = "<group>";
-		};
 		70E3D6251BCCE42600E4D167 /* LeanCloudSocialDynamic */ = {
 			isa = PBXGroup;
 			children = (
 				70E3D6261BCCE42600E4D167 /* Info.plist */,
 			);
 			path = LeanCloudSocialDynamic;
+			sourceTree = "<group>";
+		};
+		70E3D68C1BCCED0A00E4D167 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				70E3D68D1BCCED0A00E4D167 /* AVOSCloudSNS.h */,
+				70E3D68E1BCCED0A00E4D167 /* AVOSCloudSNS.m */,
+				70E3D68F1BCCED0A00E4D167 /* AVOSCloudSNS_.h */,
+				70E3D6901BCCED0A00E4D167 /* AVOSCloudSNSUtils.h */,
+				70E3D6911BCCED0A00E4D167 /* AVOSCloudSNSUtils.m */,
+				70E3D6921BCCED0A00E4D167 /* AVSNSHttpClient.h */,
+				70E3D6931BCCED0A00E4D167 /* AVSNSHttpClient.m */,
+				70E3D6941BCCED0A00E4D167 /* AVSNSLoginViewController.h */,
+				70E3D6951BCCED0A00E4D167 /* AVSNSLoginViewController.m */,
+				70E3D6961BCCED0A00E4D167 /* AVSNSWebViewController.h */,
+				70E3D6971BCCED0A00E4D167 /* AVSNSWebViewController.m */,
+				70E3D6981BCCED0A00E4D167 /* AVUser+SNS.h */,
+				70E3D6991BCCED0A00E4D167 /* AVUser+SNS.m */,
+				70E3D69A1BCCED0A00E4D167 /* AVWebViewController.h */,
+				70E3D69B1BCCED0A00E4D167 /* AVWebViewController.m */,
+				70E3D69C1BCCED0A00E4D167 /* NSURL+AVAdditions.h */,
+				70E3D69D1BCCED0A00E4D167 /* NSURL+AVAdditions.m */,
+			);
+			name = Classes;
+			path = ../Classes;
 			sourceTree = "<group>";
 		};
 		78B1131A531E7DB383E8BE76 /* Frameworks */ = {
@@ -157,15 +158,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70A6A15E1B661BA6005C2D21 /* AVOSCloudSNS.h in Headers */,
-				70A6A1661B661BA6005C2D21 /* AVUser+SNS.h in Headers */,
-				70A6A1641B661BA6005C2D21 /* AVSNSWebViewController.h in Headers */,
-				70A6A16C1B661BA6005C2D21 /* NSURL+AVAdditions.h in Headers */,
-				70A6A16A1B661BA6005C2D21 /* AVSNSHttpClient.h in Headers */,
-				70A6A1681B661BA6005C2D21 /* AVWebViewController.h in Headers */,
-				70A6A1601B661BA6005C2D21 /* AVOSCloudSNSUtils.h in Headers */,
-				70A6A15D1B661BA6005C2D21 /* AVOSCloudSNS_.h in Headers */,
-				70A6A1621B661BA6005C2D21 /* AVSNSLoginViewController.h in Headers */,
+				70E3D6A71BCCED0A00E4D167 /* AVSNSWebViewController.h in Headers */,
+				70E3D6AD1BCCED0A00E4D167 /* NSURL+AVAdditions.h in Headers */,
+				70E3D6A01BCCED0A00E4D167 /* AVOSCloudSNS_.h in Headers */,
+				70E3D6A91BCCED0A00E4D167 /* AVUser+SNS.h in Headers */,
+				70E3D6A31BCCED0A00E4D167 /* AVSNSHttpClient.h in Headers */,
+				70E3D6A11BCCED0A00E4D167 /* AVOSCloudSNSUtils.h in Headers */,
+				70E3D69E1BCCED0A00E4D167 /* AVOSCloudSNS.h in Headers */,
+				70E3D6A51BCCED0A00E4D167 /* AVSNSLoginViewController.h in Headers */,
+				70E3D6AB1BCCED0A00E4D167 /* AVWebViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +265,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This script is based on Jacob Van Order's answer on apple dev forums\n\n# https://devforums.apple.com/message/971277\n# See also http://spin.atomicobject.com/2011/12/13/building-a-universal-framework-for-ios/ for the start\n\n\n# To get this to work with a Xcode 6 Cocoa Touch Framework, create Framework\n# Then create a new Aggregate Target. Throw this script into a Build Script Phrase on the Aggregate\n\nfunction failed() {\n    echo \"$*, failed and exit!\"\n    exit 1\n}\n\n######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=true\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"./build/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\nWORKSPACE_NAME=\"LeanCloudSocialDemo\"\n\nWORKSPACE_PATH=\"${WORKSPACE_NAME}/${WORKSPACE_NAME}.xcworkspace\"\n\n\n######################\n# Build Frameworks\n######################\n\nxcodebuild -workspace ${WORKSPACE_PATH} -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator || failed ${PROJECTNAME}\n\nxcodebuild -workspace ${WORKSPACE_PATH} -scheme ${PROJECT_NAME} -sdk iphoneos ARCHS=\"armv7 armv7s arm64\" -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos || failed ${PROJECTNAME}\n\n#xcodebuild -target ${PROJECT_NAME} ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" | echo\n\n#xcodebuild -target ${PROJECT_NAME} ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphonesimulator  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" | echo\n\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make fat universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\nchmod -x \"${FRAMEWORK}/${FRAMEWORK_NAME}\"\n\nopen \"${UNIVERSAL_LIBRARY_DIR}/\"\n######################\n# On Release, copy the result to desktop folder\n######################\n\n#if [ \"${CONFIGURATION}\" == \"Release\" ]; then\n#mkdir \"${HOME}/Desktop/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n#cp -r \"${FRAMEWORK}\" \"${HOME}/Desktop/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n#fi\n\n\n######################\n# If needed, open the Framework folder\n######################\n\n#if [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\n#if [ \"${CONFIGURATION}\" == \"Release\" ]; then\n#open \"${HOME}/Desktop/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n#else\n#open \"${UNIVERSAL_LIBRARY_DIR}/\"\n#fi\n#fi";
+			shellScript = "# This script is based on Jacob Van Order's answer on apple dev forums\n\n# https://devforums.apple.com/message/971277\n# See also http://spin.atomicobject.com/2011/12/13/building-a-universal-framework-for-ios/ for the start\n\n\n# To get this to work with a Xcode 6 Cocoa Touch Framework, create Framework\n# Then create a new Aggregate Target. Throw this script into a Build Script Phrase on the Aggregate\n\nfunction failed() {\n    echo \"$*, failed and exit!\"\n    exit 1\n}\n\n######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=true\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"./build/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\nWORKSPACE_NAME=\"LeanCloudSocial\"\n\nWORKSPACE_PATH=\"../${WORKSPACE_NAME}.xcworkspace\"\n\n\n######################\n# Build Frameworks\n######################\n\nxcodebuild -workspace ${WORKSPACE_PATH} -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator || failed ${PROJECTNAME}\n\nxcodebuild -workspace ${WORKSPACE_PATH} -scheme ${PROJECT_NAME} -sdk iphoneos ARCHS=\"armv7 armv7s arm64\" -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos || failed ${PROJECTNAME}\n\n#xcodebuild -target ${PROJECT_NAME} ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" | echo\n\n#xcodebuild -target ${PROJECT_NAME} ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphonesimulator  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" | echo\n\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make fat universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\nchmod -x \"${FRAMEWORK}/${FRAMEWORK_NAME}\"\n\nopen \"${UNIVERSAL_LIBRARY_DIR}/\"\n######################\n# On Release, copy the result to desktop folder\n######################\n\n#if [ \"${CONFIGURATION}\" == \"Release\" ]; then\n#mkdir \"${HOME}/Desktop/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n#cp -r \"${FRAMEWORK}\" \"${HOME}/Desktop/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n#fi\n\n\n######################\n# If needed, open the Framework folder\n######################\n\n#if [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\n#if [ \"${CONFIGURATION}\" == \"Release\" ]; then\n#open \"${HOME}/Desktop/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n#else\n#open \"${UNIVERSAL_LIBRARY_DIR}/\"\n#fi\n#fi";
 		};
 		F0B520CA93FC6666BBE9C6A0 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -288,14 +289,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70A6A1671B661BA6005C2D21 /* AVUser+SNS.m in Sources */,
-				70A6A15F1B661BA6005C2D21 /* AVOSCloudSNS.m in Sources */,
-				70A6A1611B661BA6005C2D21 /* AVOSCloudSNSUtils.m in Sources */,
-				70A6A16D1B661BA6005C2D21 /* NSURL+AVAdditions.m in Sources */,
-				70A6A1631B661BA6005C2D21 /* AVSNSLoginViewController.m in Sources */,
-				70A6A1691B661BA6005C2D21 /* AVWebViewController.m in Sources */,
-				70A6A1651B661BA6005C2D21 /* AVSNSWebViewController.m in Sources */,
-				70A6A16B1B661BA6005C2D21 /* AVSNSHttpClient.m in Sources */,
+				70E3D6A81BCCED0A00E4D167 /* AVSNSWebViewController.m in Sources */,
+				70E3D6A61BCCED0A00E4D167 /* AVSNSLoginViewController.m in Sources */,
+				70E3D69F1BCCED0A00E4D167 /* AVOSCloudSNS.m in Sources */,
+				70E3D6AE1BCCED0A00E4D167 /* NSURL+AVAdditions.m in Sources */,
+				70E3D6A41BCCED0A00E4D167 /* AVSNSHttpClient.m in Sources */,
+				70E3D6AA1BCCED0A00E4D167 /* AVUser+SNS.m in Sources */,
+				70E3D6AC1BCCED0A00E4D167 /* AVWebViewController.m in Sources */,
+				70E3D6A21BCCED0A00E4D167 /* AVOSCloudSNSUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

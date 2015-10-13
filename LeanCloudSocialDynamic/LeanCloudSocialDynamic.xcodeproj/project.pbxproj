@@ -39,7 +39,6 @@
 		70E3D6AC1BCCED0A00E4D167 /* AVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3D69B1BCCED0A00E4D167 /* AVWebViewController.m */; settings = {ASSET_TAGS = (); }; };
 		70E3D6AD1BCCED0A00E4D167 /* NSURL+AVAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E3D69C1BCCED0A00E4D167 /* NSURL+AVAdditions.h */; settings = {ASSET_TAGS = (); }; };
 		70E3D6AE1BCCED0A00E4D167 /* NSURL+AVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3D69D1BCCED0A00E4D167 /* NSURL+AVAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		FD22A6DD2631A2D9293AAC93 /* libPods-LeanCloudSocial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C904EA0C993C8E9F1446505C /* libPods-LeanCloudSocial.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD22A6DD2631A2D9293AAC93 /* libPods-LeanCloudSocial.a in Frameworks */,
 				471B4AFE1F14272C84CC0228 /* libPods-LeanCloudSocialDynamic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

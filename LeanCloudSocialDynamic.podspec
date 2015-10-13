@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source_files = "Classes/*.{h,m}"
   s.public_header_files = "Classes/*.h"
 
-  s.dependency "AVOSCloudDynamic", "~> 3.1"
+  s.dependency "AVOSCloudDynamic"
   s.dependency "AFNetworking", "~> 2.0"
 
   s.xcconfig = {

@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "AVOSCloudSNS.h"
+//#import "AVOSCloudSNS.h"
+//#import <LeanCloudSocial/AVOSCloudSNS.h>
+#import <LeanCloudSocialDynamic/AVOSCloudSNS.h>
 #import "ResultViewController.h"
 
 @interface ViewController ()

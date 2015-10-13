@@ -120,7 +120,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
                                   @"ucheck":@1,
                                   @"fall_to_wv":@1
                                   };
-            NSURLRequest *req = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:@"https://openmobile.qq.com/oauth2.0/m_show" parameters:params error:nil];
+            NSURLRequest *req = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:@"http://openmobile.qq.com/oauth2.0/m_show" parameters:params error:nil];
             
             [self.webView loadRequest:req];
         }

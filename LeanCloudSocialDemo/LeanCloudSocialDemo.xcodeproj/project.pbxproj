@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1346F2BEEE2C7433A439A767 /* libPods-LeanCloudSocialDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA25B14B52878663D02B08B1 /* libPods-LeanCloudSocialDemo.a */; };
+		15529521632627DCBBC55FD8 /* libPods-LeanCloudSocialDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA25B14B52878663D02B08B1 /* libPods-LeanCloudSocialDemo.a */; };
 		5CC504A41B0EF46C004D0CB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC504A31B0EF46C004D0CB1 /* main.m */; };
 		5CC504A71B0EF46C004D0CB1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC504A61B0EF46C004D0CB1 /* AppDelegate.m */; };
 		5CC504AA1B0EF46C004D0CB1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC504A91B0EF46C004D0CB1 /* ViewController.m */; };
@@ -29,8 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		187D15E2C574691072996E24 /* Pods-LeanCloudSocialDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeanCloudSocialDemo/Pods-LeanCloudSocialDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		49E5897D20D67FB1F5AD5514 /* Pods-LeanCloudSocialDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeanCloudSocialDemo/Pods-LeanCloudSocialDemo.release.xcconfig"; sourceTree = "<group>"; };
+		09AA5D57D78AC64F937E0C13 /* Pods-LeanCloudSocialDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDemo.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocialDemo/Pods-LeanCloudSocialDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		2F841BD39460028B35831547 /* Pods-LeanCloudSocialDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDemo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocialDemo/Pods-LeanCloudSocialDemo.release.xcconfig"; sourceTree = "<group>"; };
 		5CC5049E1B0EF46C004D0CB1 /* LeanCloudSocialDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeanCloudSocialDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC504A21B0EF46C004D0CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CC504A31B0EF46C004D0CB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,6 +46,10 @@
 		5CC504BD1B0EF46C004D0CB1 /* LeanCloudSocialDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanCloudSocialDemoTests.m; sourceTree = "<group>"; };
 		5CC505C31B146051004D0CB1 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
 		5CC505C41B146051004D0CB1 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		70E3D6011BCCB84000E4D167 /* LeanCloudSocial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LeanCloudSocial.framework; path = "../build/Debug-iphoneos/LeanCloudSocial.framework"; sourceTree = "<group>"; };
+		70E3D6061BCCB85F00E4D167 /* libPods-LeanCloudSocial.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-LeanCloudSocial.a"; path = "Pods/../build/Debug-iphoneos/libPods-LeanCloudSocial.a"; sourceTree = "<group>"; };
+		70E3D6081BCCB87400E4D167 /* LeanCloudSocial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LeanCloudSocial.framework; path = "../build/Debug-iphoneos/LeanCloudSocial.framework"; sourceTree = "<group>"; };
+		70E3D6121BCCCF0700E4D167 /* libPods-LeanCloudSocial.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-LeanCloudSocial.a"; path = "Pods/../build/Debug-iphoneos/libPods-LeanCloudSocial.a"; sourceTree = "<group>"; };
 		CA25B14B52878663D02B08B1 /* libPods-LeanCloudSocialDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeanCloudSocialDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -54,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1346F2BEEE2C7433A439A767 /* libPods-LeanCloudSocialDemo.a in Frameworks */,
+				15529521632627DCBBC55FD8 /* libPods-LeanCloudSocialDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,8 +78,8 @@
 				5CC504A01B0EF46C004D0CB1 /* LeanCloudSocialDemo */,
 				5CC504BA1B0EF46C004D0CB1 /* LeanCloudSocialDemoTests */,
 				5CC5049F1B0EF46C004D0CB1 /* Products */,
-				A24F13D67756A491D2698417 /* Pods */,
 				C19EFA09CAF51C6156AF8C7D /* Frameworks */,
+				72F3F330E791515E8DFA3DD8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,11 +135,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A24F13D67756A491D2698417 /* Pods */ = {
+		72F3F330E791515E8DFA3DD8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				187D15E2C574691072996E24 /* Pods-LeanCloudSocialDemo.debug.xcconfig */,
-				49E5897D20D67FB1F5AD5514 /* Pods-LeanCloudSocialDemo.release.xcconfig */,
+				09AA5D57D78AC64F937E0C13 /* Pods-LeanCloudSocialDemo.debug.xcconfig */,
+				2F841BD39460028B35831547 /* Pods-LeanCloudSocialDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -143,6 +147,10 @@
 		C19EFA09CAF51C6156AF8C7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				70E3D6121BCCCF0700E4D167 /* libPods-LeanCloudSocial.a */,
+				70E3D6081BCCB87400E4D167 /* LeanCloudSocial.framework */,
+				70E3D6061BCCB85F00E4D167 /* libPods-LeanCloudSocial.a */,
+				70E3D6011BCCB84000E4D167 /* LeanCloudSocial.framework */,
 				CA25B14B52878663D02B08B1 /* libPods-LeanCloudSocialDemo.a */,
 			);
 			name = Frameworks;
@@ -258,7 +266,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LeanCloudSocialDemo/Pods-LeanCloudSocialDemo-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LeanCloudSocialDemo/Pods-LeanCloudSocialDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1AE1BE00C6537570DFAEB236 /* Check Pods Manifest.lock */ = {
@@ -410,42 +418,42 @@
 		};
 		5CC504C21B0EF46C004D0CB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 187D15E2C574691072996E24 /* Pods-LeanCloudSocialDemo.debug.xcconfig */;
+			baseConfigurationReference = 09AA5D57D78AC64F937E0C13 /* Pods-LeanCloudSocialDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					../,
-					../LeanCloudSocial,
-				);
 				HEADER_SEARCH_PATHS = (
 					"\"$(OBJROOT)/UninstalledProducts/include\"",
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = LeanCloudSocialDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		5CC504C31B0EF46C004D0CB1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49E5897D20D67FB1F5AD5514 /* Pods-LeanCloudSocialDemo.release.xcconfig */;
+			baseConfigurationReference = 2F841BD39460028B35831547 /* Pods-LeanCloudSocialDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					../,
-					../LeanCloudSocial,
-				);
 				HEADER_SEARCH_PATHS = (
 					"\"$(OBJROOT)/UninstalledProducts/include\"",
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = LeanCloudSocialDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

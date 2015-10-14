@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <AVOSCloud/AVOSCloud.h>
-#import "AVOSCloudSNS.h"
+#import <LeanCloudSocial/AVOSCloudSNS.h>
 
 @interface AppDelegate ()
 

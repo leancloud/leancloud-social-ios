@@ -77,6 +77,9 @@ xcodebuild -target UniversalFramework -config Release
 ## 发布日志
 发布流程：更改 podspec 版本，打 tag，推送到仓库，执行`pod trunk push LeanCloudSocial.podspec --verbose --allow-warnings --use-libraries`。
 
+0.0.6   
+调整目录结构。同时发布动态库，可通过 `pod LeanCloudSocialDynamic` 引入到项目中。
+
 0.0.5	
 重构部分函数，使命名更符合 Cocoa 规范
 

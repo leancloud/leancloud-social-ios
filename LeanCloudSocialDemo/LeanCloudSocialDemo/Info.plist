@@ -114,8 +114,21 @@
                 <true/>
                 <key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
                 <true/>
-                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-                <false/>
+            </dict>
+            <!-- QQ 登录额外加载的资源 -->
+            <key>idqqimg.com</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+            </dict>
+            <key>gtimg.cn</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
             </dict>
             <!-- 腾讯授权-->
             

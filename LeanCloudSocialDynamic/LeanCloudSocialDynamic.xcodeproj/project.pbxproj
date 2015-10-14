@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		5CC5045D1B0EC5D4004D0CB1 /* UniversalFramework */ = {
+		5CC5045D1B0EC5D4004D0CB1 /* UniversalFrameworkDynamic */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 5CC5045E1B0EC5D4004D0CB1 /* Build configuration list for PBXAggregateTarget "UniversalFramework" */;
+			buildConfigurationList = 5CC5045E1B0EC5D4004D0CB1 /* Build configuration list for PBXAggregateTarget "UniversalFrameworkDynamic" */;
 			buildPhases = (
 				5CC504611B0EC5EA004D0CB1 /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = UniversalFramework;
+			name = UniversalFrameworkDynamic;
 			productName = UniversalFramework;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
 		471B4AFE1F14272C84CC0228 /* libPods-LeanCloudSocialDynamic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DF40ABA53FE42DFCD0F859 /* libPods-LeanCloudSocialDynamic.a */; };
-		70E3D69E1BCCED0A00E4D167 /* AVOSCloudSNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E3D68D1BCCED0A00E4D167 /* AVOSCloudSNS.h */; settings = {ASSET_TAGS = (); }; };
+		70E3D69E1BCCED0A00E4D167 /* AVOSCloudSNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E3D68D1BCCED0A00E4D167 /* AVOSCloudSNS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70E3D69F1BCCED0A00E4D167 /* AVOSCloudSNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3D68E1BCCED0A00E4D167 /* AVOSCloudSNS.m */; settings = {ASSET_TAGS = (); }; };
 		70E3D6A01BCCED0A00E4D167 /* AVOSCloudSNS_.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E3D68F1BCCED0A00E4D167 /* AVOSCloudSNS_.h */; settings = {ASSET_TAGS = (); }; };
 		70E3D6A11BCCED0A00E4D167 /* AVOSCloudSNSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E3D6901BCCED0A00E4D167 /* AVOSCloudSNSUtils.h */; settings = {ASSET_TAGS = (); }; };
@@ -156,13 +156,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E3D69E1BCCED0A00E4D167 /* AVOSCloudSNS.h in Headers */,
 				70E3D6A71BCCED0A00E4D167 /* AVSNSWebViewController.h in Headers */,
 				70E3D6AD1BCCED0A00E4D167 /* NSURL+AVAdditions.h in Headers */,
 				70E3D6A01BCCED0A00E4D167 /* AVOSCloudSNS_.h in Headers */,
 				70E3D6A91BCCED0A00E4D167 /* AVUser+SNS.h in Headers */,
 				70E3D6A31BCCED0A00E4D167 /* AVSNSHttpClient.h in Headers */,
 				70E3D6A11BCCED0A00E4D167 /* AVOSCloudSNSUtils.h in Headers */,
-				70E3D69E1BCCED0A00E4D167 /* AVOSCloudSNS.h in Headers */,
 				70E3D6A51BCCED0A00E4D167 /* AVSNSLoginViewController.h in Headers */,
 				70E3D6AB1BCCED0A00E4D167 /* AVWebViewController.h in Headers */,
 			);
@@ -221,7 +221,7 @@
 			projectRoot = "";
 			targets = (
 				5CC504401B0EC5B8004D0CB1 /* LeanCloudSocialDynamic */,
-				5CC5045D1B0EC5D4004D0CB1 /* UniversalFramework */,
+				5CC5045D1B0EC5D4004D0CB1 /* UniversalFrameworkDynamic */,
 			);
 		};
 /* End PBXProject section */
@@ -263,7 +263,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This script is based on Jacob Van Order's answer on apple dev forums\n\n# https://devforums.apple.com/message/971277\n# See also http://spin.atomicobject.com/2011/12/13/building-a-universal-framework-for-ios/ for the start\n\n\n# To get this to work with a Xcode 6 Cocoa Touch Framework, create Framework\n# Then create a new Aggregate Target. Throw this script into a Build Script Phrase on the Aggregate\n\nfunction failed() {\n    echo \"$*, failed and exit!\"\n    exit 1\n}\n\n######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=true\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"./build/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\nWORKSPACE_NAME=\"LeanCloudSocial\"\n\nWORKSPACE_PATH=\"../${WORKSPACE_NAME}.xcworkspace\"\n\n\n######################\n# Build Frameworks\n######################\n\nxcodebuild -workspace ${WORKSPACE_PATH} -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator || failed ${PROJECTNAME}\n\nxcodebuild -workspace ${WORKSPACE_PATH} -scheme ${PROJECT_NAME} -sdk iphoneos ARCHS=\"armv7 armv7s arm64\" -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos || failed ${PROJECTNAME}\n\n#xcodebuild -target ${PROJECT_NAME} ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" | echo\n\n#xcodebuild -target ${PROJECT_NAME} ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphonesimulator  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" | echo\n\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make fat universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\nchmod -x \"${FRAMEWORK}/${FRAMEWORK_NAME}\"\n\nopen \"${UNIVERSAL_LIBRARY_DIR}/\"\n######################\n# On Release, copy the result to desktop folder\n######################\n\n#if [ \"${CONFIGURATION}\" == \"Release\" ]; then\n#mkdir \"${HOME}/Desktop/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n#cp -r \"${FRAMEWORK}\" \"${HOME}/Desktop/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n#fi\n\n\n######################\n# If needed, open the Framework folder\n######################\n\n#if [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\n#if [ \"${CONFIGURATION}\" == \"Release\" ]; then\n#open \"${HOME}/Desktop/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n#else\n#open \"${UNIVERSAL_LIBRARY_DIR}/\"\n#fi\n#fi";
+			shellScript = "# This script is based on Jacob Van Order's answer on apple dev forums\n\n# https://devforums.apple.com/message/971277\n# See also http://spin.atomicobject.com/2011/12/13/building-a-universal-framework-for-ios/ for the start\n\n\n# To get this to work with a Xcode 6 Cocoa Touch Framework, create Framework\n# Then create a new Aggregate Target. Throw this script into a Build Script Phrase on the Aggregate\n\nfunction failed() {\n    echo \"$*, failed and exit!\"\n    exit 1\n}\n\n######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=true\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"./build/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\nWORKSPACE_NAME=\"LeanCloudSocial\"\n\nWORKSPACE_PATH=\"../${WORKSPACE_NAME}.xcworkspace\"\n\n\n######################\n# Build Frameworks\n######################\n\nxcodebuild -workspace ${WORKSPACE_PATH} -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator || failed ${PROJECTNAME}\n\nxcodebuild -workspace ${WORKSPACE_PATH} -scheme ${PROJECT_NAME} -sdk iphoneos ARCHS=\"armv7 armv7s arm64\" -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos || failed ${PROJECTNAME}\n\n#xcodebuild -target ${PROJECT_NAME} ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" | echo\n\n#xcodebuild -target ${PROJECT_NAME} ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphonesimulator  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" | echo\n\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir -p \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir -p \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make fat universal binary\n######################\necho \"warning: ${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\"\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\nchmod -x \"${FRAMEWORK}/${FRAMEWORK_NAME}\"\n\nopen \"${UNIVERSAL_LIBRARY_DIR}/\"\n######################\n# On Release, copy the result to desktop folder\n######################\n\n#if [ \"${CONFIGURATION}\" == \"Release\" ]; then\n#mkdir \"${HOME}/Desktop/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n#cp -r \"${FRAMEWORK}\" \"${HOME}/Desktop/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n#fi\n\n\n######################\n# If needed, open the Framework folder\n######################\n\n#if [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\n#if [ \"${CONFIGURATION}\" == \"Release\" ]; then\n#open \"${HOME}/Desktop/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n#else\n#open \"${UNIVERSAL_LIBRARY_DIR}/\"\n#fi\n#fi";
 		};
 		F0B520CA93FC6666BBE9C6A0 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -398,10 +398,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = "$(PROJECT_DIR)/LeanCloudSocialDynamic/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -419,10 +415,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = "$(PROJECT_DIR)/LeanCloudSocialDynamic/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -469,7 +461,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5CC5045E1B0EC5D4004D0CB1 /* Build configuration list for PBXAggregateTarget "UniversalFramework" */ = {
+		5CC5045E1B0EC5D4004D0CB1 /* Build configuration list for PBXAggregateTarget "UniversalFrameworkDynamic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5CC5045F1B0EC5D4004D0CB1 /* Debug */,

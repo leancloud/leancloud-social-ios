@@ -28,6 +28,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7034F0B31BCEBBD100689FB0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		09AA5D57D78AC64F937E0C13 /* Pods-LeanCloudSocialDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDemo.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocialDemo/Pods-LeanCloudSocialDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		2F841BD39460028B35831547 /* Pods-LeanCloudSocialDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDemo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocialDemo/Pods-LeanCloudSocialDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +181,8 @@
 				5CC5049B1B0EF46C004D0CB1 /* Frameworks */,
 				5CC5049C1B0EF46C004D0CB1 /* Resources */,
 				0A4FBFF1E4B152AC28ED357A /* Copy Pods Resources */,
+				1DC39088070770BD3FE222CB /* Embed Pods Frameworks */,
+				7034F0B31BCEBBD100689FB0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,6 +297,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1DC39088070770BD3FE222CB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LeanCloudSocialDemo/Pods-LeanCloudSocialDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -421,6 +451,11 @@
 			baseConfigurationReference = 09AA5D57D78AC64F937E0C13 /* Pods-LeanCloudSocialDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"\"$(OBJROOT)/UninstalledProducts/include\"",
 					"$(inherited)",
@@ -442,6 +477,11 @@
 			baseConfigurationReference = 2F841BD39460028B35831547 /* Pods-LeanCloudSocialDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"\"$(OBJROOT)/UninstalledProducts/include\"",
 					"$(inherited)",

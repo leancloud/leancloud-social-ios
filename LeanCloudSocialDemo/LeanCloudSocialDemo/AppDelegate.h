@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#import <AVOSCloud/AVOSCloud.h>
+
+// 静态库方式引入
+#import <LeanCloudSocial/AVOSCloudSNS.h>
+
+// 动态库方式引入
+//#import <LeanCloudSocialDynamic/AVOSCloudSNS.h>
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

@@ -14,8 +14,8 @@ end
 
 target 'LeanCloudSocialDynamic' do
     platform :ios, '8.0'
-    
-    xcodeproj 'LeanCloudSocialDynamic/LeanCloudSocialDynamic.xcodeproj'
+
+    xcodeproj 'LeanCloudSocial/LeanCloudSocial.xcodeproj'
     pod 'AVOSCloudDynamic', '~> 3.1.4'
     pod 'AFNetworking', '~> 2.0'
 end

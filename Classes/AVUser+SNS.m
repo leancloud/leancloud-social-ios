@@ -16,14 +16,29 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
 
 @implementation AVUser(SNS)
 
-+(NSString*)nameOfPlatform:(AVOSCloudSNSType)type{
++ (NSString*)nameOfPlatform:(AVOSCloudSNSType)type {
     switch (type) {
         case AVOSCloudSNSQQ: return @"qq";
-            
         case AVOSCloudSNSSinaWeibo: return @"weibo";
         case AVOSCloudSNSWeiXin: return AVOSCloudSNSPlatformWeiXin;
     }
     return nil;
+}
+
+- (AVOSCloudSNSType)platformFromName:(NSString *)name {
+    if ([name isEqualToString:AVOSCloudSNSPlatformQQ]) {
+        return AVOSCloudSNSQQ;
+    } else if ([name isEqualToString:AVOSCloudSNSPlatformWeiBo]) {
+        return AVOSCloudSNSSinaWeibo;
+    } else if ([name isEqualToString:AVOSCloudSNSPlatformWeiXin]) {
+        return AVOSCloudSNSWeiXin;
+    } else {
+        return -1;
+    }
+}
+
+- (BOOL)isInternalSupportPlatform:(NSString *)platformName {
+    return (int)([self platformFromName:platformName]) != -1;
 }
 
 +(NSDictionary *)authDataFromSNSResult:(NSDictionary*)authData{
@@ -96,28 +111,16 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     return authData;
 }
 
--(void)deleteAuthForPlatform:(AVOSCloudSNSType)type block:(AVUserResultBlock)block{
-    NSMutableDictionary *dict=[NSMutableDictionary dictionaryWithDictionary:[self objectForKey:@"authData"]];
-    [dict removeObjectForKey:[[self class] nameOfPlatform:type]];
-    
-    [self setObject:dict forKey:@"authData"];
-    
-    [AVOSCloudSNS logout:type];
-    __weak AVUser *ws=self;
-    if (self.objectId && self.sessionToken) {
-        [self saveEventually:^(BOOL succeeded, NSError *error) {
-            [AVOSCloudSNSUtils callUserResultBlock:block user:ws error:error];
-        }];
-    }else{
-        [AVOSCloudSNSUtils callUserResultBlock:block user:self error:nil];
-    }
-}
-
 -(void)deleteAuthDataForPlatform:(NSString *)platform block:(AVUserResultBlock)block {
     NSMutableDictionary *dict = [[self objectForKey:@"authData"] mutableCopy];
     [dict removeObjectForKey:platform];
+    [self setObject:dict forKey:@"authData"];
+    
+    if ([self isInternalSupportPlatform:platform]) {
+        [AVOSCloudSNS logout:[self platformFromName:platform]];
+    }
     if (self.objectId && self.sessionToken) {
-        [self saveEventually:^(BOOL succeeded, NSError *error) {
+        [self saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             [AVOSCloudSNSUtils callUserResultBlock:block user:self error:error];
         }];
     } else {

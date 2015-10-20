@@ -7,33 +7,57 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <LeanCloudSocial/AVOSCloudSNS.h>
+#import <AVOSCloud/AVOSCloud.h>
+#import <Expecta/Expecta.h>
 
-@interface LeanCloudSocialTests : XCTestCase
+const void *AVOSCloudSNSNotifation = &AVOSCloudSNSNotifation;
+
+#define WAIT [self waitNotification:AVOSCloudSNSNotifation];
+#define NOTIFY [self postNotification:AVOSCloudSNSNotifation];
+
+@interface SocialTest : XCTestCase
 
 @end
 
-@implementation LeanCloudSocialTests
+@implementation SocialTest
+
+- (void)waitNotification:(const void *)notification {
+    NSString *name = [NSString stringWithFormat:@"%p", notification];
+    [self expectationForNotification:name object:nil handler:nil];
+    [self waitForExpectationsWithTimeout:60 handler:nil];
+}
+
+- (void)postNotification:(const void *)notification {
+    NSString *name = [NSString stringWithFormat:@"%p", notification];
+    [[NSNotificationCenter defaultCenter] postNotificationName:name object:nil];
+}
+
++ (void)setUp {
+    [super setUp];
+    NSString *appId = @"2jjvnj3938p6pns11r41dlte2n98bm6m7bkblm1cysttm7in";
+    NSString *appKey = @"7dtvdetcfggpalwtf91pdoootc7csxx0vxyi3ayqtbnlklq2";
+    [AVOSCloud setApplicationId:appId clientKey:appKey];
+}
 
 - (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
+    
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+- (void)testWeiboLogin {
+    NSDictionary *authData = @{@"access_token": @"2.00_hkjqBJKf8mCe3c8acf73as6LRxC", @"id":@"1695406573", @"expires_at": @"2015-10-27T18:59:46.676Z", @"platform": @1};
+    [AVUser loginWithAuthData:authData platform:AVOSCloudSNSPlatformWeiBo block:^(AVUser *user, NSError *error) {
+        expect(error).to.beNil();
+        expect(user).notTo.beNil();
+        NOTIFY
     }];
+    WAIT
 }
 
 @end
+
+

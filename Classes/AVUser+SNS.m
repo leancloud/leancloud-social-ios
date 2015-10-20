@@ -106,10 +106,10 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     __weak AVUser *ws=self;
     if (self.objectId && self.sessionToken) {
         [self saveEventually:^(BOOL succeeded, NSError *error) {
-            if(block)[AVOSCloudSNSUtils callUserResultBlock:block user:ws error:error];
+            [AVOSCloudSNSUtils callUserResultBlock:block user:ws error:error];
         }];
     }else{
-        if(block)[AVOSCloudSNSUtils callUserResultBlock:block user:self error:nil];
+        [AVOSCloudSNSUtils callUserResultBlock:block user:self error:nil];
     }
 }
 
@@ -118,16 +118,10 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     [dict removeObjectForKey:platform];
     if (self.objectId && self.sessionToken) {
         [self saveEventually:^(BOOL succeeded, NSError *error) {
-            if(block) {
-                [AVOSCloudSNSUtils callUserResultBlock:block user:self error:error];
-            }
+            [AVOSCloudSNSUtils callUserResultBlock:block user:self error:error];
         }];
     } else {
-        if (block) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [AVOSCloudSNSUtils callUserResultBlock:block user:self error:nil];
-            });
-        }
+        [AVOSCloudSNSUtils callUserResultBlock:block user:self error:nil];
     }
 }
 
@@ -143,10 +137,10 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
             [self setObject:dict forKey:@"authData"];
             
             [self saveEventually:^(BOOL succeeded, NSError *error) {
-                if(block)[AVOSCloudSNSUtils callUserResultBlock:block user:ws error:error];
+                [AVOSCloudSNSUtils callUserResultBlock:block user:ws error:error];
             }];
         }else{
-            //这个是新产生的用户, 需要在服务器注册
+            // 这个是新产生的用户, 需要在服务器注册
             NSDictionary *dict=@{@"authData":@{
                                          [[self class] nameOfPlatform:[authData[@"platform"] intValue]]:
                                              [[self class] authDataFromSNSResult:authData]
@@ -156,17 +150,13 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
                 {
                     [AVOSCloudSNSUtils copyDictionary:object toObject:ws];
                     [ws setObject:dict[@"authData"] forKey:@"authData"];
-// todo: fix me!
-//                    [ws.requestManager clear];
+                    // todo: fix me!
+                    // [ws.requestManager clear];
                     [[self class] changeCurrentUser:ws save:YES];
                 }
-                
-                
-                if(block)[AVOSCloudSNSUtils callUserResultBlock:block user:ws error:error];
+                [AVOSCloudSNSUtils callUserResultBlock:block user:ws error:error];
             }];
         }
-        
-        
     }
 }
 
@@ -174,11 +164,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     NSError *error = nil;
     NSDictionary *authDataResult = [[self class] authDataFromSNSResult:authData platform:platform error:&error];
     if (error) {
-        if(block) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [AVOSCloudSNSUtils callUserResultBlock:block user:self error:error];
-            });
-        }
+        [AVOSCloudSNSUtils callUserResultBlock:block user:self error:error];
         return;
     }
     
@@ -191,9 +177,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
         [dict setObject:authDataResult forKey:platform];
         [self setObject:dict forKey:@"authData"];
         [self saveEventually:^(BOOL succeeded, NSError *error) {
-            if(block) {
-                [AVOSCloudSNSUtils callUserResultBlock:block user:self error:error];
-            }
+            [AVOSCloudSNSUtils callUserResultBlock:block user:self error:error];
         }];
     }else{
         //这个是新产生的用户, 需要在服务器注册
@@ -206,26 +190,17 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
 //                    [self.requestManager clear];
                 [[self class] changeCurrentUser:self save:YES];
             }
-            if(block) {
-                [AVOSCloudSNSUtils callUserResultBlock:block user:self error:error];
-            }
+            [AVOSCloudSNSUtils callUserResultBlock:block user:self error:error];
         }];
     }
 }
 
 +(void)loginWithAuthData:(NSDictionary*)authData
-                   block:(AVUserResultBlock)block{
-    
-    
-    
-    NSDictionary *dict=@{@"authData":@{
-                                 [self nameOfPlatform:[authData[@"platform"] intValue]]:
-                                     [self authDataFromSNSResult:authData]
-                                 }};
-    
-    
+                   block:(AVUserResultBlock)block {
+
+    NSDictionary *dict = @{ @"authData" : @{ [self nameOfPlatform:[authData[@"platform"] intValue]] : [self authDataFromSNSResult:authData] } };
+
     [[AVSNSHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
-        
         AVUser * user = nil;
         if (error == nil)
         {
@@ -236,13 +211,12 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
                 [user setObject:dict[@"authData"] forKey:@"authData"];
             }
             
-// todo: fix me!
-//                [user.requestManager clear];
+            // todo: fix me!
+            // [user.requestManager clear];
             [[self class] changeCurrentUser:user save:YES];
         }
         
-        
-        if(block)[AVOSCloudSNSUtils callUserResultBlock:block user:user error:error];
+        [AVOSCloudSNSUtils callUserResultBlock:block user:user error:error];
     }];
 }
 
@@ -250,11 +224,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     NSError *error = nil;
     NSDictionary *authDataResult = [self authDataFromSNSResult:authData platform:platform error:&error];
     if (error) {
-        if(block) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [AVOSCloudSNSUtils callUserResultBlock:block user:nil error:error];
-            });
-        }
+        [AVOSCloudSNSUtils callUserResultBlock:block user:nil error:error];
         return;
     }
     NSDictionary *dict=@{@"authData":@{platform:authDataResult}};
@@ -262,11 +232,11 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
         AVUser * user = nil;
         if (!error) {
             if ([object objectForKey:@"objectId"]) {
-                //            第一次会返回
-                //            objectId = 55b8b76400b066e34529d4a6;
-                //            sessionToken = fzs03y5g7hr4r22iikhv2babe;
-                //            createdAt = "2015-07-29T11:33:03.642Z";
-                //            username = mzv62gzwrwzqtz75rv51kzye6;
+                // 第一次会返回
+                // objectId = 55b8b76400b066e34529d4a6;
+                // sessionToken = fzs03y5g7hr4r22iikhv2babe;
+                // createdAt = "2015-07-29T11:33:03.642Z";
+                // username = mzv62gzwrwzqtz75rv51kzye6;
                 
                 user = [self user];
                 [user objectFromDictionary:object];
@@ -274,16 +244,14 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
                     [user setObject:dict[@"authData"] forKey:@"authData"];
                 }
                 // todo: fix me!
-                //            [user.requestManager clear];
+                // [user.requestManager clear];
                 [[self class] changeCurrentUser:user save:YES];
             } else {
-//                {code = 1;error = "无效的第三方数据";}
+                // {code = 1;error = "无效的第三方数据";}
                 error = [NSError errorWithDomain:AVOSCloudSNSErrorDomain code:AVOSCloudSNSErrorCodeAuthDataError userInfo:@{NSLocalizedFailureReasonErrorKey: object}];
             }
         }
-        if(block) {
-            [AVOSCloudSNSUtils callUserResultBlock:block user:user error:error];
-        }
+        [AVOSCloudSNSUtils callUserResultBlock:block user:user error:error];
     }];
 }
 @end

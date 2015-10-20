@@ -22,6 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		46E48FEED9B943740A34D735 /* libPods-LeanCloudSocial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5406E5F39D2923D567AC261 /* libPods-LeanCloudSocial.a */; };
+		7030A9001BD6415700636404 /* LeanCloudSocialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7030A8FF1BD6415700636404 /* LeanCloudSocialTests.m */; };
+		7030A9021BD6415700636404 /* LeanCloudSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7034F08E1BCEB46B00689FB0 /* LeanCloudSocial.framework */; settings = {ASSET_TAGS = (); }; };
 		7034F0701BCEB3BF00689FB0 /* AVOSCloudSNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F05F1BCEB3BF00689FB0 /* AVOSCloudSNS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7034F0711BCEB3BF00689FB0 /* AVOSCloudSNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F0601BCEB3BF00689FB0 /* AVOSCloudSNS.m */; settings = {ASSET_TAGS = (); }; };
 		7034F0721BCEB3BF00689FB0 /* AVOSCloudSNS_.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0611BCEB3BF00689FB0 /* AVOSCloudSNS_.h */; settings = {ASSET_TAGS = (); }; };
@@ -60,10 +62,23 @@
 		9164637509911E1C6E5B4C27 /* libPods-LeanCloudSocialDynamic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B96F283ED44DC0F3AFFB175 /* libPods-LeanCloudSocialDynamic.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7030A9031BD6415700636404 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70A648021BCEA86300D56C78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7034F08D1BCEB46B00689FB0;
+			remoteInfo = LeanCloudSocial;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1463B00C15C788942C9454A3 /* Pods-LeanCloudSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocial.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocial/Pods-LeanCloudSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		3B96F283ED44DC0F3AFFB175 /* libPods-LeanCloudSocialDynamic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeanCloudSocialDynamic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5AB76CAE0B16721FF50DE7 /* Pods-LeanCloudSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocial.release.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocial/Pods-LeanCloudSocial.release.xcconfig"; sourceTree = "<group>"; };
+		7030A8FD1BD6415700636404 /* LeanCloudSocialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeanCloudSocialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7030A8FF1BD6415700636404 /* LeanCloudSocialTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanCloudSocialTests.m; sourceTree = "<group>"; };
+		7030A9011BD6415700636404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7034F02C1BCEACD100689FB0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		7034F05F1BCEB3BF00689FB0 /* AVOSCloudSNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVOSCloudSNS.h; sourceTree = "<group>"; };
 		7034F0601BCEB3BF00689FB0 /* AVOSCloudSNS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVOSCloudSNS.m; sourceTree = "<group>"; };
@@ -92,6 +107,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7030A8FA1BD6415700636404 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7030A9021BD6415700636404 /* LeanCloudSocial.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7034F08A1BCEB46B00689FB0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,6 +153,15 @@
 				847392B14A6854CE535F8FA3 /* Pods-LeanCloudSocialDynamic.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		7030A8FE1BD6415700636404 /* LeanCloudSocialTests */ = {
+			isa = PBXGroup;
+			children = (
+				7030A8FF1BD6415700636404 /* LeanCloudSocialTests.m */,
+				7030A9011BD6415700636404 /* Info.plist */,
+			);
+			path = LeanCloudSocialTests;
 			sourceTree = "<group>";
 		};
 		7034F05E1BCEB3BF00689FB0 /* Classes */ = {
@@ -171,6 +203,7 @@
 				7034F05E1BCEB3BF00689FB0 /* Classes */,
 				70A6485E1BCEAB2000D56C78 /* LeanCloudSocialDynamic */,
 				7034F08F1BCEB46B00689FB0 /* LeanCloudSocial */,
+				7030A8FE1BD6415700636404 /* LeanCloudSocialTests */,
 				70A6480C1BCEA86300D56C78 /* Products */,
 				4A9E9E44EEFD758DB3D7C266 /* Pods */,
 				026B36CE3C66CE2A3180C0EC /* Frameworks */,
@@ -182,6 +215,7 @@
 			children = (
 				70A6485D1BCEAB2000D56C78 /* LeanCloudSocialDynamic.framework */,
 				7034F08E1BCEB46B00689FB0 /* LeanCloudSocial.framework */,
+				7030A8FD1BD6415700636404 /* LeanCloudSocialTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,6 +266,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		7030A8FC1BD6415700636404 /* LeanCloudSocialTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7030A9071BD6415700636404 /* Build configuration list for PBXNativeTarget "LeanCloudSocialTests" */;
+			buildPhases = (
+				7030A8F91BD6415700636404 /* Sources */,
+				7030A8FA1BD6415700636404 /* Frameworks */,
+				7030A8FB1BD6415700636404 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7030A9041BD6415700636404 /* PBXTargetDependency */,
+			);
+			name = LeanCloudSocialTests;
+			productName = LeanCloudSocialTests;
+			productReference = 7030A8FD1BD6415700636404 /* LeanCloudSocialTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7034F08D1BCEB46B00689FB0 /* LeanCloudSocial */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7034F0931BCEB46B00689FB0 /* Build configuration list for PBXNativeTarget "LeanCloudSocial" */;
@@ -281,6 +333,9 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = LeanCloud;
 				TargetAttributes = {
+					7030A8FC1BD6415700636404 = {
+						CreatedOnToolsVersion = 7.0;
+					};
 					7034F0501BCEAD4000689FB0 = {
 						CreatedOnToolsVersion = 7.0;
 					};
@@ -306,12 +361,20 @@
 			targets = (
 				70A6485C1BCEAB2000D56C78 /* LeanCloudSocialDynamic */,
 				7034F08D1BCEB46B00689FB0 /* LeanCloudSocial */,
+				7030A8FC1BD6415700636404 /* LeanCloudSocialTests */,
 				7034F0501BCEAD4000689FB0 /* UniversalFramework */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7030A8FB1BD6415700636404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7034F08C1BCEB46B00689FB0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,6 +469,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7030A8F91BD6415700636404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7030A9001BD6415700636404 /* LeanCloudSocialTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7034F0891BCEB46B00689FB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -438,7 +509,35 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7030A9041BD6415700636404 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7034F08D1BCEB46B00689FB0 /* LeanCloudSocial */;
+			targetProxy = 7030A9031BD6415700636404 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		7030A9051BD6415700636404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LeanCloudSocialTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.leancloud.LeanCloudSocialTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7030A9061BD6415700636404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LeanCloudSocialTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.leancloud.LeanCloudSocialTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		7034F0521BCEAD4000689FB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -616,6 +715,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7030A9071BD6415700636404 /* Build configuration list for PBXNativeTarget "LeanCloudSocialTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7030A9051BD6415700636404 /* Debug */,
+				7030A9061BD6415700636404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		7034F0511BCEAD4000689FB0 /* Build configuration list for PBXAggregateTarget "UniversalFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

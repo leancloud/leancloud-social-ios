@@ -31,9 +31,6 @@
 
 + (NSError *)errorWithText:(NSString *)format, ... NS_FORMAT_FUNCTION(1, 2);
 
-+(void)copyDictionary:(NSDictionary *)src
-             toObject:(AVObject *)target;
-
 #pragma mark - Block
 
 + (void)callBooleanResultBlock:(AVBooleanResultBlock)block

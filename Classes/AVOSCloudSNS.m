@@ -637,7 +637,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
         switch (type) {
             case AVOSCloudSNSQQ:
                 //redirect_uri=@"http://open.z.qq.com/moc2/success.jsp";
-                //FIXME: 不要纠结这个问题了，我也是抓了 ShareSDK 的数据包才发现这样是可以work的
+                //FIXME: 通过抓取其它服务的包，发现这样是可以work的
                 redirect_uri=@"auth://tauth.qq.com/";
                 break;
                 

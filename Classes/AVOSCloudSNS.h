@@ -29,7 +29,7 @@ typedef NS_ENUM(int, AVOSCloudSNSType){
     
     /// 微信
     AVOSCloudSNSWeiXin      =3,
-} ;
+};
 
 #import "AVUser+SNS.h"
 

@@ -29,3 +29,6 @@ xcuserdata
 # CocoaPods
 Pods/
 Podfile.lock
+
+*.gcda
+*.gcno

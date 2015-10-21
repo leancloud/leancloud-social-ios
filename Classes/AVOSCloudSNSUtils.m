@@ -93,11 +93,6 @@
     return strDate;
 }
 
-+(void)copyDictionary:(NSDictionary *)src
-             toObject:(AVObject *)target {
-    ;
-}
-
 #pragma mark - Safe way to call block
 
 #define safeBlock(first_param) \

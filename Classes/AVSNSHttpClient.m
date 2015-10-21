@@ -77,14 +77,15 @@
         if (connectionError) {
             block(nil, connectionError);
         } else {
-            if (response && data) {
+            if (response && data.length > 0) {
                 NSError *error;
                 NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
                 if (error) {
                     NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                     SLog(@"reponse : %@", responseString);
-                    block(nil, [AVOSCloudSNSUtils errorWithText:@"Http request failed, reponse string : %@", responseString]);
+                    block(nil, [AVOSCloudSNSUtils errorWithText:@"HTTP request failed, reponse string: %@", responseString]);
                 } else {
+                    SLog(@"reponse : %@", dictionary);
                     block(dictionary, nil);
                 }
             }

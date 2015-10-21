@@ -9,7 +9,7 @@ target 'LeanCloudSocial' do
     
     xcodeproj 'LeanCloudSocial/LeanCloudSocial.xcodeproj'
     pod 'AVOSCloud', '~> 3.1'
-    pod 'AFNetworking', '~> 2.0'
+    pod 'AFNetworking', '< 2.6'
 end
 
 target 'LeanCloudSocialTests' do
@@ -24,7 +24,7 @@ target 'LeanCloudSocialDynamic' do
 
     xcodeproj 'LeanCloudSocial/LeanCloudSocial.xcodeproj'
     pod 'AVOSCloudDynamic', '~> 3.1'
-    pod 'AFNetworking', '~> 2.0'
+    pod 'AFNetworking', '< 2.6'
 end
 
 target 'LeanCloudSocialDemo' do

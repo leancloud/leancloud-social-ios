@@ -128,39 +128,17 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     }
 }
 
++ (NSString *)platformNameFromAuthData:(NSDictionary *)authData {
+    NSNumber *platform = [authData objectForKey:@"platform"];
+    NSAssert([platform isKindOfClass:[NSNumber class]], @"The authData should have platform number value");
+    AVOSCloudSNSType type = [platform intValue];
+    NSString *platformName = [[self class] nameOfPlatform:type];
+    NSAssert(platformName != nil, @"The platform is not internally supported");
+    return platformName;
+}
+
 -(void)addAuthData:(NSDictionary*)authData block:(AVUserResultBlock)block{
-    if (authData) {
-        __weak AVUser *ws=self;
-        
-        if (self.objectId && self.sessionToken) {
-            //目前API不支持添加 只会覆盖 所以临时会把用户所有的绑定数据同时发一次 (如果服务器准备好, 直接删除下面两行即可)
-            NSMutableDictionary *dict=[NSMutableDictionary dictionaryWithDictionary:[self objectForKey:@"authData"]];
-            [dict setObject:[[self class] authDataFromSNSResult:authData] forKey:[[self class] nameOfPlatform:[authData[@"platform"] intValue]]];
-            
-            [self setObject:dict forKey:@"authData"];
-            
-            [self saveEventually:^(BOOL succeeded, NSError *error) {
-                [AVOSCloudSNSUtils callUserResultBlock:block user:ws error:error];
-            }];
-        }else{
-            // 这个是新产生的用户, 需要在服务器注册
-            NSDictionary *dict=@{@"authData":@{
-                                         [[self class] nameOfPlatform:[authData[@"platform"] intValue]]:
-                                             [[self class] authDataFromSNSResult:authData]
-                                         }};
-            [[AVSNSHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
-                if (error == nil)
-                {
-                    [AVOSCloudSNSUtils copyDictionary:object toObject:ws];
-                    [ws setObject:dict[@"authData"] forKey:@"authData"];
-                    // todo: fix me!
-                    // [ws.requestManager clear];
-                    [[self class] changeCurrentUser:ws save:YES];
-                }
-                [AVOSCloudSNSUtils callUserResultBlock:block user:ws error:error];
-            }];
-        }
-    }
+    [self addAuthData:authData platform:[[self class] platformNameFromAuthData:authData] block:block];
 }
 
 -(void)addAuthData:(NSDictionary*)authData platform:(NSString *)platform block:(AVUserResultBlock)block {
@@ -187,10 +165,10 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
         NSDictionary *dict=@{@"authData":@{platform:authDataResult}};
         [[AVSNSHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
             if (!error) {
-                [AVOSCloudSNSUtils copyDictionary:object toObject:self];
+                [self objectFromDictionary:object];
                 [self setObject:dict[@"authData"] forKey:@"authData"];
-// todo: fix me!
-//                    [self.requestManager clear];
+                // todo: fix me!
+                // [self.requestManager clear];
                 [[self class] changeCurrentUser:self save:YES];
             }
             [AVOSCloudSNSUtils callUserResultBlock:block user:self error:error];
@@ -198,29 +176,8 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     }
 }
 
-+(void)loginWithAuthData:(NSDictionary*)authData
-                   block:(AVUserResultBlock)block {
-
-    NSDictionary *dict = @{ @"authData" : @{ [self nameOfPlatform:[authData[@"platform"] intValue]] : [self authDataFromSNSResult:authData] } };
-
-    [[AVSNSHttpClient sharedInstance] postObject:@"users" withParameters:dict block:^(id object, NSError *error) {
-        AVUser * user = nil;
-        if (error == nil)
-        {
-            user = [[self class] user];
-            [AVOSCloudSNSUtils copyDictionary:object toObject:user];
-            
-            if(object[@"authData"]==nil){
-                [user setObject:dict[@"authData"] forKey:@"authData"];
-            }
-            
-            // todo: fix me!
-            // [user.requestManager clear];
-            [[self class] changeCurrentUser:user save:YES];
-        }
-        
-        [AVOSCloudSNSUtils callUserResultBlock:block user:user error:error];
-    }];
++(void)loginWithAuthData:(NSDictionary*)authData block:(AVUserResultBlock)block {
+    [self loginWithAuthData:authData platform:[[self class] platformNameFromAuthData:authData] block:block];
 }
 
 +(void)loginWithAuthData:(NSDictionary*)authData platform:(NSString *)platform block:(AVUserResultBlock)block {

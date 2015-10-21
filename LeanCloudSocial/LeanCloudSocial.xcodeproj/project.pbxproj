@@ -22,7 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		46E48FEED9B943740A34D735 /* libPods-LeanCloudSocial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5406E5F39D2923D567AC261 /* libPods-LeanCloudSocial.a */; };
-		7030A9001BD6415700636404 /* LeanCloudSocialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7030A8FF1BD6415700636404 /* LeanCloudSocialTests.m */; };
+		7030A9001BD6415700636404 /* AVUserSNSTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7030A8FF1BD6415700636404 /* AVUserSNSTest.m */; };
 		7034F0701BCEB3BF00689FB0 /* AVOSCloudSNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F05F1BCEB3BF00689FB0 /* AVOSCloudSNS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7034F0711BCEB3BF00689FB0 /* AVOSCloudSNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F0601BCEB3BF00689FB0 /* AVOSCloudSNS.m */; settings = {ASSET_TAGS = (); }; };
 		7034F0721BCEB3BF00689FB0 /* AVOSCloudSNS_.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0611BCEB3BF00689FB0 /* AVOSCloudSNS_.h */; settings = {ASSET_TAGS = (); }; };
@@ -58,6 +58,8 @@
 		7034F0A81BCEB4F500689FB0 /* AVUser+SNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06B1BCEB3BF00689FB0 /* AVUser+SNS.m */; };
 		7034F0A91BCEB4F500689FB0 /* AVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06D1BCEB3BF00689FB0 /* AVWebViewController.m */; };
 		7034F0AA1BCEB4F500689FB0 /* NSURL+AVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06F1BCEB3BF00689FB0 /* NSURL+AVAdditions.m */; };
+		70F675051BD7397400163D89 /* AVSNSTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F675041BD7397400163D89 /* AVSNSTestCase.m */; settings = {ASSET_TAGS = (); }; };
+		70F675081BD73AA300163D89 /* AVOSCloudSNSTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F675071BD73AA300163D89 /* AVOSCloudSNSTest.m */; settings = {ASSET_TAGS = (); }; };
 		9164637509911E1C6E5B4C27 /* libPods-LeanCloudSocialDynamic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B96F283ED44DC0F3AFFB175 /* libPods-LeanCloudSocialDynamic.a */; };
 		DDAB97E8AAA8C7757CD7D158 /* libPods-LeanCloudSocialTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6499EBDDC79C5167F06ADD47 /* libPods-LeanCloudSocialTests.a */; };
 /* End PBXBuildFile section */
@@ -70,7 +72,7 @@
 		5D5AB76CAE0B16721FF50DE7 /* Pods-LeanCloudSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocial.release.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocial/Pods-LeanCloudSocial.release.xcconfig"; sourceTree = "<group>"; };
 		6499EBDDC79C5167F06ADD47 /* libPods-LeanCloudSocialTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeanCloudSocialTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7030A8FD1BD6415700636404 /* LeanCloudSocialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeanCloudSocialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7030A8FF1BD6415700636404 /* LeanCloudSocialTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanCloudSocialTests.m; sourceTree = "<group>"; };
+		7030A8FF1BD6415700636404 /* AVUserSNSTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVUserSNSTest.m; sourceTree = "<group>"; };
 		7030A9011BD6415700636404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7034F02C1BCEACD100689FB0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		7034F05F1BCEB3BF00689FB0 /* AVOSCloudSNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVOSCloudSNS.h; sourceTree = "<group>"; };
@@ -94,6 +96,9 @@
 		7034F0971BCEB4AB00689FB0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70A6485D1BCEAB2000D56C78 /* LeanCloudSocialDynamic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanCloudSocialDynamic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A648611BCEAB2000D56C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70F675041BD7397400163D89 /* AVSNSTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSNSTestCase.m; sourceTree = "<group>"; };
+		70F675061BD7399900163D89 /* AVSNSTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVSNSTestCase.h; sourceTree = "<group>"; };
+		70F675071BD73AA300163D89 /* AVOSCloudSNSTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVOSCloudSNSTest.m; sourceTree = "<group>"; };
 		847392B14A6854CE535F8FA3 /* Pods-LeanCloudSocialDynamic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDynamic.release.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocialDynamic/Pods-LeanCloudSocialDynamic.release.xcconfig"; sourceTree = "<group>"; };
 		857347A4DC9D90897CF61A18 /* Pods-LeanCloudSocialDynamic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDynamic.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocialDynamic/Pods-LeanCloudSocialDynamic.debug.xcconfig"; sourceTree = "<group>"; };
 		C5406E5F39D2923D567AC261 /* libPods-LeanCloudSocial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeanCloudSocial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +159,10 @@
 		7030A8FE1BD6415700636404 /* LeanCloudSocialTests */ = {
 			isa = PBXGroup;
 			children = (
-				7030A8FF1BD6415700636404 /* LeanCloudSocialTests.m */,
+				70F675061BD7399900163D89 /* AVSNSTestCase.h */,
+				70F675041BD7397400163D89 /* AVSNSTestCase.m */,
+				7030A8FF1BD6415700636404 /* AVUserSNSTest.m */,
+				70F675071BD73AA300163D89 /* AVOSCloudSNSTest.m */,
 				7030A9011BD6415700636404 /* Info.plist */,
 			);
 			path = LeanCloudSocialTests;
@@ -516,7 +524,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7030A9001BD6415700636404 /* LeanCloudSocialTests.m in Sources */,
+				70F675081BD73AA300163D89 /* AVOSCloudSNSTest.m in Sources */,
+				7030A9001BD6415700636404 /* AVUserSNSTest.m in Sources */,
+				70F675051BD7397400163D89 /* AVSNSTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

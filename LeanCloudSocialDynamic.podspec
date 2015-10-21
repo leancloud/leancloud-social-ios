@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.public_header_files = "Classes/AVUser+SNS.h", "Classes/AVOSCloudSNS.h"
 
   s.dependency "AVOSCloudDynamic"
-  s.dependency "AFNetworking", "~> 2.0"
+  s.dependency "AFNetworking", "< 2.6" # 2.6 require iOS 7
 
   s.xcconfig = {
       "OTHER_LDFLAGS" => "$(inherited) -ObjC",

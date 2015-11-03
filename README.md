@@ -1,7 +1,6 @@
 # leancloud-social-ios
 
 [![Podspec][podspec-svg]][podspec-link]
-[![DynamicSpec][dynamic-podspec-svg]][dynamic-podspec-link]
 ![Platforms][platforms-svg]
 [![Dependencies][dependencies-svg]][dependencies-link]
 
@@ -107,9 +106,6 @@ xcodebuild -target UniversalFramework -config Release
 
 ## License
 MIT
-
- [dynamic-podspec-svg]: https://img.shields.io/badge/pod-dynamic-brightgreen.svg
- [dynamic-podspec-link]: https://cocoapods.org/pods/LeanCloudSocialDynamic
 
  [podspec-svg]: https://img.shields.io/cocoapods/v/LeanCloudSocial.svg
  [podspec-link]: https://cocoapods.org/pods/LeanCloudSocial

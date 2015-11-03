@@ -1,7 +1,6 @@
 # leancloud-social-ios
 
 [![Podspec][podspec-svg]][podspec-link]
-[![DynamicPodspec][dynamic-podspec-svg]][dynamic-podspec-link]
 ![Platforms][platforms-svg]
 [![Dependencies][dependencies-svg]][dependencies-link]
 
@@ -110,9 +109,6 @@ MIT
 
  [podspec-svg]: https://img.shields.io/cocoapods/v/LeanCloudSocial.svg
  [podspec-link]: https://cocoapods.org/pods/LeanCloudSocial
- 
- [dynamic-podspec-svg]: https://img.shields.io/cocoapods/v/LeanCloudSocialDynamic.svg
- [dynamic-podspec-link]: https://cocoapods.org/pods/LeanCloudSocialDynamic
 
  [platforms-svg]: https://img.shields.io/badge/platform-ios-lightgrey.svg
 

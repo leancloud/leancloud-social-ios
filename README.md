@@ -77,24 +77,28 @@ xcodebuild -target UniversalFramework -config Release
 ## 发布日志
 发布流程：更改 podspec 版本，打 tag，推送到仓库，执行`pod trunk push LeanCloudSocial.podspec --verbose --allow-warnings --use-libraries`。
 
+0.0.7   
+* 因为 AFNetworking 2.6 最低支持 7.0，同时考虑到微信等应用也是最低支持 7.0。故 LeanCloudSocial 项目支持的 iOS 版本从 6.0 提升成 7.0。
+* 仅公开 AVUser+SNS.h、AVOSCloudSNS.h 头文件。
+
 0.0.6   
-调整目录结构。同时发布动态库，可通过 `pod LeanCloudSocialDynamic` 引入到项目中。
+* 调整目录结构。同时发布动态库，可通过 `pod LeanCloudSocialDynamic` 引入到项目中。
 
 0.0.5	
-重构部分函数，使命名更符合 Cocoa 规范
+* 重构部分函数，使命名更符合 Cocoa 规范
 
 0.0.4	
-支持微信 SSO 登录，对 -[AVOSCloudSNS loginWithCallback:toPlatform] 第二个参数传入 AVOSCloudSNSWeiXin 即可。
-同时提供 -[AVOSCloudSNS isAppInstalledWithType] 来检测相应的应用有没安装。
+* 支持微信 SSO 登录，对 -[AVOSCloudSNS loginWithCallback:toPlatform] 第二个参数传入 AVOSCloudSNSWeiXin 即可。
+* 同时提供 -[AVOSCloudSNS isAppInstalledWithType] 来检测相应的应用有没安装。
 
 0.0.3	
-重命名 LCHttpClient 至 AVSNSHttpClient，避免和其它LC的模块冲突
+* 重命名 LCHttpClient 至 AVSNSHttpClient，避免和其它LC的模块冲突
 
 0.0.2	
-使用 AFNetworking ~2.0 版本，使得主项目能够和此库共用同一个 AFNetworking 版本。如果主项目使用的是 AFNetworking 1.0，推荐使用 LeanCloudSocial 0.0.1 版本。
+* 使用 AFNetworking ~2.0 版本，使得主项目能够和此库共用同一个 AFNetworking 版本。如果主项目使用的是 AFNetworking 1.0，推荐使用 LeanCloudSocial 0.0.1 版本。
 
 0.0.1	
-重命名模块后发布
+* 重命名模块后发布
 
 ## License
 MIT

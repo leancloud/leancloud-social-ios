@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   component      = "LeanCloudSocial"
 
   s.name         = "LeanCloudSocialDynamic"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.summary      = "LeanCloud iOS Social SDK for mobile backend."
   s.homepage     = "https://leancloud.cn"
   s.license      = { :type => "Commercial", :text => "© Copyright 2015 LeanCloud, Inc. See https://leancloud.cn/terms.html" }
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.public_header_files = "Classes/AVUser+SNS.h", "Classes/AVOSCloudSNS.h"
 
   s.dependency "AVOSCloudDynamic"
-  s.dependency "AFNetworking", "< 2.6" # 2.6 require iOS 7
+  s.dependency "AFNetworking", "~> 2.0"
 
   s.xcconfig = {
       "OTHER_LDFLAGS" => "$(inherited) -ObjC",

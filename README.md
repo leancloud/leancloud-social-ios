@@ -117,5 +117,4 @@ MIT
  [platforms-svg]: https://img.shields.io/badge/platform-ios-lightgrey.svg
 
  [dependencies-svg]: https://img.shields.io/badge/dependencies-2-yellowgreen.svg
- [dependencies-link]: https://github.com/leancloud/leancloud-social-ios/blob/master/LeanCloudSocial.podspec#L15
-
+ [dependencies-link]: https://github.com/leancloud/leancloud-social-ios/blob/master/LeanCloudSocial.podspec#L15-L16

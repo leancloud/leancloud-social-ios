@@ -1,5 +1,10 @@
 # leancloud-social-ios
 
+[![Podspec][podspec-svg]][podspec-link]
+[![DynamicPodspec][dynamic-podspec-svg]][dynamic-podspec-link]
+![Platforms][platforms-svg]
+[![Dependencies][dependencies-svg]][dependencies-link]
+
 LeanCloud Social Network 模块是 [LeanCloud](https://leancloud.cn) 开源的一个第三方平台登录、分享组件，目前支持 QQ 空间、新浪微博、微信三个平台，具体使用方法可以参看[文档](https://leancloud.cn/docs/sns.html)。
 
 ## 视频演示
@@ -102,3 +107,15 @@ xcodebuild -target UniversalFramework -config Release
 
 ## License
 MIT
+
+ [podspec-svg]: https://img.shields.io/cocoapods/v/LeanCloudSocial.svg
+ [podspec-link]: https://cocoapods.org/pods/LeanCloudSocial
+ 
+ [dynamic-podspec-svg]: https://img.shields.io/cocoapods/v/LeanCloudSocialDynamic.svg
+ [dynamic-podspec-link]: https://cocoapods.org/pods/LeanCloudSocialDynamic
+
+ [platforms-svg]: https://img.shields.io/badge/platform-ios-lightgrey.svg
+
+ [dependencies-svg]: https://img.shields.io/badge/dependencies-2-yellowgreen.svg
+ [dependencies-link]: https://github.com/leancloud/leancloud-social-ios/blob/master/LeanCloudSocial.podspec#L15
+

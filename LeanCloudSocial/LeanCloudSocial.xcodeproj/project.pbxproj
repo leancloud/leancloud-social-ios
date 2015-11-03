@@ -24,23 +24,23 @@
 		46E48FEED9B943740A34D735 /* libPods-LeanCloudSocial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5406E5F39D2923D567AC261 /* libPods-LeanCloudSocial.a */; };
 		7030A9001BD6415700636404 /* AVUserSNSTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7030A8FF1BD6415700636404 /* AVUserSNSTest.m */; };
 		7034F0701BCEB3BF00689FB0 /* AVOSCloudSNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F05F1BCEB3BF00689FB0 /* AVOSCloudSNS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7034F0711BCEB3BF00689FB0 /* AVOSCloudSNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F0601BCEB3BF00689FB0 /* AVOSCloudSNS.m */; settings = {ASSET_TAGS = (); }; };
-		7034F0721BCEB3BF00689FB0 /* AVOSCloudSNS_.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0611BCEB3BF00689FB0 /* AVOSCloudSNS_.h */; settings = {ASSET_TAGS = (); }; };
-		7034F0731BCEB3BF00689FB0 /* AVOSCloudSNSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0621BCEB3BF00689FB0 /* AVOSCloudSNSUtils.h */; settings = {ASSET_TAGS = (); }; };
-		7034F0741BCEB3BF00689FB0 /* AVOSCloudSNSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F0631BCEB3BF00689FB0 /* AVOSCloudSNSUtils.m */; settings = {ASSET_TAGS = (); }; };
-		7034F0751BCEB3BF00689FB0 /* AVSNSHttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0641BCEB3BF00689FB0 /* AVSNSHttpClient.h */; settings = {ASSET_TAGS = (); }; };
-		7034F0761BCEB3BF00689FB0 /* AVSNSHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F0651BCEB3BF00689FB0 /* AVSNSHttpClient.m */; settings = {ASSET_TAGS = (); }; };
-		7034F0771BCEB3BF00689FB0 /* AVSNSLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0661BCEB3BF00689FB0 /* AVSNSLoginViewController.h */; settings = {ASSET_TAGS = (); }; };
-		7034F0781BCEB3BF00689FB0 /* AVSNSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F0671BCEB3BF00689FB0 /* AVSNSLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
-		7034F0791BCEB3BF00689FB0 /* AVSNSWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0681BCEB3BF00689FB0 /* AVSNSWebViewController.h */; settings = {ASSET_TAGS = (); }; };
-		7034F07A1BCEB3BF00689FB0 /* AVSNSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F0691BCEB3BF00689FB0 /* AVSNSWebViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7034F0711BCEB3BF00689FB0 /* AVOSCloudSNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F0601BCEB3BF00689FB0 /* AVOSCloudSNS.m */; };
+		7034F0721BCEB3BF00689FB0 /* AVOSCloudSNS_.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0611BCEB3BF00689FB0 /* AVOSCloudSNS_.h */; };
+		7034F0731BCEB3BF00689FB0 /* AVOSCloudSNSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0621BCEB3BF00689FB0 /* AVOSCloudSNSUtils.h */; };
+		7034F0741BCEB3BF00689FB0 /* AVOSCloudSNSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F0631BCEB3BF00689FB0 /* AVOSCloudSNSUtils.m */; };
+		7034F0751BCEB3BF00689FB0 /* AVSNSHttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0641BCEB3BF00689FB0 /* AVSNSHttpClient.h */; };
+		7034F0761BCEB3BF00689FB0 /* AVSNSHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F0651BCEB3BF00689FB0 /* AVSNSHttpClient.m */; };
+		7034F0771BCEB3BF00689FB0 /* AVSNSLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0661BCEB3BF00689FB0 /* AVSNSLoginViewController.h */; };
+		7034F0781BCEB3BF00689FB0 /* AVSNSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F0671BCEB3BF00689FB0 /* AVSNSLoginViewController.m */; };
+		7034F0791BCEB3BF00689FB0 /* AVSNSWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0681BCEB3BF00689FB0 /* AVSNSWebViewController.h */; };
+		7034F07A1BCEB3BF00689FB0 /* AVSNSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F0691BCEB3BF00689FB0 /* AVSNSWebViewController.m */; };
 		7034F07B1BCEB3BF00689FB0 /* AVUser+SNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F06A1BCEB3BF00689FB0 /* AVUser+SNS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7034F07C1BCEB3BF00689FB0 /* AVUser+SNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06B1BCEB3BF00689FB0 /* AVUser+SNS.m */; settings = {ASSET_TAGS = (); }; };
-		7034F07D1BCEB3BF00689FB0 /* AVWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F06C1BCEB3BF00689FB0 /* AVWebViewController.h */; settings = {ASSET_TAGS = (); }; };
-		7034F07E1BCEB3BF00689FB0 /* AVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06D1BCEB3BF00689FB0 /* AVWebViewController.m */; settings = {ASSET_TAGS = (); }; };
-		7034F07F1BCEB3BF00689FB0 /* NSURL+AVAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F06E1BCEB3BF00689FB0 /* NSURL+AVAdditions.h */; settings = {ASSET_TAGS = (); }; };
-		7034F0801BCEB3BF00689FB0 /* NSURL+AVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06F1BCEB3BF00689FB0 /* NSURL+AVAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		7034F0991BCEB4AB00689FB0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7034F0971BCEB4AB00689FB0 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
+		7034F07C1BCEB3BF00689FB0 /* AVUser+SNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06B1BCEB3BF00689FB0 /* AVUser+SNS.m */; };
+		7034F07D1BCEB3BF00689FB0 /* AVWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F06C1BCEB3BF00689FB0 /* AVWebViewController.h */; };
+		7034F07E1BCEB3BF00689FB0 /* AVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06D1BCEB3BF00689FB0 /* AVWebViewController.m */; };
+		7034F07F1BCEB3BF00689FB0 /* NSURL+AVAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F06E1BCEB3BF00689FB0 /* NSURL+AVAdditions.h */; };
+		7034F0801BCEB3BF00689FB0 /* NSURL+AVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06F1BCEB3BF00689FB0 /* NSURL+AVAdditions.m */; };
+		7034F0991BCEB4AB00689FB0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7034F0971BCEB4AB00689FB0 /* Info.plist */; };
 		7034F09A1BCEB4DC00689FB0 /* AVOSCloudSNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F05F1BCEB3BF00689FB0 /* AVOSCloudSNS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7034F09B1BCEB4DC00689FB0 /* AVOSCloudSNS_.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0611BCEB3BF00689FB0 /* AVOSCloudSNS_.h */; };
 		7034F09C1BCEB4DC00689FB0 /* AVOSCloudSNSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0621BCEB3BF00689FB0 /* AVOSCloudSNSUtils.h */; };
@@ -58,8 +58,8 @@
 		7034F0A81BCEB4F500689FB0 /* AVUser+SNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06B1BCEB3BF00689FB0 /* AVUser+SNS.m */; };
 		7034F0A91BCEB4F500689FB0 /* AVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06D1BCEB3BF00689FB0 /* AVWebViewController.m */; };
 		7034F0AA1BCEB4F500689FB0 /* NSURL+AVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06F1BCEB3BF00689FB0 /* NSURL+AVAdditions.m */; };
-		70F675051BD7397400163D89 /* AVSNSTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F675041BD7397400163D89 /* AVSNSTestCase.m */; settings = {ASSET_TAGS = (); }; };
-		70F675081BD73AA300163D89 /* AVOSCloudSNSTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F675071BD73AA300163D89 /* AVOSCloudSNSTest.m */; settings = {ASSET_TAGS = (); }; };
+		70F675051BD7397400163D89 /* AVSNSTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F675041BD7397400163D89 /* AVSNSTestCase.m */; };
+		70F675081BD73AA300163D89 /* AVOSCloudSNSTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F675071BD73AA300163D89 /* AVOSCloudSNSTest.m */; };
 		9164637509911E1C6E5B4C27 /* libPods-LeanCloudSocialDynamic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B96F283ED44DC0F3AFFB175 /* libPods-LeanCloudSocialDynamic.a */; };
 		DDAB97E8AAA8C7757CD7D158 /* libPods-LeanCloudSocialTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6499EBDDC79C5167F06ADD47 /* libPods-LeanCloudSocialTests.a */; };
 /* End PBXBuildFile section */
@@ -94,7 +94,7 @@
 		7034F06F1BCEB3BF00689FB0 /* NSURL+AVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+AVAdditions.m"; sourceTree = "<group>"; };
 		7034F08E1BCEB46B00689FB0 /* LeanCloudSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanCloudSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7034F0971BCEB4AB00689FB0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70A6485D1BCEAB2000D56C78 /* LeanCloudSocialDynamic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanCloudSocialDynamic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70A6485D1BCEAB2000D56C78 /* LeanCloudSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanCloudSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A648611BCEAB2000D56C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70F675041BD7397400163D89 /* AVSNSTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSNSTestCase.m; sourceTree = "<group>"; };
 		70F675061BD7399900163D89 /* AVSNSTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVSNSTestCase.h; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 		70A6480C1BCEA86300D56C78 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				70A6485D1BCEAB2000D56C78 /* LeanCloudSocialDynamic.framework */,
+				70A6485D1BCEAB2000D56C78 /* LeanCloudSocial.framework */,
 				7034F08E1BCEB46B00689FB0 /* LeanCloudSocial.framework */,
 				7030A8FD1BD6415700636404 /* LeanCloudSocialTests.xctest */,
 			);
@@ -327,7 +327,7 @@
 			);
 			name = LeanCloudSocialDynamic;
 			productName = LeanCloudSocialDynamic;
-			productReference = 70A6485D1BCEAB2000D56C78 /* LeanCloudSocialDynamic.framework */;
+			productReference = 70A6485D1BCEAB2000D56C78 /* LeanCloudSocial.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -680,7 +680,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -721,7 +721,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

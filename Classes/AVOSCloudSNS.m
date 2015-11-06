@@ -376,7 +376,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     
     __block UIViewController *vc=nil;
     
-    vc=[self loginManualyWithCallback:^(id object, NSError *error) {
+    vc=[self loginManuallyWithCallback:^(id object, NSError *error) {
         if (error) {
             NSError *err=[NSError errorWithDomain:AVOSCloudSNSErrorDomain code:AVOSCloudSNSErrorTokenExpired userInfo:error.userInfo];
             callback(object,err);
@@ -662,14 +662,14 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
 }
 
 
-+(UIViewController*)loginManualyWithCallback:(AVSNSResultBlock)callback{
++(UIViewController*)loginManuallyWithCallback:(AVSNSResultBlock)callback{
     if(callback)[[self ssoConfigs] setObject:[callback copy] forKey:@"callback"];
     AVSNSLoginViewController *vc=[[AVSNSLoginViewController alloc] init];
     [vc loginToPlatform:0];
     return vc;
 }
 
-+(UIViewController*)loginManualyWithCallback:(AVSNSResultBlock)callback toPlatform:(AVOSCloudSNSType)type{
++(UIViewController*)loginManuallyWithCallback:(AVSNSResultBlock)callback toPlatform:(AVOSCloudSNSType)type{
     if (![self doesUserExpireOfPlatform:type]) {
         //有可用用户数据直接返回
         if(callback)callback([self userInfo:type],nil);
@@ -694,7 +694,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     }
 }
 
-+(UIViewController *)loginManualyWithURL:(NSURL *)url callback:(AVSNSResultBlock)callback {
++(UIViewController *)loginManuallyWithURL:(NSURL *)url callback:(AVSNSResultBlock)callback {
     AVSNSWebViewController *controller = [[AVSNSWebViewController alloc] init];
     controller.callback = callback;
     [controller.webView loadRequest:[NSURLRequest requestWithURL:url]];
@@ -702,17 +702,17 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
 }
 
 +(void)loginWithURL:(NSURL *)url callback:(AVSNSResultBlock)callback {
-    UIViewController *controller = [self loginManualyWithURL:url callback:callback];
+    UIViewController *controller = [self loginManuallyWithURL:url callback:callback];
     [self tryOpenViewController:controller];
 }
 
 +(void)loginWithCallback:(AVSNSResultBlock)callback toPlatform:(AVOSCloudSNSType)type{
-    UIViewController *vc= [self loginManualyWithCallback:callback toPlatform:type];
+    UIViewController *vc= [self loginManuallyWithCallback:callback toPlatform:type];
     [self tryOpenViewController:vc];
 }
 
 +(void)loginWithCallback:(AVSNSResultBlock)callback{
-    UIViewController *vc= [self loginManualyWithCallback:callback];
+    UIViewController *vc= [self loginManuallyWithCallback:callback];
     
     [self tryOpenViewController:vc];
 }
@@ -720,7 +720,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
 +(void)tryOpenViewController:(UIViewController*)vc{
     if (vc) {
         UIViewController *rootC=[[UIApplication sharedApplication].delegate window].rootViewController;
-        NSAssert(rootC, @"Can't find rootViewController of the main window! Use 'loginManualyWithCallback'method instead!");
+        NSAssert(rootC, @"Can't find rootViewController of the main window! Use 'loginManuallyWithCallback'method instead!");
         
         UINavigationController *nvc=[[UINavigationController alloc] initWithRootViewController:vc];
         
@@ -859,6 +859,20 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     
     //NSAssert1(type==AVOSCloudSNSSinaWeibo, @"%@ 分享多个图片",NameStringOfParam(type));
     //FIXME: 新浪微博需要高级接口权限才能用 所以目前不打算支持
-    
 }
+
+#pragma mark - Deprecated
+
++ (UIViewController *)loginManualyWithURL:(NSURL *)url callback:(AVSNSResultBlock)callback {
+    return [[self class] loginManuallyWithURL:url callback:callback];
+}
+
++ (UIViewController*)loginManualyWithCallback:(AVSNSResultBlock)callback {
+    return [[self class] loginManuallyWithCallback:callback];
+}
+
++ (UIViewController*)loginManualyWithCallback:(AVSNSResultBlock)callback toPlatform:(AVOSCloudSNSType)type {
+    return [[self class] loginManuallyWithCallback:callback toPlatform:type];
+}
+
 @end

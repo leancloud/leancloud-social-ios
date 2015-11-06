@@ -16,6 +16,7 @@ FOUNDATION_EXPORT const unsigned char AVOSCloudSocialVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <LeanCloudSocial/PublicHeader.h>
 
+#import "AVUser+SNS.h"
 
 /**
  *  AVOSCloudSNS目前支持的平台类型
@@ -30,8 +31,6 @@ typedef NS_ENUM(int, AVOSCloudSNSType){
     /// 微信
     AVOSCloudSNSWeiXin      =3,
 };
-
-#import "AVUser+SNS.h"
 
 /**
  *  AVOSCloudSNS错误码
@@ -57,7 +56,6 @@ typedef NS_ENUM(int, AVOSCloudSNSErrorCode){
     AVOSCloudSNSErrorCodeAuthDataError = 6,
 };
 
-#import "AVUser+SNS.h"
 /**
  *  AVOSCloudSNS错误域
  */
@@ -106,7 +104,7 @@ typedef void (^AVSNSProgressBlock)(float percent);
  *
  *  @return 用于显示登录界面的UIViewController,如果可以SSO登录 则返回nil.
  */
-+(UIViewController*)loginManualyWithCallback:(AVSNSResultBlock)callback;
++(UIViewController*)loginManuallyWithCallback:(AVSNSResultBlock)callback;
 
 
 /**
@@ -117,7 +115,7 @@ typedef void (^AVSNSProgressBlock)(float percent);
  *
  *  @return 用于显示登录界面的UIViewController,如果可以SSO登录 则返回nil.
  */
-+(UIViewController*)loginManualyWithCallback:(AVSNSResultBlock)callback toPlatform:(AVOSCloudSNSType)type;
++(UIViewController*)loginManuallyWithCallback:(AVSNSResultBlock)callback toPlatform:(AVOSCloudSNSType)type;
 
 /**
  *  用社会化平台登录,并自动弹出登录界面
@@ -147,7 +145,7 @@ typedef void (^AVSNSProgressBlock)(float percent);
  *
  *  @return 用于显示登录界面的UIViewController.
  */
-+(UIViewController *)loginManualyWithURL:(NSURL *)url callback:(AVSNSResultBlock)callback;
++(UIViewController *)loginManuallyWithURL:(NSURL *)url callback:(AVSNSResultBlock)callback;
 
 /**
  *  通过后台生成的登录url显示登录界面
@@ -230,6 +228,12 @@ typedef void (^AVSNSProgressBlock)(float percent);
  *  @param  callback    登录结果回调
  */
 +(void)refreshToken:(AVOSCloudSNSType)type withCallback:(AVSNSResultBlock)callback;
+
+#pragma mark - Deprecated
+
++ (UIViewController*)loginManualyWithCallback:(AVSNSResultBlock)callback AVDeprecated("Use loginManuallyWithCallback: instead");
++ (UIViewController *)loginManualyWithURL:(NSURL *)url callback:(AVSNSResultBlock)callback AVDeprecated("Use loginManuallyWithURL:callback instead.");
++ (UIViewController*)loginManualyWithCallback:(AVSNSResultBlock)callback toPlatform:(AVOSCloudSNSType)type AVDeprecated("Use loginManuallyWithCallback:toPlatform: instead.");
 
 @end
 

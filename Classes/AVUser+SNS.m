@@ -214,4 +214,5 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
         [AVOSCloudSNSUtils callUserResultBlock:block user:user error:error];
     }];
 }
+
 @end

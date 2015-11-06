@@ -125,10 +125,9 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
             [self.webView loadRequest:req];
         }
             break;
+        case AVOSCloudSNSWeiXin:
+            break;
     }
-    
-    
-    
 }
 
 -(void)getAccessToken:(NSString*)code{

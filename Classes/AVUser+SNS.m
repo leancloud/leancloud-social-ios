@@ -154,7 +154,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
         NSMutableDictionary *dict;
         id dictionayValue = [self objectForKey:@"authData"];
         if (dictionayValue && (dictionayValue != [NSNull null])) {
-            dict = [[self objectForKey:@"authData"] mutableCopy];
+            dict = [dictionayValue mutableCopy];
         } else {
             dict = [[NSMutableDictionary alloc] init];
         }

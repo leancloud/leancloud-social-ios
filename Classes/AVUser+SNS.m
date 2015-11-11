@@ -151,11 +151,8 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
     
     if (self.objectId && self.sessionToken) {
         //目前API不支持添加 只会覆盖 所以临时会把用户所有的绑定数据同时发一次 (如果服务器准备好, 直接删除下面两行即可)
-        NSMutableDictionary *dict;
-        id dictionayValue = [self objectForKey:@"authData"];
-        if (dictionayValue && (dictionayValue != [NSNull null])) {
-            dict = [[self objectForKey:@"authData"] mutableCopy];
-        } else {
+        NSMutableDictionary *dict = [[self objectForKey:@"authData"] mutableCopy];
+        if (!dict) {
             dict = [[NSMutableDictionary alloc] init];
         }
         [dict setObject:authDataResult forKey:platform];

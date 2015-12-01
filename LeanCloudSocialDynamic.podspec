@@ -18,8 +18,8 @@ Pod::Spec.new do |s|
   s.dependency "AFNetworking", "~> 2.0"
 
   s.xcconfig = {
-      "OTHER_LDFLAGS" => "$(inherited) -ObjC",
-      "FRAMEWORK_SEARCH_PATHS" => "\"${PODS_ROOT}/#{s.name}/**\"",
+      "FRAMEWORK_SEARCH_PATHS" => "\"${PODS_ROOT}/AVOSCloudDynamic/**\" \"${PODS_ROOT}/#{s.name}/**\"",
+      "OTHER_LDFLAGS" => "$(inherited) -ObjC -framework AVOSCloud",
       "LD_RUNPATH_SEARCH_PATHS" => "@loader_path/../Frameworks"
   }
 end

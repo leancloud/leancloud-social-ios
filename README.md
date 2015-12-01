@@ -12,9 +12,9 @@ LeanCloud Social Network 模块是 [LeanCloud](https://leancloud.cn) 开源的�
 ## 如何运行 demo
 
 ```
- 	cd LeanCloudSocialDemo
+ 	cd leancloud-social-ios
  	pod install --verbose (如果本地安装过 AVOSCloud 库，则可以加选项 --no-repo-update，加快速度)
- 	open LeanCloudSocialDemo.xcworkspace
+ 	open LeanCloudSocial.xcworkspace
 ```
 
 ## 使用方法

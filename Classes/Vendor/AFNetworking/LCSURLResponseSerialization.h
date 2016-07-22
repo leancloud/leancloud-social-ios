@@ -57,7 +57,7 @@ NS_SWIFT_NOTHROW
 
  Any request or response serializer dealing with HTTP is encouraged to subclass `AFHTTPResponseSerializer` in order to ensure consistent default behavior.
  */
-@interface AFHTTPResponseSerializer : NSObject <AFURLResponseSerialization>
+@interface LCSHTTPResponseSerializer : NSObject <AFURLResponseSerialization>
 
 - (instancetype)init;
 
@@ -116,7 +116,7 @@ NS_SWIFT_NOTHROW
  - `text/json`
  - `text/javascript`
  */
-@interface AFJSONResponseSerializer : AFHTTPResponseSerializer
+@interface LCSJSONResponseSerializer : LCSHTTPResponseSerializer
 
 - (instancetype)init;
 
@@ -149,7 +149,7 @@ NS_SWIFT_NOTHROW
  - `application/xml`
  - `text/xml`
  */
-@interface AFXMLParserResponseSerializer : AFHTTPResponseSerializer
+@interface LCSXMLParserResponseSerializer : LCSHTTPResponseSerializer
 
 @end
 
@@ -165,7 +165,7 @@ NS_SWIFT_NOTHROW
  - `application/xml`
  - `text/xml`
  */
-@interface AFXMLDocumentResponseSerializer : AFHTTPResponseSerializer
+@interface AFXMLDocumentResponseSerializer : LCSHTTPResponseSerializer
 
 - (instancetype)init;
 
@@ -194,7 +194,7 @@ NS_SWIFT_NOTHROW
 
  - `application/x-plist`
  */
-@interface AFPropertyListResponseSerializer : AFHTTPResponseSerializer
+@interface LCSPropertyListResponseSerializer : LCSHTTPResponseSerializer
 
 - (instancetype)init;
 
@@ -237,7 +237,7 @@ NS_SWIFT_NOTHROW
  - `image/x-xbitmap`
  - `image/x-win-bitmap`
  */
-@interface AFImageResponseSerializer : AFHTTPResponseSerializer
+@interface LCSImageResponseSerializer : LCSHTTPResponseSerializer
 
 #if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
 /**
@@ -258,7 +258,7 @@ NS_SWIFT_NOTHROW
 /**
  `AFCompoundSerializer` is a subclass of `AFHTTPResponseSerializer` that delegates the response serialization to the first `AFHTTPResponseSerializer` object that returns an object for `responseObjectForResponse:data:error:`, falling back on the default behavior of `AFHTTPResponseSerializer`. This is useful for supporting multiple potential types and structures of server responses with a single serializer.
  */
-@interface AFCompoundResponseSerializer : AFHTTPResponseSerializer
+@interface LCSCompoundResponseSerializer : LCSHTTPResponseSerializer
 
 /**
  The component response serializers.

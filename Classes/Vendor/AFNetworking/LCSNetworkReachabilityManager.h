@@ -50,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @warning Instances of `AFNetworkReachabilityManager` must be started with `-startMonitoring` before reachability status can be determined.
  */
-@interface AFNetworkReachabilityManager : NSObject
+@interface LCSNetworkReachabilityManager : NSObject
 
 /**
  The current network reachability status.

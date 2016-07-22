@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  `AFHTTPRequestOperation` is a subclass of `AFURLConnectionOperation` for requests using the HTTP or HTTPS protocols. It encapsulates the concept of acceptable status codes and content types, which determine the success or failure of a request.
  */
-@interface AFHTTPRequestOperation : AFURLConnectionOperation
+@interface LCSHTTPRequestOperation : LCSURLConnectionOperation
 
 ///------------------------------------------------
 /// @name Getting HTTP URL Connection Information
@@ -43,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @warning `responseSerializer` must not be `nil`. Setting a response serializer will clear out any cached value
  */
-@property (nonatomic, strong) AFHTTPResponseSerializer <AFURLResponseSerialization> * responseSerializer;
+@property (nonatomic, strong) LCSHTTPResponseSerializer <AFURLResponseSerialization> * responseSerializer;
 
 /**
  An object constructed by the `responseSerializer` from the response and response data. Returns `nil` unless the operation `isFinished`, has a `response`, and has `responseData` with non-zero content length. If an error occurs during serialization, `nil` will be returned, and the `error` property will be populated with the serialization error.
@@ -62,8 +62,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param success The block to be executed on the completion of a successful request. This block has no return value and takes two arguments: the receiver operation and the object constructed from the response data of the request.
  @param failure The block to be executed on the completion of an unsuccessful request. This block has no return value and takes two arguments: the receiver operation and the error that occurred during the request.
  */
-- (void)setCompletionBlockWithSuccess:(nullable void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-                              failure:(nullable void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+- (void)setCompletionBlockWithSuccess:(nullable void (^)(LCSHTTPRequestOperation *operation, id responseObject))success
+                              failure:(nullable void (^)(LCSHTTPRequestOperation *operation, NSError *error))failure;
 
 @end
 

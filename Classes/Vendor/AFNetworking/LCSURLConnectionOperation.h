@@ -91,7 +91,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AFURLConnectionOperation : NSOperation <NSURLConnectionDelegate, NSURLConnectionDataDelegate, NSSecureCoding, NSCopying>
+@interface LCSURLConnectionOperation : NSOperation <NSURLConnectionDelegate, NSURLConnectionDataDelegate, NSSecureCoding, NSCopying>
 
 ///-------------------------------
 /// @name Accessing Run Loop Modes
@@ -167,7 +167,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The security policy used to evaluate server trust for secure connections.
  */
-@property (nonatomic, strong) AFSecurityPolicy *securityPolicy;
+@property (nonatomic, strong) LCSSecurityPolicy *securityPolicy;
 
 ///------------------------
 /// @name Accessing Streams
@@ -220,7 +220,7 @@ NS_ASSUME_NONNULL_BEGIN
 // FIXME: It doesn't seem that this userInfo is used anywhere in the implementation.
 
 ///------------------------------------------------------
-/// @name Initializing an AFURLConnectionOperation Object
+/// @name Initializing an LCSURLConnectionOperation Object
 ///------------------------------------------------------
 
 /**

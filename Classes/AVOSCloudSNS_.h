@@ -14,7 +14,7 @@
 
 @interface AVOSCloudSNS ()
 +(NSMutableDictionary*)ssoConfigs;
-+ (AFHTTPRequestOperationManager *)requestManager;
++ (LCSHTTPRequestOperationManager *)requestManager;
 
 +(void)onSuccess:(AVOSCloudSNSType)type withToken:(NSString*)token andExpires:(NSString*)expires andUid:(NSString*)uid;
 +(void)onSuccess:(AVOSCloudSNSType)type withParams:(NSDictionary*)info;

@@ -21,8 +21,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import "AFHTTPRequestOperationManager.h"
-#import "AFHTTPRequestOperation.h"
+#import "LCSHTTPRequestOperationManager.h"
+#import "LCSHTTPRequestOperation.h"
 
 #import <Availability.h>
 #import <Security/Security.h>

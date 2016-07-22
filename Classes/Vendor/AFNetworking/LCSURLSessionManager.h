@@ -21,11 +21,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import "AFURLResponseSerialization.h"
-#import "AFURLRequestSerialization.h"
-#import "AFSecurityPolicy.h"
+#import "LCSURLResponseSerialization.h"
+#import "LCSURLRequestSerialization.h"
+#import "LCSSecurityPolicy.h"
 #if !TARGET_OS_WATCH
-#import "AFNetworkReachabilityManager.h"
+#import "LCSNetworkReachabilityManager.h"
 #endif
 
 #ifndef NS_DESIGNATED_INITIALIZER

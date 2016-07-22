@@ -20,7 +20,7 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "AFURLConnectionOperation.h"
+#import "LCSURLConnectionOperation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

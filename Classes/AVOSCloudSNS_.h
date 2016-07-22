@@ -10,7 +10,7 @@
 #define AVOSCloudSNS_AVOSCloudSNS__h
 
 #import "AVOSCloudSNS.h"
-#import "AFNetworking.h"
+#import "LCSNetworking.h"
 
 @interface AVOSCloudSNS ()
 +(NSMutableDictionary*)ssoConfigs;

@@ -10,7 +10,7 @@
 #import "AVOSCloudSNSUtils.h"
 #import "AVSNSLoginViewController.h"
 
-#import <AFNetworking/AFNetworking.h>
+#import "AFNetworking.h"
 #import "AVSNSWebViewController.h"
 
 NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";

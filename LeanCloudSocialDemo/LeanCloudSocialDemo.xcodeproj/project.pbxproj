@@ -176,12 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CC504C11B0EF46C004D0CB1 /* Build configuration list for PBXNativeTarget "LeanCloudSocialDemo" */;
 			buildPhases = (
-				1AE1BE00C6537570DFAEB236 /* Check Pods Manifest.lock */,
+				1AE1BE00C6537570DFAEB236 /* [CP] Check Pods Manifest.lock */,
 				5CC5049A1B0EF46C004D0CB1 /* Sources */,
 				5CC5049B1B0EF46C004D0CB1 /* Frameworks */,
 				5CC5049C1B0EF46C004D0CB1 /* Resources */,
-				0A4FBFF1E4B152AC28ED357A /* Copy Pods Resources */,
-				1DC39088070770BD3FE222CB /* Embed Pods Frameworks */,
+				0A4FBFF1E4B152AC28ED357A /* [CP] Copy Pods Resources */,
+				1DC39088070770BD3FE222CB /* [CP] Embed Pods Frameworks */,
 				7034F0B31BCEBBD100689FB0 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -269,14 +269,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0A4FBFF1E4B152AC28ED357A /* Copy Pods Resources */ = {
+		0A4FBFF1E4B152AC28ED357A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,14 +284,14 @@
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LeanCloudSocialDemo/Pods-LeanCloudSocialDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1AE1BE00C6537570DFAEB236 /* Check Pods Manifest.lock */ = {
+		1AE1BE00C6537570DFAEB236 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,14 +299,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		1DC39088070770BD3FE222CB /* Embed Pods Frameworks */ = {
+		1DC39088070770BD3FE222CB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

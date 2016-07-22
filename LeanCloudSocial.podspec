@@ -9,10 +9,9 @@ Pod::Spec.new do |s|
   s.documentation_url = "https://leancloud.cn/docs/sns.html"
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/leancloud/leancloud-social-ios.git", :tag => s.version.to_s }
-  s.source_files = "Classes/*.{h,m}"
+  s.source_files = "Classes/**/*.{h,m}"
   s.public_header_files = "Classes/AVUser+SNS.h", "Classes/AVOSCloudSNS.h"
 
   s.dependency "AVOSCloud"
-  s.dependency "AFNetworking", "~> 2.0"
 end
 

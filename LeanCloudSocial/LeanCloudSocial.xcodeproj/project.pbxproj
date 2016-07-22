@@ -60,6 +60,44 @@
 		7034F0AA1BCEB4F500689FB0 /* NSURL+AVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06F1BCEB3BF00689FB0 /* NSURL+AVAdditions.m */; };
 		70F675051BD7397400163D89 /* AVSNSTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F675041BD7397400163D89 /* AVSNSTestCase.m */; };
 		70F675081BD73AA300163D89 /* AVOSCloudSNSTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F675071BD73AA300163D89 /* AVOSCloudSNSTest.m */; };
+		8325BD9B1D41EDB8007079A2 /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD881D41EDB8007079A2 /* AFHTTPRequestOperation.h */; };
+		8325BD9C1D41EDB8007079A2 /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD881D41EDB8007079A2 /* AFHTTPRequestOperation.h */; };
+		8325BD9D1D41EDB8007079A2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD891D41EDB8007079A2 /* AFHTTPRequestOperation.m */; };
+		8325BD9E1D41EDB8007079A2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD891D41EDB8007079A2 /* AFHTTPRequestOperation.m */; };
+		8325BD9F1D41EDB8007079A2 /* AFHTTPRequestOperationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD8A1D41EDB8007079A2 /* AFHTTPRequestOperationManager.h */; };
+		8325BDA01D41EDB8007079A2 /* AFHTTPRequestOperationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD8A1D41EDB8007079A2 /* AFHTTPRequestOperationManager.h */; };
+		8325BDA11D41EDB8007079A2 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD8B1D41EDB8007079A2 /* AFHTTPRequestOperationManager.m */; };
+		8325BDA21D41EDB8007079A2 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD8B1D41EDB8007079A2 /* AFHTTPRequestOperationManager.m */; };
+		8325BDA31D41EDB8007079A2 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD8C1D41EDB8007079A2 /* AFHTTPSessionManager.h */; };
+		8325BDA41D41EDB8007079A2 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD8C1D41EDB8007079A2 /* AFHTTPSessionManager.h */; };
+		8325BDA51D41EDB8007079A2 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD8D1D41EDB8007079A2 /* AFHTTPSessionManager.m */; };
+		8325BDA61D41EDB8007079A2 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD8D1D41EDB8007079A2 /* AFHTTPSessionManager.m */; };
+		8325BDA71D41EDB8007079A2 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD8E1D41EDB8007079A2 /* AFNetworking.h */; };
+		8325BDA81D41EDB8007079A2 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD8E1D41EDB8007079A2 /* AFNetworking.h */; };
+		8325BDA91D41EDB8007079A2 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD8F1D41EDB8007079A2 /* AFNetworkReachabilityManager.h */; };
+		8325BDAA1D41EDB8007079A2 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD8F1D41EDB8007079A2 /* AFNetworkReachabilityManager.h */; };
+		8325BDAB1D41EDB8007079A2 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD901D41EDB8007079A2 /* AFNetworkReachabilityManager.m */; };
+		8325BDAC1D41EDB8007079A2 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD901D41EDB8007079A2 /* AFNetworkReachabilityManager.m */; };
+		8325BDAD1D41EDB8007079A2 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD911D41EDB8007079A2 /* AFSecurityPolicy.h */; };
+		8325BDAE1D41EDB8007079A2 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD911D41EDB8007079A2 /* AFSecurityPolicy.h */; };
+		8325BDAF1D41EDB8007079A2 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD921D41EDB8007079A2 /* AFSecurityPolicy.m */; };
+		8325BDB01D41EDB8007079A2 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD921D41EDB8007079A2 /* AFSecurityPolicy.m */; };
+		8325BDB11D41EDB8007079A2 /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD931D41EDB8007079A2 /* AFURLConnectionOperation.h */; };
+		8325BDB21D41EDB8007079A2 /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD931D41EDB8007079A2 /* AFURLConnectionOperation.h */; };
+		8325BDB31D41EDB8007079A2 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD941D41EDB8007079A2 /* AFURLConnectionOperation.m */; };
+		8325BDB41D41EDB8007079A2 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD941D41EDB8007079A2 /* AFURLConnectionOperation.m */; };
+		8325BDB51D41EDB8007079A2 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD951D41EDB8007079A2 /* AFURLRequestSerialization.h */; };
+		8325BDB61D41EDB8007079A2 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD951D41EDB8007079A2 /* AFURLRequestSerialization.h */; };
+		8325BDB71D41EDB8007079A2 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD961D41EDB8007079A2 /* AFURLRequestSerialization.m */; };
+		8325BDB81D41EDB8007079A2 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD961D41EDB8007079A2 /* AFURLRequestSerialization.m */; };
+		8325BDB91D41EDB8007079A2 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD971D41EDB8007079A2 /* AFURLResponseSerialization.h */; };
+		8325BDBA1D41EDB8007079A2 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD971D41EDB8007079A2 /* AFURLResponseSerialization.h */; };
+		8325BDBB1D41EDB8007079A2 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD981D41EDB8007079A2 /* AFURLResponseSerialization.m */; };
+		8325BDBC1D41EDB8007079A2 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD981D41EDB8007079A2 /* AFURLResponseSerialization.m */; };
+		8325BDBD1D41EDB8007079A2 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD991D41EDB8007079A2 /* AFURLSessionManager.h */; };
+		8325BDBE1D41EDB8007079A2 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8325BD991D41EDB8007079A2 /* AFURLSessionManager.h */; };
+		8325BDBF1D41EDB8007079A2 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD9A1D41EDB8007079A2 /* AFURLSessionManager.m */; };
+		8325BDC01D41EDB8007079A2 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8325BD9A1D41EDB8007079A2 /* AFURLSessionManager.m */; };
 		9164637509911E1C6E5B4C27 /* libPods-LeanCloudSocialDynamic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B96F283ED44DC0F3AFFB175 /* libPods-LeanCloudSocialDynamic.a */; };
 		DDAB97E8AAA8C7757CD7D158 /* libPods-LeanCloudSocialTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6499EBDDC79C5167F06ADD47 /* libPods-LeanCloudSocialTests.a */; };
 /* End PBXBuildFile section */
@@ -94,11 +132,30 @@
 		7034F06F1BCEB3BF00689FB0 /* NSURL+AVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+AVAdditions.m"; sourceTree = "<group>"; };
 		7034F08E1BCEB46B00689FB0 /* LeanCloudSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanCloudSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7034F0971BCEB4AB00689FB0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70A6485D1BCEAB2000D56C78 /* LeanCloudSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanCloudSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70A6485D1BCEAB2000D56C78 /* LeanCloudSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LeanCloudSocial.framework; path = LeanCloudSocialDynamic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A648611BCEAB2000D56C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70F675041BD7397400163D89 /* AVSNSTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSNSTestCase.m; sourceTree = "<group>"; };
 		70F675061BD7399900163D89 /* AVSNSTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVSNSTestCase.h; sourceTree = "<group>"; };
 		70F675071BD73AA300163D89 /* AVOSCloudSNSTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVOSCloudSNSTest.m; sourceTree = "<group>"; };
+		8325BD881D41EDB8007079A2 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		8325BD891D41EDB8007079A2 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		8325BD8A1D41EDB8007079A2 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		8325BD8B1D41EDB8007079A2 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		8325BD8C1D41EDB8007079A2 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		8325BD8D1D41EDB8007079A2 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		8325BD8E1D41EDB8007079A2 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		8325BD8F1D41EDB8007079A2 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		8325BD901D41EDB8007079A2 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		8325BD911D41EDB8007079A2 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		8325BD921D41EDB8007079A2 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		8325BD931D41EDB8007079A2 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		8325BD941D41EDB8007079A2 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		8325BD951D41EDB8007079A2 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		8325BD961D41EDB8007079A2 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		8325BD971D41EDB8007079A2 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		8325BD981D41EDB8007079A2 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		8325BD991D41EDB8007079A2 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		8325BD9A1D41EDB8007079A2 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		847392B14A6854CE535F8FA3 /* Pods-LeanCloudSocialDynamic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDynamic.release.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocialDynamic/Pods-LeanCloudSocialDynamic.release.xcconfig"; sourceTree = "<group>"; };
 		857347A4DC9D90897CF61A18 /* Pods-LeanCloudSocialDynamic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDynamic.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocialDynamic/Pods-LeanCloudSocialDynamic.debug.xcconfig"; sourceTree = "<group>"; };
 		C5406E5F39D2923D567AC261 /* libPods-LeanCloudSocial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeanCloudSocial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +228,7 @@
 		7034F05E1BCEB3BF00689FB0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8325BD861D41EDB8007079A2 /* Vendor */,
 				7034F05F1BCEB3BF00689FB0 /* AVOSCloudSNS.h */,
 				7034F0601BCEB3BF00689FB0 /* AVOSCloudSNS.m */,
 				7034F0611BCEB3BF00689FB0 /* AVOSCloudSNS_.h */,
@@ -232,6 +290,40 @@
 			path = LeanCloudSocialDynamic;
 			sourceTree = "<group>";
 		};
+		8325BD861D41EDB8007079A2 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				8325BD871D41EDB8007079A2 /* AFNetworking */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		8325BD871D41EDB8007079A2 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				8325BD881D41EDB8007079A2 /* AFHTTPRequestOperation.h */,
+				8325BD891D41EDB8007079A2 /* AFHTTPRequestOperation.m */,
+				8325BD8A1D41EDB8007079A2 /* AFHTTPRequestOperationManager.h */,
+				8325BD8B1D41EDB8007079A2 /* AFHTTPRequestOperationManager.m */,
+				8325BD8C1D41EDB8007079A2 /* AFHTTPSessionManager.h */,
+				8325BD8D1D41EDB8007079A2 /* AFHTTPSessionManager.m */,
+				8325BD8E1D41EDB8007079A2 /* AFNetworking.h */,
+				8325BD8F1D41EDB8007079A2 /* AFNetworkReachabilityManager.h */,
+				8325BD901D41EDB8007079A2 /* AFNetworkReachabilityManager.m */,
+				8325BD911D41EDB8007079A2 /* AFSecurityPolicy.h */,
+				8325BD921D41EDB8007079A2 /* AFSecurityPolicy.m */,
+				8325BD931D41EDB8007079A2 /* AFURLConnectionOperation.h */,
+				8325BD941D41EDB8007079A2 /* AFURLConnectionOperation.m */,
+				8325BD951D41EDB8007079A2 /* AFURLRequestSerialization.h */,
+				8325BD961D41EDB8007079A2 /* AFURLRequestSerialization.m */,
+				8325BD971D41EDB8007079A2 /* AFURLResponseSerialization.h */,
+				8325BD981D41EDB8007079A2 /* AFURLResponseSerialization.m */,
+				8325BD991D41EDB8007079A2 /* AFURLSessionManager.h */,
+				8325BD9A1D41EDB8007079A2 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -239,13 +331,23 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8325BDA81D41EDB8007079A2 /* AFNetworking.h in Headers */,
+				8325BDB61D41EDB8007079A2 /* AFURLRequestSerialization.h in Headers */,
 				7034F09A1BCEB4DC00689FB0 /* AVOSCloudSNS.h in Headers */,
+				8325BDBE1D41EDB8007079A2 /* AFURLSessionManager.h in Headers */,
+				8325BDA01D41EDB8007079A2 /* AFHTTPRequestOperationManager.h in Headers */,
+				8325BDA41D41EDB8007079A2 /* AFHTTPSessionManager.h in Headers */,
 				7034F0A01BCEB4DC00689FB0 /* AVUser+SNS.h in Headers */,
 				7034F09B1BCEB4DC00689FB0 /* AVOSCloudSNS_.h in Headers */,
+				8325BDAE1D41EDB8007079A2 /* AFSecurityPolicy.h in Headers */,
 				7034F09C1BCEB4DC00689FB0 /* AVOSCloudSNSUtils.h in Headers */,
+				8325BDAA1D41EDB8007079A2 /* AFNetworkReachabilityManager.h in Headers */,
 				7034F09D1BCEB4DC00689FB0 /* AVSNSHttpClient.h in Headers */,
 				7034F09E1BCEB4DC00689FB0 /* AVSNSLoginViewController.h in Headers */,
+				8325BDB21D41EDB8007079A2 /* AFURLConnectionOperation.h in Headers */,
 				7034F09F1BCEB4DC00689FB0 /* AVSNSWebViewController.h in Headers */,
+				8325BD9C1D41EDB8007079A2 /* AFHTTPRequestOperation.h in Headers */,
+				8325BDBA1D41EDB8007079A2 /* AFURLResponseSerialization.h in Headers */,
 				7034F0A11BCEB4DC00689FB0 /* AVWebViewController.h in Headers */,
 				7034F0A21BCEB4DC00689FB0 /* NSURL+AVAdditions.h in Headers */,
 			);
@@ -255,13 +357,23 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8325BDA71D41EDB8007079A2 /* AFNetworking.h in Headers */,
+				8325BDB51D41EDB8007079A2 /* AFURLRequestSerialization.h in Headers */,
 				7034F0701BCEB3BF00689FB0 /* AVOSCloudSNS.h in Headers */,
+				8325BDBD1D41EDB8007079A2 /* AFURLSessionManager.h in Headers */,
+				8325BD9F1D41EDB8007079A2 /* AFHTTPRequestOperationManager.h in Headers */,
+				8325BDA31D41EDB8007079A2 /* AFHTTPSessionManager.h in Headers */,
 				7034F0771BCEB3BF00689FB0 /* AVSNSLoginViewController.h in Headers */,
 				7034F07B1BCEB3BF00689FB0 /* AVUser+SNS.h in Headers */,
+				8325BDAD1D41EDB8007079A2 /* AFSecurityPolicy.h in Headers */,
 				7034F0791BCEB3BF00689FB0 /* AVSNSWebViewController.h in Headers */,
+				8325BDA91D41EDB8007079A2 /* AFNetworkReachabilityManager.h in Headers */,
 				7034F0721BCEB3BF00689FB0 /* AVOSCloudSNS_.h in Headers */,
 				7034F0731BCEB3BF00689FB0 /* AVOSCloudSNSUtils.h in Headers */,
+				8325BDB11D41EDB8007079A2 /* AFURLConnectionOperation.h in Headers */,
 				7034F07F1BCEB3BF00689FB0 /* NSURL+AVAdditions.h in Headers */,
+				8325BD9B1D41EDB8007079A2 /* AFHTTPRequestOperation.h in Headers */,
+				8325BDB91D41EDB8007079A2 /* AFURLResponseSerialization.h in Headers */,
 				7034F0751BCEB3BF00689FB0 /* AVSNSHttpClient.h in Headers */,
 				7034F07D1BCEB3BF00689FB0 /* AVWebViewController.h in Headers */,
 			);
@@ -274,12 +386,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7030A9071BD6415700636404 /* Build configuration list for PBXNativeTarget "LeanCloudSocialTests" */;
 			buildPhases = (
-				7C5779F0CD117B9B686910B7 /* Check Pods Manifest.lock */,
+				7C5779F0CD117B9B686910B7 /* [CP] Check Pods Manifest.lock */,
 				7030A8F91BD6415700636404 /* Sources */,
 				7030A8FA1BD6415700636404 /* Frameworks */,
 				7030A8FB1BD6415700636404 /* Resources */,
-				7124F962330DBF4065A555DF /* Embed Pods Frameworks */,
-				645B53BDEF023E64F5D1E22E /* Copy Pods Resources */,
+				7124F962330DBF4065A555DF /* [CP] Embed Pods Frameworks */,
+				645B53BDEF023E64F5D1E22E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,12 +406,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7034F0931BCEB46B00689FB0 /* Build configuration list for PBXNativeTarget "LeanCloudSocial" */;
 			buildPhases = (
-				096D1908673A30EE4DECB21F /* Check Pods Manifest.lock */,
+				096D1908673A30EE4DECB21F /* [CP] Check Pods Manifest.lock */,
 				7034F0891BCEB46B00689FB0 /* Sources */,
 				7034F08A1BCEB46B00689FB0 /* Frameworks */,
 				7034F08B1BCEB46B00689FB0 /* Headers */,
 				7034F08C1BCEB46B00689FB0 /* Resources */,
-				F64A0005C2CE46ACAD5E1377 /* Copy Pods Resources */,
+				F64A0005C2CE46ACAD5E1377 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,12 +426,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70A648621BCEAB2000D56C78 /* Build configuration list for PBXNativeTarget "LeanCloudSocialDynamic" */;
 			buildPhases = (
-				5A42F1405DB016C39A79FB9D /* Check Pods Manifest.lock */,
+				5A42F1405DB016C39A79FB9D /* [CP] Check Pods Manifest.lock */,
 				70A648581BCEAB2000D56C78 /* Sources */,
 				70A648591BCEAB2000D56C78 /* Frameworks */,
 				70A6485A1BCEAB2000D56C78 /* Headers */,
 				70A6485B1BCEAB2000D56C78 /* Resources */,
-				CCCD82F5048A7AAF46D618C7 /* Copy Pods Resources */,
+				CCCD82F5048A7AAF46D618C7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -399,14 +511,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		096D1908673A30EE4DECB21F /* Check Pods Manifest.lock */ = {
+		096D1908673A30EE4DECB21F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,14 +526,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		5A42F1405DB016C39A79FB9D /* Check Pods Manifest.lock */ = {
+		5A42F1405DB016C39A79FB9D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,14 +541,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		645B53BDEF023E64F5D1E22E /* Copy Pods Resources */ = {
+		645B53BDEF023E64F5D1E22E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,14 +569,14 @@
 			shellPath = /bin/sh;
 			shellScript = "# This script is based on Jacob Van Order's answer on apple dev forums\n\n# https://devforums.apple.com/message/971277\n# See also http://spin.atomicobject.com/2011/12/13/building-a-universal-framework-for-ios/ for the start\n\nfunction failed() {\n    echo \"$*, failed and exit!\"\n    exit 1\n}\n\nWORKSPACE_PATH=\"../LeanCloudSocial.xcworkspace\"\nUNIVERSAL_OUTPUTFOLDER=\"./build/${CONFIGURATION}-universal\"\n\nfunction build_target(){\n    # define output folder environment variable\n    FRAMEWORK_TARGET=$1\n    # Step 1. Build Device and Simulator versions\n    xcodebuild -target ${FRAMEWORK_TARGET} clean\n    xcodebuild GCC_GENERATE_DEBUGGING_SYMBOLS=NO -workspace ${WORKSPACE_PATH} -scheme ${FRAMEWORK_TARGET} ARCHS=\"armv7 armv7s arm64\" -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" || failed ${FRAMEWORK_TARGET}\n    xcodebuild GCC_GENERATE_DEBUGGING_SYMBOLS=NO -workspace ${WORKSPACE_PATH} -scheme ${FRAMEWORK_TARGET} -configuration ${CONFIGURATION} -sdk iphonesimulator BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" || failed ${FRAMEWORK_TARGET}\n    \n    # make sure the output directory exists\n    mkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n    rm -dfR \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_TARGET}.framework\"\n    cp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_TARGET}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n    # Step 2. Create universal binary file using lipo\n    lipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_TARGET}.framework/${FRAMEWORK_TARGET}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_TARGET}.framework/${FRAMEWORK_TARGET}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_TARGET}.framework/${FRAMEWORK_TARGET}\"|| failed \"Lipo ${FRAMEWORK_TARGET}\"\n}\n\nbuild_target \"LeanCloudSocial\"\nbuild_target \"LeanCloudSocialDynamic\"\n\nopen \"${UNIVERSAL_OUTPUTFOLDER}/\"\n";
 		};
-		7124F962330DBF4065A555DF /* Embed Pods Frameworks */ = {
+		7124F962330DBF4065A555DF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,14 +584,14 @@
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LeanCloudSocialTests/Pods-LeanCloudSocialTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7C5779F0CD117B9B686910B7 /* Check Pods Manifest.lock */ = {
+		7C5779F0CD117B9B686910B7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,14 +599,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		CCCD82F5048A7AAF46D618C7 /* Copy Pods Resources */ = {
+		CCCD82F5048A7AAF46D618C7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,14 +614,14 @@
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LeanCloudSocialDynamic/Pods-LeanCloudSocialDynamic-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F64A0005C2CE46ACAD5E1377 /* Copy Pods Resources */ = {
+		F64A0005C2CE46ACAD5E1377 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,13 +646,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8325BDC01D41EDB8007079A2 /* AFURLSessionManager.m in Sources */,
+				8325BDB41D41EDB8007079A2 /* AFURLConnectionOperation.m in Sources */,
+				8325BD9E1D41EDB8007079A2 /* AFHTTPRequestOperation.m in Sources */,
 				7034F0A31BCEB4F500689FB0 /* AVOSCloudSNS.m in Sources */,
+				8325BDA21D41EDB8007079A2 /* AFHTTPRequestOperationManager.m in Sources */,
 				7034F0A41BCEB4F500689FB0 /* AVOSCloudSNSUtils.m in Sources */,
 				7034F0A51BCEB4F500689FB0 /* AVSNSHttpClient.m in Sources */,
+				8325BDA61D41EDB8007079A2 /* AFHTTPSessionManager.m in Sources */,
 				7034F0A61BCEB4F500689FB0 /* AVSNSLoginViewController.m in Sources */,
 				7034F0A71BCEB4F500689FB0 /* AVSNSWebViewController.m in Sources */,
 				7034F0A81BCEB4F500689FB0 /* AVUser+SNS.m in Sources */,
+				8325BDB01D41EDB8007079A2 /* AFSecurityPolicy.m in Sources */,
 				7034F0A91BCEB4F500689FB0 /* AVWebViewController.m in Sources */,
+				8325BDB81D41EDB8007079A2 /* AFURLRequestSerialization.m in Sources */,
+				8325BDAC1D41EDB8007079A2 /* AFNetworkReachabilityManager.m in Sources */,
+				8325BDBC1D41EDB8007079A2 /* AFURLResponseSerialization.m in Sources */,
 				7034F0AA1BCEB4F500689FB0 /* NSURL+AVAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,13 +670,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8325BDBF1D41EDB8007079A2 /* AFURLSessionManager.m in Sources */,
+				8325BDB31D41EDB8007079A2 /* AFURLConnectionOperation.m in Sources */,
+				8325BD9D1D41EDB8007079A2 /* AFHTTPRequestOperation.m in Sources */,
 				7034F07A1BCEB3BF00689FB0 /* AVSNSWebViewController.m in Sources */,
+				8325BDA11D41EDB8007079A2 /* AFHTTPRequestOperationManager.m in Sources */,
 				7034F0781BCEB3BF00689FB0 /* AVSNSLoginViewController.m in Sources */,
 				7034F0711BCEB3BF00689FB0 /* AVOSCloudSNS.m in Sources */,
+				8325BDA51D41EDB8007079A2 /* AFHTTPSessionManager.m in Sources */,
 				7034F0801BCEB3BF00689FB0 /* NSURL+AVAdditions.m in Sources */,
 				7034F0761BCEB3BF00689FB0 /* AVSNSHttpClient.m in Sources */,
 				7034F07C1BCEB3BF00689FB0 /* AVUser+SNS.m in Sources */,
+				8325BDAF1D41EDB8007079A2 /* AFSecurityPolicy.m in Sources */,
 				7034F07E1BCEB3BF00689FB0 /* AVWebViewController.m in Sources */,
+				8325BDB71D41EDB8007079A2 /* AFURLRequestSerialization.m in Sources */,
+				8325BDAB1D41EDB8007079A2 /* AFNetworkReachabilityManager.m in Sources */,
+				8325BDBB1D41EDB8007079A2 /* AFURLResponseSerialization.m in Sources */,
 				7034F0741BCEB3BF00689FB0 /* AVOSCloudSNSUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

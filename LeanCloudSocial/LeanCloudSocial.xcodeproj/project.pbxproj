@@ -60,6 +60,44 @@
 		7034F0AA1BCEB4F500689FB0 /* NSURL+AVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06F1BCEB3BF00689FB0 /* NSURL+AVAdditions.m */; };
 		70F675051BD7397400163D89 /* AVSNSTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F675041BD7397400163D89 /* AVSNSTestCase.m */; };
 		70F675081BD73AA300163D89 /* AVOSCloudSNSTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F675071BD73AA300163D89 /* AVOSCloudSNSTest.m */; };
+		83371BA11D42172B00BF895E /* LCSHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B8E1D42172B00BF895E /* LCSHTTPRequestOperation.h */; };
+		83371BA21D42172B00BF895E /* LCSHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B8E1D42172B00BF895E /* LCSHTTPRequestOperation.h */; };
+		83371BA31D42172B00BF895E /* LCSHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371B8F1D42172B00BF895E /* LCSHTTPRequestOperation.m */; };
+		83371BA41D42172B00BF895E /* LCSHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371B8F1D42172B00BF895E /* LCSHTTPRequestOperation.m */; };
+		83371BA51D42172B00BF895E /* LCSHTTPRequestOperationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B901D42172B00BF895E /* LCSHTTPRequestOperationManager.h */; };
+		83371BA61D42172B00BF895E /* LCSHTTPRequestOperationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B901D42172B00BF895E /* LCSHTTPRequestOperationManager.h */; };
+		83371BA71D42172B00BF895E /* LCSHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371B911D42172B00BF895E /* LCSHTTPRequestOperationManager.m */; };
+		83371BA81D42172B00BF895E /* LCSHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371B911D42172B00BF895E /* LCSHTTPRequestOperationManager.m */; };
+		83371BA91D42172B00BF895E /* LCSHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B921D42172B00BF895E /* LCSHTTPSessionManager.h */; };
+		83371BAA1D42172B00BF895E /* LCSHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B921D42172B00BF895E /* LCSHTTPSessionManager.h */; };
+		83371BAB1D42172B00BF895E /* LCSHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371B931D42172B00BF895E /* LCSHTTPSessionManager.m */; };
+		83371BAC1D42172B00BF895E /* LCSHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371B931D42172B00BF895E /* LCSHTTPSessionManager.m */; };
+		83371BAD1D42172B00BF895E /* LCSNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B941D42172B00BF895E /* LCSNetworking.h */; };
+		83371BAE1D42172B00BF895E /* LCSNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B941D42172B00BF895E /* LCSNetworking.h */; };
+		83371BAF1D42172B00BF895E /* LCSNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B951D42172B00BF895E /* LCSNetworkReachabilityManager.h */; };
+		83371BB01D42172B00BF895E /* LCSNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B951D42172B00BF895E /* LCSNetworkReachabilityManager.h */; };
+		83371BB11D42172B00BF895E /* LCSNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371B961D42172B00BF895E /* LCSNetworkReachabilityManager.m */; };
+		83371BB21D42172B00BF895E /* LCSNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371B961D42172B00BF895E /* LCSNetworkReachabilityManager.m */; };
+		83371BB31D42172B00BF895E /* LCSSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B971D42172B00BF895E /* LCSSecurityPolicy.h */; };
+		83371BB41D42172B00BF895E /* LCSSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B971D42172B00BF895E /* LCSSecurityPolicy.h */; };
+		83371BB51D42172B00BF895E /* LCSSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371B981D42172B00BF895E /* LCSSecurityPolicy.m */; };
+		83371BB61D42172B00BF895E /* LCSSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371B981D42172B00BF895E /* LCSSecurityPolicy.m */; };
+		83371BB71D42172B00BF895E /* LCSURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B991D42172B00BF895E /* LCSURLConnectionOperation.h */; };
+		83371BB81D42172B00BF895E /* LCSURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B991D42172B00BF895E /* LCSURLConnectionOperation.h */; };
+		83371BB91D42172B00BF895E /* LCSURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371B9A1D42172B00BF895E /* LCSURLConnectionOperation.m */; };
+		83371BBA1D42172B00BF895E /* LCSURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371B9A1D42172B00BF895E /* LCSURLConnectionOperation.m */; };
+		83371BBB1D42172B00BF895E /* LCSURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B9B1D42172B00BF895E /* LCSURLRequestSerialization.h */; };
+		83371BBC1D42172B00BF895E /* LCSURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B9B1D42172B00BF895E /* LCSURLRequestSerialization.h */; };
+		83371BBD1D42172B00BF895E /* LCSURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371B9C1D42172B00BF895E /* LCSURLRequestSerialization.m */; };
+		83371BBE1D42172B00BF895E /* LCSURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371B9C1D42172B00BF895E /* LCSURLRequestSerialization.m */; };
+		83371BBF1D42172B00BF895E /* LCSURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B9D1D42172B00BF895E /* LCSURLResponseSerialization.h */; };
+		83371BC01D42172B00BF895E /* LCSURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B9D1D42172B00BF895E /* LCSURLResponseSerialization.h */; };
+		83371BC11D42172B00BF895E /* LCSURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371B9E1D42172B00BF895E /* LCSURLResponseSerialization.m */; };
+		83371BC21D42172B00BF895E /* LCSURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371B9E1D42172B00BF895E /* LCSURLResponseSerialization.m */; };
+		83371BC31D42172B00BF895E /* LCSURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B9F1D42172B00BF895E /* LCSURLSessionManager.h */; };
+		83371BC41D42172B00BF895E /* LCSURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B9F1D42172B00BF895E /* LCSURLSessionManager.h */; };
+		83371BC51D42172B00BF895E /* LCSURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371BA01D42172B00BF895E /* LCSURLSessionManager.m */; };
+		83371BC61D42172B00BF895E /* LCSURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371BA01D42172B00BF895E /* LCSURLSessionManager.m */; };
 		9164637509911E1C6E5B4C27 /* libPods-LeanCloudSocialDynamic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B96F283ED44DC0F3AFFB175 /* libPods-LeanCloudSocialDynamic.a */; };
 		DDAB97E8AAA8C7757CD7D158 /* libPods-LeanCloudSocialTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6499EBDDC79C5167F06ADD47 /* libPods-LeanCloudSocialTests.a */; };
 /* End PBXBuildFile section */
@@ -94,11 +132,30 @@
 		7034F06F1BCEB3BF00689FB0 /* NSURL+AVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+AVAdditions.m"; sourceTree = "<group>"; };
 		7034F08E1BCEB46B00689FB0 /* LeanCloudSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanCloudSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7034F0971BCEB4AB00689FB0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70A6485D1BCEAB2000D56C78 /* LeanCloudSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanCloudSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70A6485D1BCEAB2000D56C78 /* LeanCloudSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LeanCloudSocial.framework; path = LeanCloudSocialDynamic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A648611BCEAB2000D56C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70F675041BD7397400163D89 /* AVSNSTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSNSTestCase.m; sourceTree = "<group>"; };
 		70F675061BD7399900163D89 /* AVSNSTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVSNSTestCase.h; sourceTree = "<group>"; };
 		70F675071BD73AA300163D89 /* AVOSCloudSNSTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVOSCloudSNSTest.m; sourceTree = "<group>"; };
+		83371B8E1D42172B00BF895E /* LCSHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSHTTPRequestOperation.h; sourceTree = "<group>"; };
+		83371B8F1D42172B00BF895E /* LCSHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSHTTPRequestOperation.m; sourceTree = "<group>"; };
+		83371B901D42172B00BF895E /* LCSHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		83371B911D42172B00BF895E /* LCSHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		83371B921D42172B00BF895E /* LCSHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSHTTPSessionManager.h; sourceTree = "<group>"; };
+		83371B931D42172B00BF895E /* LCSHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSHTTPSessionManager.m; sourceTree = "<group>"; };
+		83371B941D42172B00BF895E /* LCSNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSNetworking.h; sourceTree = "<group>"; };
+		83371B951D42172B00BF895E /* LCSNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		83371B961D42172B00BF895E /* LCSNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		83371B971D42172B00BF895E /* LCSSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSSecurityPolicy.h; sourceTree = "<group>"; };
+		83371B981D42172B00BF895E /* LCSSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSSecurityPolicy.m; sourceTree = "<group>"; };
+		83371B991D42172B00BF895E /* LCSURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSURLConnectionOperation.h; sourceTree = "<group>"; };
+		83371B9A1D42172B00BF895E /* LCSURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSURLConnectionOperation.m; sourceTree = "<group>"; };
+		83371B9B1D42172B00BF895E /* LCSURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSURLRequestSerialization.h; sourceTree = "<group>"; };
+		83371B9C1D42172B00BF895E /* LCSURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSURLRequestSerialization.m; sourceTree = "<group>"; };
+		83371B9D1D42172B00BF895E /* LCSURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSURLResponseSerialization.h; sourceTree = "<group>"; };
+		83371B9E1D42172B00BF895E /* LCSURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSURLResponseSerialization.m; sourceTree = "<group>"; };
+		83371B9F1D42172B00BF895E /* LCSURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSURLSessionManager.h; sourceTree = "<group>"; };
+		83371BA01D42172B00BF895E /* LCSURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSURLSessionManager.m; sourceTree = "<group>"; };
 		847392B14A6854CE535F8FA3 /* Pods-LeanCloudSocialDynamic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDynamic.release.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocialDynamic/Pods-LeanCloudSocialDynamic.release.xcconfig"; sourceTree = "<group>"; };
 		857347A4DC9D90897CF61A18 /* Pods-LeanCloudSocialDynamic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDynamic.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocialDynamic/Pods-LeanCloudSocialDynamic.debug.xcconfig"; sourceTree = "<group>"; };
 		C5406E5F39D2923D567AC261 /* libPods-LeanCloudSocial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeanCloudSocial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +228,7 @@
 		7034F05E1BCEB3BF00689FB0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8325BD861D41EDB8007079A2 /* Vendor */,
 				7034F05F1BCEB3BF00689FB0 /* AVOSCloudSNS.h */,
 				7034F0601BCEB3BF00689FB0 /* AVOSCloudSNS.m */,
 				7034F0611BCEB3BF00689FB0 /* AVOSCloudSNS_.h */,
@@ -232,6 +290,40 @@
 			path = LeanCloudSocialDynamic;
 			sourceTree = "<group>";
 		};
+		8325BD861D41EDB8007079A2 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				83371B8D1D42172B00BF895E /* AFNetworking */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		83371B8D1D42172B00BF895E /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				83371B8E1D42172B00BF895E /* LCSHTTPRequestOperation.h */,
+				83371B8F1D42172B00BF895E /* LCSHTTPRequestOperation.m */,
+				83371B901D42172B00BF895E /* LCSHTTPRequestOperationManager.h */,
+				83371B911D42172B00BF895E /* LCSHTTPRequestOperationManager.m */,
+				83371B921D42172B00BF895E /* LCSHTTPSessionManager.h */,
+				83371B931D42172B00BF895E /* LCSHTTPSessionManager.m */,
+				83371B941D42172B00BF895E /* LCSNetworking.h */,
+				83371B951D42172B00BF895E /* LCSNetworkReachabilityManager.h */,
+				83371B961D42172B00BF895E /* LCSNetworkReachabilityManager.m */,
+				83371B971D42172B00BF895E /* LCSSecurityPolicy.h */,
+				83371B981D42172B00BF895E /* LCSSecurityPolicy.m */,
+				83371B991D42172B00BF895E /* LCSURLConnectionOperation.h */,
+				83371B9A1D42172B00BF895E /* LCSURLConnectionOperation.m */,
+				83371B9B1D42172B00BF895E /* LCSURLRequestSerialization.h */,
+				83371B9C1D42172B00BF895E /* LCSURLRequestSerialization.m */,
+				83371B9D1D42172B00BF895E /* LCSURLResponseSerialization.h */,
+				83371B9E1D42172B00BF895E /* LCSURLResponseSerialization.m */,
+				83371B9F1D42172B00BF895E /* LCSURLSessionManager.h */,
+				83371BA01D42172B00BF895E /* LCSURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -239,14 +331,24 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83371BBC1D42172B00BF895E /* LCSURLRequestSerialization.h in Headers */,
 				7034F09A1BCEB4DC00689FB0 /* AVOSCloudSNS.h in Headers */,
 				7034F0A01BCEB4DC00689FB0 /* AVUser+SNS.h in Headers */,
 				7034F09B1BCEB4DC00689FB0 /* AVOSCloudSNS_.h in Headers */,
+				83371BA21D42172B00BF895E /* LCSHTTPRequestOperation.h in Headers */,
 				7034F09C1BCEB4DC00689FB0 /* AVOSCloudSNSUtils.h in Headers */,
+				83371BB01D42172B00BF895E /* LCSNetworkReachabilityManager.h in Headers */,
+				83371BA61D42172B00BF895E /* LCSHTTPRequestOperationManager.h in Headers */,
+				83371BB81D42172B00BF895E /* LCSURLConnectionOperation.h in Headers */,
+				83371BC01D42172B00BF895E /* LCSURLResponseSerialization.h in Headers */,
+				83371BAA1D42172B00BF895E /* LCSHTTPSessionManager.h in Headers */,
+				83371BC41D42172B00BF895E /* LCSURLSessionManager.h in Headers */,
+				83371BB41D42172B00BF895E /* LCSSecurityPolicy.h in Headers */,
 				7034F09D1BCEB4DC00689FB0 /* AVSNSHttpClient.h in Headers */,
 				7034F09E1BCEB4DC00689FB0 /* AVSNSLoginViewController.h in Headers */,
 				7034F09F1BCEB4DC00689FB0 /* AVSNSWebViewController.h in Headers */,
 				7034F0A11BCEB4DC00689FB0 /* AVWebViewController.h in Headers */,
+				83371BAE1D42172B00BF895E /* LCSNetworking.h in Headers */,
 				7034F0A21BCEB4DC00689FB0 /* NSURL+AVAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,14 +357,24 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83371BBB1D42172B00BF895E /* LCSURLRequestSerialization.h in Headers */,
 				7034F0701BCEB3BF00689FB0 /* AVOSCloudSNS.h in Headers */,
 				7034F0771BCEB3BF00689FB0 /* AVSNSLoginViewController.h in Headers */,
 				7034F07B1BCEB3BF00689FB0 /* AVUser+SNS.h in Headers */,
+				83371BA11D42172B00BF895E /* LCSHTTPRequestOperation.h in Headers */,
 				7034F0791BCEB3BF00689FB0 /* AVSNSWebViewController.h in Headers */,
+				83371BAF1D42172B00BF895E /* LCSNetworkReachabilityManager.h in Headers */,
+				83371BA51D42172B00BF895E /* LCSHTTPRequestOperationManager.h in Headers */,
+				83371BB71D42172B00BF895E /* LCSURLConnectionOperation.h in Headers */,
+				83371BBF1D42172B00BF895E /* LCSURLResponseSerialization.h in Headers */,
+				83371BA91D42172B00BF895E /* LCSHTTPSessionManager.h in Headers */,
+				83371BC31D42172B00BF895E /* LCSURLSessionManager.h in Headers */,
+				83371BB31D42172B00BF895E /* LCSSecurityPolicy.h in Headers */,
 				7034F0721BCEB3BF00689FB0 /* AVOSCloudSNS_.h in Headers */,
 				7034F0731BCEB3BF00689FB0 /* AVOSCloudSNSUtils.h in Headers */,
 				7034F07F1BCEB3BF00689FB0 /* NSURL+AVAdditions.h in Headers */,
 				7034F0751BCEB3BF00689FB0 /* AVSNSHttpClient.h in Headers */,
+				83371BAD1D42172B00BF895E /* LCSNetworking.h in Headers */,
 				7034F07D1BCEB3BF00689FB0 /* AVWebViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,12 +386,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7030A9071BD6415700636404 /* Build configuration list for PBXNativeTarget "LeanCloudSocialTests" */;
 			buildPhases = (
-				7C5779F0CD117B9B686910B7 /* Check Pods Manifest.lock */,
+				7C5779F0CD117B9B686910B7 /* [CP] Check Pods Manifest.lock */,
 				7030A8F91BD6415700636404 /* Sources */,
 				7030A8FA1BD6415700636404 /* Frameworks */,
 				7030A8FB1BD6415700636404 /* Resources */,
-				7124F962330DBF4065A555DF /* Embed Pods Frameworks */,
-				645B53BDEF023E64F5D1E22E /* Copy Pods Resources */,
+				7124F962330DBF4065A555DF /* [CP] Embed Pods Frameworks */,
+				645B53BDEF023E64F5D1E22E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,12 +406,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7034F0931BCEB46B00689FB0 /* Build configuration list for PBXNativeTarget "LeanCloudSocial" */;
 			buildPhases = (
-				096D1908673A30EE4DECB21F /* Check Pods Manifest.lock */,
+				096D1908673A30EE4DECB21F /* [CP] Check Pods Manifest.lock */,
 				7034F0891BCEB46B00689FB0 /* Sources */,
 				7034F08A1BCEB46B00689FB0 /* Frameworks */,
 				7034F08B1BCEB46B00689FB0 /* Headers */,
 				7034F08C1BCEB46B00689FB0 /* Resources */,
-				F64A0005C2CE46ACAD5E1377 /* Copy Pods Resources */,
+				F64A0005C2CE46ACAD5E1377 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,12 +426,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70A648621BCEAB2000D56C78 /* Build configuration list for PBXNativeTarget "LeanCloudSocialDynamic" */;
 			buildPhases = (
-				5A42F1405DB016C39A79FB9D /* Check Pods Manifest.lock */,
+				5A42F1405DB016C39A79FB9D /* [CP] Check Pods Manifest.lock */,
 				70A648581BCEAB2000D56C78 /* Sources */,
 				70A648591BCEAB2000D56C78 /* Frameworks */,
 				70A6485A1BCEAB2000D56C78 /* Headers */,
 				70A6485B1BCEAB2000D56C78 /* Resources */,
-				CCCD82F5048A7AAF46D618C7 /* Copy Pods Resources */,
+				CCCD82F5048A7AAF46D618C7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -399,14 +511,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		096D1908673A30EE4DECB21F /* Check Pods Manifest.lock */ = {
+		096D1908673A30EE4DECB21F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,14 +526,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		5A42F1405DB016C39A79FB9D /* Check Pods Manifest.lock */ = {
+		5A42F1405DB016C39A79FB9D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,14 +541,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		645B53BDEF023E64F5D1E22E /* Copy Pods Resources */ = {
+		645B53BDEF023E64F5D1E22E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,14 +569,14 @@
 			shellPath = /bin/sh;
 			shellScript = "# This script is based on Jacob Van Order's answer on apple dev forums\n\n# https://devforums.apple.com/message/971277\n# See also http://spin.atomicobject.com/2011/12/13/building-a-universal-framework-for-ios/ for the start\n\nfunction failed() {\n    echo \"$*, failed and exit!\"\n    exit 1\n}\n\nWORKSPACE_PATH=\"../LeanCloudSocial.xcworkspace\"\nUNIVERSAL_OUTPUTFOLDER=\"./build/${CONFIGURATION}-universal\"\n\nfunction build_target(){\n    # define output folder environment variable\n    FRAMEWORK_TARGET=$1\n    # Step 1. Build Device and Simulator versions\n    xcodebuild -target ${FRAMEWORK_TARGET} clean\n    xcodebuild GCC_GENERATE_DEBUGGING_SYMBOLS=NO -workspace ${WORKSPACE_PATH} -scheme ${FRAMEWORK_TARGET} ARCHS=\"armv7 armv7s arm64\" -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" || failed ${FRAMEWORK_TARGET}\n    xcodebuild GCC_GENERATE_DEBUGGING_SYMBOLS=NO -workspace ${WORKSPACE_PATH} -scheme ${FRAMEWORK_TARGET} -configuration ${CONFIGURATION} -sdk iphonesimulator BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" || failed ${FRAMEWORK_TARGET}\n    \n    # make sure the output directory exists\n    mkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n    rm -dfR \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_TARGET}.framework\"\n    cp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_TARGET}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n    # Step 2. Create universal binary file using lipo\n    lipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_TARGET}.framework/${FRAMEWORK_TARGET}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_TARGET}.framework/${FRAMEWORK_TARGET}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_TARGET}.framework/${FRAMEWORK_TARGET}\"|| failed \"Lipo ${FRAMEWORK_TARGET}\"\n}\n\nbuild_target \"LeanCloudSocial\"\nbuild_target \"LeanCloudSocialDynamic\"\n\nopen \"${UNIVERSAL_OUTPUTFOLDER}/\"\n";
 		};
-		7124F962330DBF4065A555DF /* Embed Pods Frameworks */ = {
+		7124F962330DBF4065A555DF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,14 +584,14 @@
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LeanCloudSocialTests/Pods-LeanCloudSocialTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7C5779F0CD117B9B686910B7 /* Check Pods Manifest.lock */ = {
+		7C5779F0CD117B9B686910B7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,14 +599,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		CCCD82F5048A7AAF46D618C7 /* Copy Pods Resources */ = {
+		CCCD82F5048A7AAF46D618C7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,14 +614,14 @@
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LeanCloudSocialDynamic/Pods-LeanCloudSocialDynamic-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F64A0005C2CE46ACAD5E1377 /* Copy Pods Resources */ = {
+		F64A0005C2CE46ACAD5E1377 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,13 +646,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83371BA81D42172B00BF895E /* LCSHTTPRequestOperationManager.m in Sources */,
+				83371BC61D42172B00BF895E /* LCSURLSessionManager.m in Sources */,
 				7034F0A31BCEB4F500689FB0 /* AVOSCloudSNS.m in Sources */,
+				83371BB21D42172B00BF895E /* LCSNetworkReachabilityManager.m in Sources */,
+				83371BBE1D42172B00BF895E /* LCSURLRequestSerialization.m in Sources */,
 				7034F0A41BCEB4F500689FB0 /* AVOSCloudSNSUtils.m in Sources */,
 				7034F0A51BCEB4F500689FB0 /* AVSNSHttpClient.m in Sources */,
 				7034F0A61BCEB4F500689FB0 /* AVSNSLoginViewController.m in Sources */,
+				83371BBA1D42172B00BF895E /* LCSURLConnectionOperation.m in Sources */,
 				7034F0A71BCEB4F500689FB0 /* AVSNSWebViewController.m in Sources */,
+				83371BB61D42172B00BF895E /* LCSSecurityPolicy.m in Sources */,
+				83371BC21D42172B00BF895E /* LCSURLResponseSerialization.m in Sources */,
 				7034F0A81BCEB4F500689FB0 /* AVUser+SNS.m in Sources */,
 				7034F0A91BCEB4F500689FB0 /* AVWebViewController.m in Sources */,
+				83371BAC1D42172B00BF895E /* LCSHTTPSessionManager.m in Sources */,
+				83371BA41D42172B00BF895E /* LCSHTTPRequestOperation.m in Sources */,
 				7034F0AA1BCEB4F500689FB0 /* NSURL+AVAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,13 +670,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83371BA71D42172B00BF895E /* LCSHTTPRequestOperationManager.m in Sources */,
+				83371BC51D42172B00BF895E /* LCSURLSessionManager.m in Sources */,
 				7034F07A1BCEB3BF00689FB0 /* AVSNSWebViewController.m in Sources */,
+				83371BB11D42172B00BF895E /* LCSNetworkReachabilityManager.m in Sources */,
+				83371BBD1D42172B00BF895E /* LCSURLRequestSerialization.m in Sources */,
 				7034F0781BCEB3BF00689FB0 /* AVSNSLoginViewController.m in Sources */,
 				7034F0711BCEB3BF00689FB0 /* AVOSCloudSNS.m in Sources */,
 				7034F0801BCEB3BF00689FB0 /* NSURL+AVAdditions.m in Sources */,
+				83371BB91D42172B00BF895E /* LCSURLConnectionOperation.m in Sources */,
 				7034F0761BCEB3BF00689FB0 /* AVSNSHttpClient.m in Sources */,
+				83371BB51D42172B00BF895E /* LCSSecurityPolicy.m in Sources */,
+				83371BC11D42172B00BF895E /* LCSURLResponseSerialization.m in Sources */,
 				7034F07C1BCEB3BF00689FB0 /* AVUser+SNS.m in Sources */,
 				7034F07E1BCEB3BF00689FB0 /* AVWebViewController.m in Sources */,
+				83371BAB1D42172B00BF895E /* LCSHTTPSessionManager.m in Sources */,
+				83371BA31D42172B00BF895E /* LCSHTTPRequestOperation.m in Sources */,
 				7034F0741BCEB3BF00689FB0 /* AVOSCloudSNSUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

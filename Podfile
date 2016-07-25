@@ -6,10 +6,9 @@ xcodeproj 'LeanCloudSocialDemo/LeanCloudSocialDemo.xcodeproj'
 
 target 'LeanCloudSocial' do
     platform :ios, '7.0'
-    
+
     xcodeproj 'LeanCloudSocial/LeanCloudSocial.xcodeproj'
     pod 'AVOSCloud', '~> 3.1'
-    pod 'AFNetworking', '~> 2.0'
 end
 
 target 'LeanCloudSocialTests' do
@@ -24,12 +23,11 @@ target 'LeanCloudSocialDynamic' do
 
     xcodeproj 'LeanCloudSocial/LeanCloudSocial.xcodeproj'
     pod 'AVOSCloudDynamic', '~> 3.1'
-    pod 'AFNetworking', '~> 2.0'
 end
 
 target 'LeanCloudSocialDemo' do
     platform :ios, '7.0'
-    
+
     xcodeproj 'LeanCloudSocialDemo/LeanCloudSocialDemo.xcodeproj'
     pod 'LeanCloudSocial', :path => '.'
 end

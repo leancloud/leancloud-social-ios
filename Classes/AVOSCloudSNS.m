@@ -10,7 +10,7 @@
 #import "AVOSCloudSNSUtils.h"
 #import "AVSNSLoginViewController.h"
 
-#import <AFNetworking/AFNetworking.h>
+#import "LCSNetworking.h"
 #import "AVSNSWebViewController.h"
 
 NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
@@ -21,20 +21,20 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
 
 @implementation AVOSCloudSNS
 
-+ (AFHTTPRequestOperationManager *)requestManager {
-    static AFHTTPRequestOperationManager *requestManager;
++ (LCSHTTPRequestOperationManager *)requestManager {
+    static LCSHTTPRequestOperationManager *requestManager;
     @synchronized (self) {
-        requestManager = [AFHTTPRequestOperationManager manager];
-        requestManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        requestManager = [LCSHTTPRequestOperationManager manager];
+        requestManager.responseSerializer = [LCSHTTPResponseSerializer serializer];
     }
     return requestManager;
 }
 
-+ (AFHTTPRequestOperationManager *)jsonRequestManager {
-    static AFHTTPRequestOperationManager *jsonRequestManager;
++ (LCSHTTPRequestOperationManager *)jsonRequestManager {
+    static LCSHTTPRequestOperationManager *jsonRequestManager;
     @synchronized (self) {
         if (!jsonRequestManager) {
-            jsonRequestManager = [AFHTTPRequestOperationManager manager];
+            jsonRequestManager = [LCSHTTPRequestOperationManager manager];
             // 避免服务器不规范，没有返回 application/json
             jsonRequestManager.responseSerializer.acceptableContentTypes = [jsonRequestManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
         }
@@ -424,7 +424,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
             NSAssert(NO, @"不支持的平台类型");
             break;
     }
-    [[self requestManager] GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [[self requestManager] GET:url parameters:params success:^(LCSHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *params= [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         NSString *error=params[@"error"];
         if (error) {
@@ -457,7 +457,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
             [AVOSCloudSNS onSuccess:type withParams:dict];
             
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(LCSHTTPRequestOperation *operation, NSError *error) {
         [AVOSCloudSNS onFail:type withError:error];
     }];
 }
@@ -513,8 +513,8 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
             if (dict) {
                 NSString *token=[dict objectForKey:@"access_token"];
 
-                [[self requestManager] GET:@"https://api.weibo.com/oauth2/revokeoauth2" parameters:@{@"access_token":token} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                [[self requestManager] GET:@"https://api.weibo.com/oauth2/revokeoauth2" parameters:@{@"access_token":token} success:^(LCSHTTPRequestOperation *operation, id responseObject) {
+                } failure:^(LCSHTTPRequestOperation *operation, NSError *error) {
                 }];
             }
         }
@@ -614,15 +614,15 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     NSString *appId = config[@"appkey"];
     NSString *secret = config[@"appsec"];
     NSDictionary *params = @{@"appid":appId, @"secret": secret, @"code":code, @"grant_type":@"authorization_code"};
-    AFHTTPRequestOperationManager *manager = [self jsonRequestManager];
-    [manager GET:@"https://api.weixin.qq.com/sns/oauth2/access_token" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    LCSHTTPRequestOperationManager *manager = [self jsonRequestManager];
+    [manager GET:@"https://api.weixin.qq.com/sns/oauth2/access_token" parameters:params success:^(LCSHTTPRequestOperation *operation, id responseObject) {
         if ([responseObject objectForKey:@"access_token"]) {
             block(responseObject, nil);
         } else {
             // weixin system error
             block(nil, [NSError errorWithDomain:AVOSCloudSNSErrorDomain code:AVOSCloudSNSErrorLoginFail userInfo:@{NSLocalizedDescriptionKey: [responseObject objectForKey:@"errmsg"]}]);
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(LCSHTTPRequestOperation *operation, NSError *error) {
         block(nil, error);
     }];
 }
@@ -737,11 +737,11 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
 
 +(void)request:(NSURLRequest*)req withCallback:(AVSNSResultBlock)callback andProgress:(AVSNSProgressBlock)progressBlock{
     
-    AFHTTPRequestOperation *opt = [[AFHTTPRequestOperation alloc] initWithRequest:req];
-    opt.responseSerializer = [AFJSONResponseSerializer serializer];
-    [opt setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+    LCSHTTPRequestOperation *opt = [[LCSHTTPRequestOperation alloc] initWithRequest:req];
+    opt.responseSerializer = [LCSJSONResponseSerializer serializer];
+    [opt setCompletionBlockWithSuccess:^(LCSHTTPRequestOperation *operation, id responseObject) {
         callback(responseObject,nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(LCSHTTPRequestOperation *operation, NSError *error) {
         callback(nil,error);
     }];
 
@@ -770,7 +770,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     if (image) {
         urlString=[NSString stringWithFormat:updateUrl,@"upload"];
         NSError *error;
-        request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:urlString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        request = [[LCSHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:urlString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
             NSData *imageData=UIImageJPEGRepresentation(image, 0.8);
             [formData appendPartWithFormData:imageData name:@"pic"];
             [formData appendPartWithFileData:imageData name:@"pic" fileName:@"image" mimeType:@"image/jpeg"];
@@ -782,7 +782,7 @@ NSString * const AVOSCloudSNSErrorDomain = @"com.avoscloud.snslogin";
     }else{
         urlString=[NSString stringWithFormat:updateUrl,@"update"];
         NSError *error;
-        request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:urlString parameters:parameters error:&error];
+        request = [[LCSHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:urlString parameters:parameters error:&error];
         if (error) {
             callback(nil, error);
             return;

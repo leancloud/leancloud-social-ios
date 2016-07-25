@@ -9,7 +9,7 @@
 #ifndef VZ_AVUser_SNS_h
 #define VZ_AVUser_SNS_h
 
-@import AVOSCloud;
+#import <AVOSCloud/AVOSCloud.h>
 
 #if !defined(AVDeprecated)
 #  define AVDeprecated(explain) __attribute__((deprecated(explain)))

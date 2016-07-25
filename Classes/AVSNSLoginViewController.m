@@ -101,7 +101,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
                                   @"display":@"mobile",
                                   };
             
-            NSURLRequest *req = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:@"https://open.weibo.cn/oauth2/authorize" parameters:param error:nil];
+            NSURLRequest *req = [[LCSHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:@"https://open.weibo.cn/oauth2/authorize" parameters:param error:nil];
             
             [self.webView loadRequest:req];
         }
@@ -120,7 +120,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
                                   @"ucheck":@1,
                                   @"fall_to_wv":@1
                                   };
-            NSURLRequest *req = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:@"http://openmobile.qq.com/oauth2.0/m_show" parameters:params error:nil];
+            NSURLRequest *req = [[LCSHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:@"http://openmobile.qq.com/oauth2.0/m_show" parameters:params error:nil];
             
             [self.webView loadRequest:req];
         }
@@ -167,7 +167,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
             return;
     }
     
-    [[AVOSCloudSNS requestManager] POST:url parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [[AVOSCloudSNS requestManager] POST:url parameters:param success:^(LCSHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *info=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         
         NSString *token=info[@"access_token"];
@@ -184,7 +184,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
             //TODO: return unknow error
             [AVOSCloudSNS onFail:self.type withError:error];
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(LCSHTTPRequestOperation *operation, NSError *error) {
         
     }];
 }
@@ -204,7 +204,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
         
         if(hasCode){
             //avos返回用户信息
-            [[AVOSCloudSNS requestManager] GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [[AVOSCloudSNS requestManager] GET:url parameters:nil success:^(LCSHTTPRequestOperation *operation, id responseObject) {
                 NSDictionary *info=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
                 info=info[@"user"];
                 if (info) {
@@ -214,7 +214,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
                     NSError *err=[NSError errorWithDomain:AVOSCloudSNSErrorDomain code:9999 userInfo:info];
                     [AVOSCloudSNS onFail:self.type withError:err];
                 }
-            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            } failure:^(LCSHTTPRequestOperation *operation, NSError *error) {
                 [AVOSCloudSNS onFail:self.type withError:error];
             }];
             return NO;
@@ -252,12 +252,12 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
             [self getAccessToken:code];
             return NO;
         }else if (token && self.type==AVOSCloudSNSQQ){
-            [[AVOSCloudSNS requestManager] GET:[NSString stringWithFormat:@"https://graph.qq.com/oauth2.0/me?access_token=%@",token] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [[AVOSCloudSNS requestManager] GET:[NSString stringWithFormat:@"https://graph.qq.com/oauth2.0/me?access_token=%@",token] parameters:nil success:^(LCSHTTPRequestOperation *operation, id responseObject) {
                 NSString *string=[[NSString alloc] initWithBytes:[responseObject bytes] length:[responseObject length] encoding:NSUTF8StringEncoding];
                 NSDictionary *ret= [AVOSCloudSNSUtils unserializeJSONP:string];
                 NSString *openid=ret[@"openid"];
                 [AVOSCloudSNS onSuccess:self.type withToken:token andExpires:param[@"expires_in"] andUid:openid];
-            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            } failure:^(LCSHTTPRequestOperation *operation, NSError *error) {
                 [AVOSCloudSNS onFail:AVOSCloudSNSQQ withError:error];
             }];
         }

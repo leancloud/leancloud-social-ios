@@ -9,6 +9,7 @@
 #import "AVSNSHttpClient.h"
 #import "AVOSCloudSNSUtils.h"
 #import "AVOSCloudSNS.h"
+#import "AVUser_Internal.h"
 
 NSString *const AVOSCloudSNSPlatformWeiBo = @"weibo";
 NSString *const AVOSCloudSNSPlatformQQ = @"qq";
@@ -201,7 +202,7 @@ NSString *const AVOSCloudSNSPlatformWeiXin = @"weixin";
                 // createdAt = "2015-07-29T11:33:03.642Z";
                 // username = mzv62gzwrwzqtz75rv51kzye6;
                 
-                user = [self user];
+                user = [self userOrSubclassUser];
                 [user objectFromDictionary:object];
                 if(!object[@"authData"]){
                     [user setObject:dict[@"authData"] forKey:@"authData"];

@@ -9,7 +9,7 @@
 #import "AVSNSHttpClient.h"
 #import "AVOSCloudSNSUtils.h"
 #import "AVOSCloudSNS.h"
-#import "AVUser_Internal.h"
+#import "AVUser_SNSInternal.h"
 
 NSString *const AVOSCloudSNSPlatformWeiBo = @"weibo";
 NSString *const AVOSCloudSNSPlatformQQ = @"qq";

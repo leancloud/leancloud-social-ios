@@ -40,7 +40,6 @@
 		7034F07E1BCEB3BF00689FB0 /* AVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06D1BCEB3BF00689FB0 /* AVWebViewController.m */; };
 		7034F07F1BCEB3BF00689FB0 /* NSURL+AVAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F06E1BCEB3BF00689FB0 /* NSURL+AVAdditions.h */; };
 		7034F0801BCEB3BF00689FB0 /* NSURL+AVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06F1BCEB3BF00689FB0 /* NSURL+AVAdditions.m */; };
-		7034F0991BCEB4AB00689FB0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7034F0971BCEB4AB00689FB0 /* Info.plist */; };
 		7034F09A1BCEB4DC00689FB0 /* AVOSCloudSNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F05F1BCEB3BF00689FB0 /* AVOSCloudSNS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7034F09B1BCEB4DC00689FB0 /* AVOSCloudSNS_.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0611BCEB3BF00689FB0 /* AVOSCloudSNS_.h */; };
 		7034F09C1BCEB4DC00689FB0 /* AVOSCloudSNSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0621BCEB3BF00689FB0 /* AVOSCloudSNSUtils.h */; };
@@ -131,7 +130,7 @@
 		7034F06F1BCEB3BF00689FB0 /* NSURL+AVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+AVAdditions.m"; sourceTree = "<group>"; };
 		7034F08E1BCEB46B00689FB0 /* LeanCloudSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanCloudSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7034F0971BCEB4AB00689FB0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70A6485D1BCEAB2000D56C78 /* LeanCloudSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LeanCloudSocial.framework; path = LeanCloudSocialDynamic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70A6485D1BCEAB2000D56C78 /* LeanCloudSocialDynamic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanCloudSocialDynamic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A648611BCEAB2000D56C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70F675041BD7397400163D89 /* AVSNSTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSNSTestCase.m; sourceTree = "<group>"; };
 		70F675061BD7399900163D89 /* AVSNSTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVSNSTestCase.h; sourceTree = "<group>"; };
@@ -271,7 +270,7 @@
 		70A6480C1BCEA86300D56C78 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				70A6485D1BCEAB2000D56C78 /* LeanCloudSocial.framework */,
+				70A6485D1BCEAB2000D56C78 /* LeanCloudSocialDynamic.framework */,
 				7034F08E1BCEB46B00689FB0 /* LeanCloudSocial.framework */,
 				7030A8FD1BD6415700636404 /* LeanCloudSocialTests.xctest */,
 			);
@@ -433,7 +432,7 @@
 			);
 			name = LeanCloudSocialDynamic;
 			productName = LeanCloudSocialDynamic;
-			productReference = 70A6485D1BCEAB2000D56C78 /* LeanCloudSocial.framework */;
+			productReference = 70A6485D1BCEAB2000D56C78 /* LeanCloudSocialDynamic.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -442,7 +441,7 @@
 		70A648021BCEA86300D56C78 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = LeanCloud;
 				TargetAttributes = {
 					7030A8FC1BD6415700636404 = {
@@ -491,7 +490,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7034F0991BCEB4AB00689FB0 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +711,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1463B00C15C788942C9454A3 /* Pods-LeanCloudSocial.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -733,6 +732,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D5AB76CAE0B16721FF50DE7 /* Pods-LeanCloudSocial.release.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -757,13 +757,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -786,7 +794,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -804,13 +812,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -827,7 +843,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -840,6 +856,7 @@
 		70A648631BCEAB2000D56C78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -857,6 +874,7 @@
 		70A648641BCEAB2000D56C78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

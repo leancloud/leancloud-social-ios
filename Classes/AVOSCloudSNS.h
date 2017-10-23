@@ -93,7 +93,6 @@ typedef void (^AVSNSProgressBlock)(float percent);
 /**
  *  相应的 App 是否有安装，如果有安装的话，说明可以用 SSO 跳转登录。没有安装的话，QQ 和微博将跳转至网页登录，微信暂时不支持网页登录，请隐藏微信按钮。
  *  @param type 支持 QQ、WeiXin、Weibo
- *  @return
  */
 + (BOOL)isAppInstalledForType:(AVOSCloudSNSType)type;
 

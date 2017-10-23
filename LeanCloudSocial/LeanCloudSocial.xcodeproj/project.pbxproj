@@ -40,7 +40,6 @@
 		7034F07E1BCEB3BF00689FB0 /* AVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06D1BCEB3BF00689FB0 /* AVWebViewController.m */; };
 		7034F07F1BCEB3BF00689FB0 /* NSURL+AVAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F06E1BCEB3BF00689FB0 /* NSURL+AVAdditions.h */; };
 		7034F0801BCEB3BF00689FB0 /* NSURL+AVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F06F1BCEB3BF00689FB0 /* NSURL+AVAdditions.m */; };
-		7034F0991BCEB4AB00689FB0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7034F0971BCEB4AB00689FB0 /* Info.plist */; };
 		7034F09A1BCEB4DC00689FB0 /* AVOSCloudSNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F05F1BCEB3BF00689FB0 /* AVOSCloudSNS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7034F09B1BCEB4DC00689FB0 /* AVOSCloudSNS_.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0611BCEB3BF00689FB0 /* AVOSCloudSNS_.h */; };
 		7034F09C1BCEB4DC00689FB0 /* AVOSCloudSNSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7034F0621BCEB3BF00689FB0 /* AVOSCloudSNSUtils.h */; };
@@ -98,7 +97,6 @@
 		83371BC41D42172B00BF895E /* LCSURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B9F1D42172B00BF895E /* LCSURLSessionManager.h */; };
 		83371BC51D42172B00BF895E /* LCSURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371BA01D42172B00BF895E /* LCSURLSessionManager.m */; };
 		83371BC61D42172B00BF895E /* LCSURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371BA01D42172B00BF895E /* LCSURLSessionManager.m */; };
-		9164637509911E1C6E5B4C27 /* libPods-LeanCloudSocialDynamic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B96F283ED44DC0F3AFFB175 /* libPods-LeanCloudSocialDynamic.a */; };
 		DDAB97E8AAA8C7757CD7D158 /* libPods-LeanCloudSocialTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6499EBDDC79C5167F06ADD47 /* libPods-LeanCloudSocialTests.a */; };
 /* End PBXBuildFile section */
 
@@ -132,7 +130,7 @@
 		7034F06F1BCEB3BF00689FB0 /* NSURL+AVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+AVAdditions.m"; sourceTree = "<group>"; };
 		7034F08E1BCEB46B00689FB0 /* LeanCloudSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanCloudSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7034F0971BCEB4AB00689FB0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70A6485D1BCEAB2000D56C78 /* LeanCloudSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LeanCloudSocial.framework; path = LeanCloudSocialDynamic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70A6485D1BCEAB2000D56C78 /* LeanCloudSocialDynamic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanCloudSocialDynamic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A648611BCEAB2000D56C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70F675041BD7397400163D89 /* AVSNSTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSNSTestCase.m; sourceTree = "<group>"; };
 		70F675061BD7399900163D89 /* AVSNSTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVSNSTestCase.h; sourceTree = "<group>"; };
@@ -156,8 +154,6 @@
 		83371B9E1D42172B00BF895E /* LCSURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSURLResponseSerialization.m; sourceTree = "<group>"; };
 		83371B9F1D42172B00BF895E /* LCSURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSURLSessionManager.h; sourceTree = "<group>"; };
 		83371BA01D42172B00BF895E /* LCSURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSURLSessionManager.m; sourceTree = "<group>"; };
-		847392B14A6854CE535F8FA3 /* Pods-LeanCloudSocialDynamic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDynamic.release.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocialDynamic/Pods-LeanCloudSocialDynamic.release.xcconfig"; sourceTree = "<group>"; };
-		857347A4DC9D90897CF61A18 /* Pods-LeanCloudSocialDynamic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDynamic.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocialDynamic/Pods-LeanCloudSocialDynamic.debug.xcconfig"; sourceTree = "<group>"; };
 		9AE05FDB1E10B44200C935E4 /* AVUser_SNSInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVUser_SNSInternal.h; sourceTree = "<group>"; };
 		C5406E5F39D2923D567AC261 /* libPods-LeanCloudSocial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeanCloudSocial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -183,7 +179,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9164637509911E1C6E5B4C27 /* libPods-LeanCloudSocialDynamic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,8 +201,6 @@
 			children = (
 				1463B00C15C788942C9454A3 /* Pods-LeanCloudSocial.debug.xcconfig */,
 				5D5AB76CAE0B16721FF50DE7 /* Pods-LeanCloudSocial.release.xcconfig */,
-				857347A4DC9D90897CF61A18 /* Pods-LeanCloudSocialDynamic.debug.xcconfig */,
-				847392B14A6854CE535F8FA3 /* Pods-LeanCloudSocialDynamic.release.xcconfig */,
 				28A3C087F2036413EA46F0D8 /* Pods-LeanCloudSocialTests.debug.xcconfig */,
 				5026BA746E466540B512DCAF /* Pods-LeanCloudSocialTests.release.xcconfig */,
 			);
@@ -277,7 +270,7 @@
 		70A6480C1BCEA86300D56C78 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				70A6485D1BCEAB2000D56C78 /* LeanCloudSocial.framework */,
+				70A6485D1BCEAB2000D56C78 /* LeanCloudSocialDynamic.framework */,
 				7034F08E1BCEB46B00689FB0 /* LeanCloudSocial.framework */,
 				7030A8FD1BD6415700636404 /* LeanCloudSocialTests.xctest */,
 			);
@@ -428,12 +421,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70A648621BCEAB2000D56C78 /* Build configuration list for PBXNativeTarget "LeanCloudSocialDynamic" */;
 			buildPhases = (
-				5A42F1405DB016C39A79FB9D /* [CP] Check Pods Manifest.lock */,
 				70A648581BCEAB2000D56C78 /* Sources */,
 				70A648591BCEAB2000D56C78 /* Frameworks */,
 				70A6485A1BCEAB2000D56C78 /* Headers */,
 				70A6485B1BCEAB2000D56C78 /* Resources */,
-				CCCD82F5048A7AAF46D618C7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -441,7 +432,7 @@
 			);
 			name = LeanCloudSocialDynamic;
 			productName = LeanCloudSocialDynamic;
-			productReference = 70A6485D1BCEAB2000D56C78 /* LeanCloudSocial.framework */;
+			productReference = 70A6485D1BCEAB2000D56C78 /* LeanCloudSocialDynamic.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -450,7 +441,7 @@
 		70A648021BCEA86300D56C78 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = LeanCloud;
 				TargetAttributes = {
 					7030A8FC1BD6415700636404 = {
@@ -499,7 +490,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7034F0991BCEB4AB00689FB0 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,28 +509,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LeanCloudSocial-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5A42F1405DB016C39A79FB9D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		645B53BDEF023E64F5D1E22E /* [CP] Copy Pods Resources */ = {
@@ -549,9 +527,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-LeanCloudSocialTests/Pods-LeanCloudSocialTests-resources.sh",
+				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -592,28 +573,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LeanCloudSocialTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CCCD82F5048A7AAF46D618C7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LeanCloudSocialDynamic/Pods-LeanCloudSocialDynamic-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F64A0005C2CE46ACAD5E1377 /* [CP] Copy Pods Resources */ = {
@@ -622,9 +591,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-LeanCloudSocial/Pods-LeanCloudSocial-resources.sh",
+				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -739,6 +711,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1463B00C15C788942C9454A3 /* Pods-LeanCloudSocial.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -759,6 +732,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D5AB76CAE0B16721FF50DE7 /* Pods-LeanCloudSocial.release.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -783,13 +757,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -812,7 +794,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -830,13 +812,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -853,7 +843,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -865,8 +855,8 @@
 		};
 		70A648631BCEAB2000D56C78 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 857347A4DC9D90897CF61A18 /* Pods-LeanCloudSocialDynamic.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -883,8 +873,8 @@
 		};
 		70A648641BCEAB2000D56C78 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 847392B14A6854CE535F8FA3 /* Pods-LeanCloudSocialDynamic.release.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

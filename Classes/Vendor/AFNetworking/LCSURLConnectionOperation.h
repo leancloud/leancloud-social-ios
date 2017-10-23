@@ -334,11 +334,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Posted when an operation begins executing.
  */
-FOUNDATION_EXPORT NSString * const AFNetworkingOperationDidStartNotification;
+FOUNDATION_EXPORT NSString * const LCSNetworkingOperationDidStartNotification;
 
 /**
  Posted when an operation finishes.
  */
-FOUNDATION_EXPORT NSString * const AFNetworkingOperationDidFinishNotification;
+FOUNDATION_EXPORT NSString * const LCSNetworkingOperationDidFinishNotification;
 
 NS_ASSUME_NONNULL_END

@@ -98,7 +98,6 @@
 		83371BC41D42172B00BF895E /* LCSURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 83371B9F1D42172B00BF895E /* LCSURLSessionManager.h */; };
 		83371BC51D42172B00BF895E /* LCSURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371BA01D42172B00BF895E /* LCSURLSessionManager.m */; };
 		83371BC61D42172B00BF895E /* LCSURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83371BA01D42172B00BF895E /* LCSURLSessionManager.m */; };
-		9164637509911E1C6E5B4C27 /* libPods-LeanCloudSocialDynamic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B96F283ED44DC0F3AFFB175 /* libPods-LeanCloudSocialDynamic.a */; };
 		DDAB97E8AAA8C7757CD7D158 /* libPods-LeanCloudSocialTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6499EBDDC79C5167F06ADD47 /* libPods-LeanCloudSocialTests.a */; };
 /* End PBXBuildFile section */
 
@@ -156,8 +155,6 @@
 		83371B9E1D42172B00BF895E /* LCSURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSURLResponseSerialization.m; sourceTree = "<group>"; };
 		83371B9F1D42172B00BF895E /* LCSURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSURLSessionManager.h; sourceTree = "<group>"; };
 		83371BA01D42172B00BF895E /* LCSURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSURLSessionManager.m; sourceTree = "<group>"; };
-		847392B14A6854CE535F8FA3 /* Pods-LeanCloudSocialDynamic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDynamic.release.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocialDynamic/Pods-LeanCloudSocialDynamic.release.xcconfig"; sourceTree = "<group>"; };
-		857347A4DC9D90897CF61A18 /* Pods-LeanCloudSocialDynamic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudSocialDynamic.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-LeanCloudSocialDynamic/Pods-LeanCloudSocialDynamic.debug.xcconfig"; sourceTree = "<group>"; };
 		9AE05FDB1E10B44200C935E4 /* AVUser_SNSInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVUser_SNSInternal.h; sourceTree = "<group>"; };
 		C5406E5F39D2923D567AC261 /* libPods-LeanCloudSocial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeanCloudSocial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -183,7 +180,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9164637509911E1C6E5B4C27 /* libPods-LeanCloudSocialDynamic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,8 +202,6 @@
 			children = (
 				1463B00C15C788942C9454A3 /* Pods-LeanCloudSocial.debug.xcconfig */,
 				5D5AB76CAE0B16721FF50DE7 /* Pods-LeanCloudSocial.release.xcconfig */,
-				857347A4DC9D90897CF61A18 /* Pods-LeanCloudSocialDynamic.debug.xcconfig */,
-				847392B14A6854CE535F8FA3 /* Pods-LeanCloudSocialDynamic.release.xcconfig */,
 				28A3C087F2036413EA46F0D8 /* Pods-LeanCloudSocialTests.debug.xcconfig */,
 				5026BA746E466540B512DCAF /* Pods-LeanCloudSocialTests.release.xcconfig */,
 			);
@@ -428,12 +422,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70A648621BCEAB2000D56C78 /* Build configuration list for PBXNativeTarget "LeanCloudSocialDynamic" */;
 			buildPhases = (
-				5A42F1405DB016C39A79FB9D /* [CP] Check Pods Manifest.lock */,
 				70A648581BCEAB2000D56C78 /* Sources */,
 				70A648591BCEAB2000D56C78 /* Frameworks */,
 				70A6485A1BCEAB2000D56C78 /* Headers */,
 				70A6485B1BCEAB2000D56C78 /* Resources */,
-				CCCD82F5048A7AAF46D618C7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -519,28 +511,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LeanCloudSocial-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5A42F1405DB016C39A79FB9D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		645B53BDEF023E64F5D1E22E /* [CP] Copy Pods Resources */ = {
@@ -549,9 +529,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-LeanCloudSocialTests/Pods-LeanCloudSocialTests-resources.sh",
+				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -592,28 +575,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LeanCloudSocialTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CCCD82F5048A7AAF46D618C7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-LeanCloudSocialDynamic/Pods-LeanCloudSocialDynamic-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F64A0005C2CE46ACAD5E1377 /* [CP] Copy Pods Resources */ = {
@@ -622,9 +593,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-LeanCloudSocial/Pods-LeanCloudSocial-resources.sh",
+				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -865,7 +839,6 @@
 		};
 		70A648631BCEAB2000D56C78 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 857347A4DC9D90897CF61A18 /* Pods-LeanCloudSocialDynamic.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -883,7 +856,6 @@
 		};
 		70A648641BCEAB2000D56C78 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 847392B14A6854CE535F8FA3 /* Pods-LeanCloudSocialDynamic.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

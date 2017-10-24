@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LeanCloudSocial"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "LeanCloud iOS Social SDK for mobile backend."
   s.homepage     = "https://leancloud.cn"
   s.license      = { :type => "Commercial", :text => "© Copyright 2017 LeanCloud, Inc. See https://leancloud.cn/terms.html" }

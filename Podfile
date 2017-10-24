@@ -23,4 +23,5 @@ target 'LeanCloudSocialDemo' do
 
     xcodeproj 'LeanCloudSocialDemo/LeanCloudSocialDemo.xcodeproj'
     pod 'LeanCloudSocial', :path => '.'
+    pod 'AFNetworking', '~> 2.6.3'
 end

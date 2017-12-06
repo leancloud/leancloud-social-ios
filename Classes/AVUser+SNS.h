@@ -48,7 +48,8 @@ extern NSString *const AVOSCloudSNSPlatformWeiXin;
  *  @param  block        完成后回调
  *
  */
-+(void)loginWithAuthData:(NSDictionary*)authData platform:(NSString *)platform block:(AVUserResultBlock)block;
++(void)loginWithAuthData:(NSDictionary*)authData platform:(NSString *)platform block:(AVUserResultBlock)block
+__deprecated_msg("Deprecated, use +[loginOrSignUpWithAuthData:platform:block:] instead.");
 
 /**
  *  给用户绑定SNS验证数据
@@ -59,7 +60,8 @@ extern NSString *const AVOSCloudSNSPlatformWeiXin;
  *  @param  block        完成后回调
  *
  */
--(void)addAuthData:(NSDictionary*)authData platform:(NSString *)platform block:(AVUserResultBlock)block;
+-(void)addAuthData:(NSDictionary*)authData platform:(NSString *)platform block:(AVUserResultBlock)block
+__deprecated_msg("Deprecated, use -[associateWithAuthData:platform:block:] instead.");
 
 /**
  *  取消SNS绑定
@@ -68,7 +70,8 @@ extern NSString *const AVOSCloudSNSPlatformWeiXin;
  *  @param  block   完成后回调
  *
  */
--(void)deleteAuthDataForPlatform:(NSString *)platform block:(AVUserResultBlock)block;
+-(void)deleteAuthDataForPlatform:(NSString *)platform block:(AVUserResultBlock)block
+__deprecated_msg("Deprecated, use -[disassociateWithPlatform:block:] instead.");
 
 /**
  *  用SNS数据登录
@@ -78,7 +81,8 @@ extern NSString *const AVOSCloudSNSPlatformWeiXin;
  *  @param  block        完成后回调
  *
  */
-+(void)loginWithAuthData:(NSDictionary*)authData block:(AVUserResultBlock)block AVDeprecated("使用+[loginWithAuthData:platform:block:]");
++(void)loginWithAuthData:(NSDictionary*)authData block:(AVUserResultBlock)block
+__deprecated_msg("使用+[loginWithAuthData:platform:block:]");
 
 /**
  *  给用户绑定SNS验证数据
@@ -88,7 +92,8 @@ extern NSString *const AVOSCloudSNSPlatformWeiXin;
  *  @param  block        完成后回调
  *
  */
--(void)addAuthData:(NSDictionary*)authData block:(AVUserResultBlock)block AVDeprecated("使用-[addAuthData:platform:block:]");
+-(void)addAuthData:(NSDictionary*)authData block:(AVUserResultBlock)block
+__deprecated_msg("使用-[addAuthData:platform:block:]");
 
 @end
 

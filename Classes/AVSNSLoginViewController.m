@@ -61,7 +61,7 @@ static NSString * const AVOS_SNS_API_VERSION=@"1";
     if (type==0) {
         //打开选择登录界面
         
-        NSString *url=[NSString stringWithFormat:@"https://%@/%@",AVOS_SNS_BASE_URL,@"sns.html"];
+        NSString *url=[NSString stringWithFormat:@"https://%@/%@",AVOS_SNS_BASE_URL2,@"sns.html"];
         
         [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
         return;

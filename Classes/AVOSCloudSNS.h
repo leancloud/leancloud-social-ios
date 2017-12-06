@@ -167,7 +167,7 @@ typedef void (^AVSNSProgressBlock)(float percent);
  *  @param  progressBlock    进度回调(可选)
  *
  */
-+(void)shareText:(NSString*)text andLink:(NSString*)linkUrl toPlatform:(AVOSCloudSNSType)type withCallback:(AVSNSResultBlock)callback andProgress:(AVSNSProgressBlock)progressBlock;
+//+(void)shareText:(NSString*)text andLink:(NSString*)linkUrl toPlatform:(AVOSCloudSNSType)type withCallback:(AVSNSResultBlock)callback andProgress:(AVSNSProgressBlock)progressBlock;
 
 
 /**
@@ -182,7 +182,7 @@ typedef void (^AVSNSProgressBlock)(float percent);
  *  @param  progressBlock    进度回调(可选)
  *
  */
-+(void)shareText:(NSString*)text andLink:(NSString*)linkUrl andImage:(UIImage*)image toPlatform:(AVOSCloudSNSType)type withCallback:(AVSNSResultBlock)callback andProgress:(AVSNSProgressBlock)progressBlock;
+//+(void)shareText:(NSString*)text andLink:(NSString*)linkUrl andImage:(UIImage*)image toPlatform:(AVOSCloudSNSType)type withCallback:(AVSNSResultBlock)callback andProgress:(AVSNSProgressBlock)progressBlock;
 
 
 /**

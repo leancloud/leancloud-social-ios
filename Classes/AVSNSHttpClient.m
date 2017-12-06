@@ -8,6 +8,7 @@
 
 #import "AVSNSHttpClient.h"
 #import "AVOSCloudSNSUtils.h"
+#import "LCRouter.h"
 
 @interface AVSNSHttpClient ()
 
@@ -43,7 +44,14 @@
 }
 
 - (NSMutableURLRequest *)requestWithMethod:(NSString *)method path:(NSString *)path parameters:(NSDictionary *)parameters {
-    NSURL *url = [NSURL URLWithString:path relativeToURL:self.baseURL];
+    
+    NSURL *url = [NSURL URLWithString:path];
+    
+    if (!url.scheme.length) {
+        NSString *URLString = [[LCRouter sharedInstance] URLStringForPath:path];
+        url = [NSURL URLWithString:URLString];
+    }
+    
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setValue:[AVOSCloud getApplicationId] forHTTPHeaderField:@"X-AVOSCloud-Application-Id"];
     

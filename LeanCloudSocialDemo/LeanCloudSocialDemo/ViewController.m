@@ -34,11 +34,14 @@
         if (error) {
             NSLog(@"failed to get authentication from weibo. error: %@", error.description);
         } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
             [AVUser loginWithAuthData:object platform:AVOSCloudSNSPlatformWeiBo block:^(AVUser *user, NSError *error) {
                 if ([self filterError:error]) {
                     [self loginSucceedWithUser:user authData:object];
                 }
             }];
+#pragma clang diagnostic pop
         }
     } toPlatform:AVOSCloudSNSSinaWeibo];
 }
@@ -49,11 +52,14 @@
     [AVOSCloudSNS loginWithURL:[NSURL URLWithString:@"https://leancloud.cn/1.1/sns/goto/vdhgf2lq96udqd73"] callback:^(id object, NSError *error) {
         NSLog(@"object : %@, error : %@", object, error);
         if ([self filterError:error]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
             [AVUser loginWithAuthData:object platform:AVOSCloudSNSPlatformWeiBo block:^(AVUser *user, NSError *error) {
                 if ([self filterError:error]) {
                     [self loginSucceedWithUser:user authData:object];
                 }
             }];
+#pragma clang diagnostic pop
         }
     }];
 }
@@ -64,11 +70,14 @@
         if (error) {
             NSLog(@"failed to get authentication from weibo. error: %@", error.description);
         } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
             [AVUser loginWithAuthData:object platform:AVOSCloudSNSPlatformQQ block:^(AVUser *user, NSError *error) {
                 if ([self filterError:error]) {
                     [self loginSucceedWithUser:user authData:object];
                 }
             }];
+#pragma clang diagnostic pop
         }
     } toPlatform:AVOSCloudSNSQQ];
 }
@@ -83,11 +92,14 @@
             [authData setObject:[object objectForKey:@"openid"] forKey:@"openid"];
             [authData setObject:[object objectForKey:@"expires_in"] forKey:@"expires_in"];
             [authData setObject:[object objectForKey:@"access_token"] forKey:@"access_token"];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
             [AVUser loginWithAuthData:authData platform:AVOSCloudSNSPlatformQQ block:^(AVUser *user, NSError *error) {
                 if ([self filterError:error]) {
                     [self loginSucceedWithUser:user authData:authData];
                 }
             }];
+#pragma clang diagnostic pop
         }
     }];
 }
@@ -120,11 +132,14 @@
             
             NSLog(@"object : %@ error:%@", object, error);
             if ([self filterError:error]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
                 [AVUser loginWithAuthData:object platform:AVOSCloudSNSPlatformWeiXin block:^(AVUser *user, NSError *error) {
                     if ([self filterError:error]) {
                         [self loginSucceedWithUser:user authData:object];
                     }
                 }];
+#pragma clang diagnostic pop
             }
         } toPlatform:AVOSCloudSNSWeiXin];
     } else {

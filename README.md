@@ -1,4 +1,7 @@
-# leancloud-social-ios
+
+# 本 Demo 不再更新维护。
+
+## leancloud-social-ios
 
 [![Podspec][podspec-svg]][podspec-link]
 ![Platforms][platforms-svg]
